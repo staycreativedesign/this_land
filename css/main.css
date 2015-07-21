@@ -15,6 +15,8 @@ img {
 
 .main-image {
   padding-bottom: 1em;
+  clear: both;
+  overflow: hidden;
   border-bottom: 1px solid silver; }
 
 .article-wrapper {
@@ -37,19 +39,22 @@ img {
     text-transform: uppercase;
     color: silver; }
 
-main article {
-  text-align: center;
-  min-height: 300px;
+main {
+  border-top: 1px solid silver;
+  padding-top: 1em;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
-  background-color: #fffaf6; }
-  main article:last-child {
+  width: 100%; }
+  main:last-child {
     margin-right: 0; }
-  main article h1 {
+  main article {
+    text-align: center;
+    min-height: 300px;
+    background-color: #fffaf6; }
+  main h1 {
     font-size: 2em; }
-  main article h1, main article p {
+  main h1, main p {
     padding: 0 1.5em;
     margin-top: 1.4em; }
 
@@ -71,6 +76,33 @@ section.sub-category {
       text-transform: uppercase;
       color: silver; }
 
+main.search {
+  padding-top: 3em; }
+  main.search aside {
+    background-color: red;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    main.search aside:last-child {
+      margin-right: 0; }
+  main.search section {
+    background-color: blue;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-right: 0; }
+    main.search section:last-child {
+      margin-right: 0; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
+
+ul li {
+  list-style-type: none; }
+
 body {
   margin: 0; }
 
@@ -80,9 +112,7 @@ body {
   margin-right: 1.16509%;
   width: 91.56958%;
   margin-left: 4.21521%;
-  overflow: hidden;
-  margin-bottom: 1.2em;
-  border-bottom: 1px solid #6c4b35; }
+  overflow: hidden; }
   .banner-wrapper:last-child {
     margin-right: 0; }
 
@@ -124,19 +154,18 @@ nav {
   color: #6c4b35; }
 
 .ecommerce {
-  clear: bottom;
   overflow: hidden;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%;
-  margin-left: 17.05961%;
+  width: 74.41059%;
+  margin-left: 12.79471%;
   border-bottom: 1px solid silver; }
   .ecommerce:last-child {
     margin-right: 0; }
   .ecommerce article {
     border: 1px solid silver;
-    padding: 1.7em;
+    padding: 1em;
     margin-bottom: 2em;
     text-align: center;
     font-weight: bold;
@@ -176,13 +205,10 @@ footer {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     margin-top: 2em;
-    margin-bottom: 2em;
-    padding-bottom: 1em; }
+    padding-bottom: 2em; }
     footer .footer-wrapper:last-child {
       margin-right: 0; }
   footer ul {
-    list-style-type: none;
-    padding: 0;
     float: left;
     display: block;
     margin-right: 2.35765%;

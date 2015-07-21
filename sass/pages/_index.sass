@@ -1,5 +1,7 @@
 .main-image
 	padding-bottom: 1em
+	clear: both
+	overflow: hidden
 	+border-bottom($article-border)
 
 
@@ -16,11 +18,16 @@
 
 	p:nth-child(4)
 		+type_of_story
-main article
-	text-align: center
-	min-height: 300px
+main 
+	border-top: 1px solid $article-border
+	padding-top: 1em
 	@include span-columns(12)
-	background-color: $article-bg
+
+	article
+		text-align: center
+		min-height: 300px
+		
+		background-color: $article-bg
 
 	h1
 		font-size: 2em

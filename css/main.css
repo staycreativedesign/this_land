@@ -20,7 +20,6 @@ img {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1em;
   border-bottom: 1px solid silver;
   float: left;
   display: block;
@@ -47,10 +46,18 @@ main article {
     padding: 0 1.5em;
     margin-top: 1.4em; }
 
-footer::after {
+section.sub-category {
   clear: both;
-  content: "";
-  display: table; }
+  padding-top: 1.5em; }
+
+section.sub-category > article {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  border-bottom: 1px solid silver; }
+  section.sub-category > article:last-child {
+    margin-right: 0; }
 
 body {
   margin: 0; }
@@ -62,7 +69,7 @@ body {
   width: 91.56958%;
   margin-left: 4.21521%;
   overflow: hidden;
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
   border-bottom: 1px solid #6c4b35; }
   .banner-wrapper:last-child {
     margin-right: 0; }
@@ -104,3 +111,6 @@ body {
 
 nav {
   color: #6c4b35; }
+
+footer {
+  background-color: red; }

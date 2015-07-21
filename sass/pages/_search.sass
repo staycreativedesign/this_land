@@ -10,14 +10,36 @@ main.search
 		li:nth-child(1)
 			color: $red
 
+	.search_bar
+		margin-bottom: 1.2em
+		@include direction-context(right-to-left)
+			@include span-columns(3 of 12)
+		
+		input
+			@include direction-context(right-to-left)
+				@include span-columns(10)
+			
+			border: none
+			border-bottom: 1px solid black
+			padding: 1em 0 1em
+			color: black
+
 	section
 		text-align: center
 		@include span-columns(10)
 
 		article
+			margin-top: 1em
 			@include span-columns(3 of 12)
 			+article_type
 			@include omega(4n)
+
+		.load-more
+			text-align: left
+			@include span-columns(3 of 12)
+			clear: both
+			padding-top: 2em
+			margin-bottom: 2em
 	
 				
 			

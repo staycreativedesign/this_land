@@ -1,0 +1,34 @@
+$grid-columns: 24 !default;
+
+body
+	margin: 0
+
+
+.banner-wrapper
+	@include span-columns(22 of 24)
+	@include shift(1)
+	overflow: hidden
+	+border-bottom($nav-brown)
+
+.main-wrapper
+	@include outer-container()
+	.logo 
+		@include span-columns(10 of 24)
+		color: $red
+	
+	nav
+		@include span-columns(14 of 24)
+		ul
+			float: right
+		li 
+			display: inline-block
+
+.banner
+	@include omega
+	background-color: $red
+	text-align: center
+	overflow: hidden
+	color: white
+
+nav
+	color: $nav-brown

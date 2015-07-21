@@ -1,0 +1,32 @@
+.main-image
+	padding-bottom: 1em
+	border-bottom: 1px solid $article-border
+
+
+.article-wrapper
+	overflow: hidden
+	min-height: 350px
+	max-height: 350px
+	display: flex!important
+	align-items: center
+	justify-content: center
+	+border-bottom($article-border)
+	@include span-columns(6)
+	@include omega(odd)
+
+main article
+	text-align: center
+	min-height: 300px
+	@include span-columns(12)
+	background-color: $article-bg
+
+	h1
+		font-size: 2em
+
+	h1, p
+		padding: 0 1.5em
+		margin-top: 1.4em
+
+footer
+	+clearfix
+

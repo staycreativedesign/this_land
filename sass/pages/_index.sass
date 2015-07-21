@@ -13,6 +13,9 @@
 	+border-bottom($article-border)
 	@include span-columns(6)
 	@include omega(odd)
+
+	p:nth-child(4)
+		+type_of_story
 main article
 	text-align: center
 	min-height: 300px
@@ -29,7 +32,13 @@ main article
 section.sub-category
 	clear: both
 	padding-top: 1.5em
+	height: 425px
 
-section.sub-category > article
-	@include span-columns(3)
-	+border-bottom($article-border)
+	article
+		@include span-columns(3)
+		+border-bottom($article-border)
+
+		p:nth-child(2n)
+			margin-top: 5em
+			vertical-align: baseline
+			+type_of_story

@@ -1,2 +1,63 @@
+.ecommerce
+	clear: bottom
+	overflow: hidden
+	@include span-columns(8)
+	@include shift(2)
+	+border-bottom($article-border)
+	article
+		border: 1px solid $article-border
+		padding: 1.7em
+		margin-bottom: 2em
+		text-align: center
+		font-weight: bold
+		@include span-columns(3)
+
+
+.subscribe
+	@include span-columns(12)
+	text-align: center
+	text-transform: uppercase
+
 footer
-	background-color: red
+	@include span-columns(12)
+	background-color: rgb(26,45,61)
+	color: white
+
+	.footer-wrapper
+		@include span-columns(8)
+		@include shift(2)
+		overflow: hidden
+		border-top: 1px solid white
+		border-bottom: 1px solid white
+		margin-top: 2em
+		margin-bottom: 2em
+		padding-bottom: 1em
+	ul
+		list-style-type: none
+		padding: 0
+		@include span-columns(3)
+
+		li:nth-child(2n)
+			margin: .7em 0
+
+	ul:nth-child(-n+3)
+		li:nth-child(1)
+			text-transform: uppercase
+			+border-bottom(white)
+
+	input[type="text"]
+		margin-top: .7em
+		width: 100%
+		padding:.5em
+
+	.myButton
+		margin-top: .7em
+		background-color: transparent
+		border: 1px solid white
+		display: inline-block
+		cursor: pointer
+		color: #ffffff
+		font-size: 17px
+		padding: .5em 31px
+		text-transform: uppercase
+		text-decoration: none

@@ -6,6 +6,11 @@ $article-bg: 			rgb(255,250,246)
 =border-bottom($color)
 	border-bottom: 1px solid $color
 
-=type_of_story
-	text-transform: uppercase
-	color: $article-border
+
+=article_type
+	img
+		border: 1px solid black
+	+border-bottom($article-border)
+	p:nth-child(4)
+		text-transform: uppercase
+		color: $article-border

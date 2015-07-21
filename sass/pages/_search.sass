@@ -1,10 +1,23 @@
 main.search  
 	padding-top: 3em
+	
 	aside
-		background-color: red
-		@include span-columns(3)
+		@include span-columns(2)
+
+		li:nth-child(2n)
+			padding: 1.2em 0
+
+		li:nth-child(1)
+			color: $red
 
 	section
-		background-color: blue
-		@include span-columns(9)
-		@include omega()
+		text-align: center
+		@include span-columns(10)
+
+		article
+			@include span-columns(3 of 12)
+			+article_type
+			@include omega(4n)
+	
+				
+			

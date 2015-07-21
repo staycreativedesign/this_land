@@ -1,4 +1,5 @@
 .main-image
+	margin-top: 1em
 	padding-bottom: 1em
 	clear: both
 	overflow: hidden
@@ -15,13 +16,12 @@
 	+border-bottom($article-border)
 	@include span-columns(6)
 	@include omega(odd)
-
-	p:nth-child(4)
-		+type_of_story
-main 
-	border-top: 1px solid $article-border
-	padding-top: 1em
-	@include span-columns(12)
+	+article_type
+	
+	
+	main 
+		padding-top: 1em
+		@include span-columns(12)
 
 	article
 		text-align: center
@@ -36,6 +36,7 @@ main
 		padding: 0 1.5em
 		margin-top: 1.4em
 
+
 section.sub-category
 	clear: both
 	padding-top: 1.5em
@@ -44,8 +45,21 @@ section.sub-category
 	article
 		@include span-columns(3)
 		+border-bottom($article-border)
-
+		+article_type
 		p:nth-child(2n)
 			margin-top: 5em
-			vertical-align: baseline
-			+type_of_story
+
+.ecommerce
+	overflow: hidden
+	@include span-columns(12)
+	@include omega()
+
+	+border-bottom($article-border)
+	article
+		border: 1px solid $article-border
+		padding: 1em
+		margin-bottom: 2em
+		text-align: center
+		font-weight: bold
+		@include span-columns(3)
+

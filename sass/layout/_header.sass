@@ -10,20 +10,24 @@ body
 	overflow: hidden
 	
 .main-wrapper
-	@include outer-container()
+	+outer-container()
 	.logo 
-		@include span-columns(10 of 24)
+		+span-columns(10 of 24)
 		color: $red
 	
 	nav
-		@include span-columns(14 of 24)
+		+span-columns(14 of 24)
 		ul
 			float: right
 		li 
 			display: inline-block
 
+	+media(min-width 320px max-width 560px, 24)
+		+span-columns(22 of 24)
+		+shift(1)
+
 .banner
-	@include omega
+	+omega()
 	text-align: center
 	overflow: hidden
 	color: white

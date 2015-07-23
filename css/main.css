@@ -346,8 +346,11 @@ main.story section {
     min-height: 439px; }
     main.story section aside:nth-child(1):last-child {
       margin-right: 0; }
-    main.story section aside:nth-child(1) img {
-      vertical-align: baseline; }
+    main.story section aside:nth-child(1) figure {
+      margin-top: 265px; }
+    @media screen and (min-width: 320px) and (max-width: 560px) {
+      main.story section aside:nth-child(1) {
+        display: none; } }
   main.story section header {
     float: left;
     display: block;
@@ -359,18 +362,49 @@ main.story section {
     max-height: 439px; }
     main.story section header:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 320px) and (max-width: 560px) {
+      main.story section header {
+        float: left;
+        display: block;
+        margin-right: 38.19821%;
+        width: 100%;
+        min-height: 0;
+        max-height: none; }
+        main.story section header:last-child {
+          margin-right: 0; } }
     main.story section header h1 {
       margin: 0;
       text-transform: uppercase; }
+      @media screen and (min-width: 320px) and (max-width: 560px) {
+        main.story section header h1 {
+          display: none; } }
     main.story section header h4 {
       margin-top: 0;
       padding: 1em 0;
       border-top: 1px solid black;
       border-bottom: 1px solid black;
       font-weight: normal; }
+      @media screen and (min-width: 320px) and (max-width: 560px) {
+        main.story section header h4 {
+          display: none; } }
     main.story section header p:nth-child(n+4) {
       margin-top: 0;
       text-transform: uppercase; }
+    @media screen and (min-width: 320px) and (max-width: 560px) {
+      main.story section header {
+        float: left;
+        display: block;
+        margin-right: 38.19821%;
+        width: 100%; }
+        main.story section header:last-child {
+          margin-right: 0; }
+        main.story section header p:nth-child(n+4) {
+          display: none; }
+        main.story section header p:nth-child(3) {
+          padding-bottom: 1em;
+          margin-top: 9em;
+          margin-bottom: 0;
+          border-bottom: 1px solid silver; } }
   main.story section aside:nth-child(3) {
     float: left;
     display: block;
@@ -398,6 +432,15 @@ main.story section {
       color: gray;
       font-size: .8em;
       border-bottom: 1px solid black; }
+    @media screen and (min-width: 320px) and (max-width: 560px) {
+      main.story section aside:nth-child(3) {
+        float: left;
+        display: block;
+        margin-right: 38.19821%;
+        width: 100%;
+        min-height: 0; }
+        main.story section aside:nth-child(3):last-child {
+          margin-right: 0; } }
   main.story section article {
     float: left;
     display: block;
@@ -412,12 +455,24 @@ main.story section {
       margin-right: 0; }
     main.story section article p, main.story section article blockquote:nth-child(2) {
       margin-top: 0; }
-    main.story section article blockquote:nth-child(2) {
+    main.story section article blockquote {
       padding: 1em; }
     main.story section article .spacer {
       font-size: 2em;
       text-align: center;
       padding-bottom: .5em; }
+    @media screen and (min-width: 320px) and (max-width: 560px) {
+      main.story section article {
+        float: left;
+        display: block;
+        margin-right: 38.19821%;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 1em; }
+        main.story section article:last-child {
+          margin-right: 0; }
+        main.story section article blockquote {
+          padding: 1em 0; } }
   main.story section aside:nth-child(5) {
     float: left;
     display: block;
@@ -430,6 +485,18 @@ main.story section {
       line-height: 1.5em; }
     main.story section aside:nth-child(5) .ad {
       margin-top: 40em; }
+    @media screen and (min-width: 320px) and (max-width: 560px) {
+      main.story section aside:nth-child(5) {
+        float: left;
+        display: block;
+        margin-right: 38.19821%;
+        width: 100%; }
+        main.story section aside:nth-child(5):last-child {
+          margin-right: 0; }
+        main.story section aside:nth-child(5) p {
+          text-align: center; }
+        main.story section aside:nth-child(5) .ad {
+          margin-top: auto; } }
 
 a {
   text-decoration: none; }
@@ -530,11 +597,23 @@ nav {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
+  width: 82.94039%;
+  margin-left: 8.5298%;
+  border-top: 1px solid black;
   text-align: center;
   text-transform: uppercase; }
   .subscribe:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 560px) {
+    .subscribe {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      margin-left: 8.5298%;
+      margin-top: 1em; }
+      .subscribe:last-child {
+        margin-right: 0; } }
 
 footer {
   float: left;

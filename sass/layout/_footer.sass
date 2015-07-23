@@ -1,7 +1,15 @@
 .subscribe
-	+span-columns(12)
+	+span-columns(10)
+	+shift(1)
+	border-top: 1px solid black
 	text-align: center
 	text-transform: uppercase
+
+	+media(min-width 320px max-width 560px, 1)
+		+span-columns(10 of 12)
+		+shift(1)
+		margin-top: 1em
+
 
 footer
 	+span-columns(12)
@@ -34,7 +42,7 @@ footer
 		width: 100%
 		padding:.5em
 
-	@include media(min-width 320px max-width 560px, 1)
+	+media(min-width 320px max-width 560px, 1)
 		+span-columns(1)
 		
 		.footer-wrapper

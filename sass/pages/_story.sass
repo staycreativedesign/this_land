@@ -1,0 +1,130 @@
+main.story
+
+	section
+		margin-top: 2em
+		+span-columns(12)
+
+		aside:nth-child(1)
+			+span-columns(2)
+			min-height: 439px
+
+			figure
+				margin-top: 265px
+
+			+media(min-width 320px max-width 560px, 1)
+				display: none
+
+		header
+			+span-columns(5)
+			+border-bottom(black)
+			padding-bottom: 1em
+			min-height: 439px
+			max-height: 439px
+			
+			+media(min-width 320px max-width 560px, 1)
+				+span-columns(1)
+				min-height: 0
+				max-height: none
+			h1
+				margin: 0
+				text-transform: uppercase
+
+				+media(min-width 320px max-width 560px, 1)
+					display: none				
+
+			h4
+				margin-top: 0
+				padding: 1em 0
+				border-top: 1px solid black
+				border-bottom: 1px solid black
+				font-weight: normal
+
+				+media(min-width 320px max-width 560px, 1)
+					display: none
+
+
+
+			p:nth-child(n+4)
+				margin-top: 0
+				text-transform: uppercase
+		
+			+media(min-width 320px max-width 560px, 1)
+				+span-columns(1)
+				
+				p:nth-child(n+4)
+					display: none
+
+				p:nth-child(3)
+					padding-bottom: 1em
+					margin-top: 9em
+					margin-bottom: 0
+					+border-bottom($article-border)
+
+
+		aside:nth-child(3)
+			+span-columns(5)
+			+omega()
+			min-height: 600px
+
+			figure
+				+span-columns(12)
+				+omega()
+				text-align: right
+				min-height: 439px
+				max-height: 600px
+
+
+			figcaption
+				margin-top: 2em
+				padding-bottom: 2em
+				text-align: justify
+				color: gray
+				font-size: .8em
+				+border-bottom(black)
+
+			+media(min-width 320px max-width 560px, 1)
+				+span-columns(1)
+				min-height: 0
+
+		article
+			+span-columns(5)
+			+shift(2)
+			text-align: left
+			padding: 0
+			margin-top: -8.3em
+			background-color: white
+
+			p, blockquote:nth-child(2)
+				margin-top: 0
+
+			blockquote
+				padding: 1em
+
+			.spacer
+				font-size: 2em
+				text-align: center
+				padding-bottom: .5em
+
+			+media(min-width 320px max-width 560px, 1)
+				+span-columns(1)
+				+shift(0)
+				margin-top: 1em
+
+				blockquote
+					padding: 1em 0
+
+		aside:nth-child(5)
+			+span-columns(5)
+			p
+				font-size: 2em
+				line-height: 1.5em
+
+			.ad
+				margin-top:40em
+
+			+media(min-width 320px max-width 560px, 1)
+				+span-columns(1)
+				p
+					text-align: center
+				.ad
+					margin-top: auto

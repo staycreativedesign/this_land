@@ -7,6 +7,10 @@
 	width: 100%
 	padding: .5em 1.35em
 
+	@include media(min-width 320px max-width 560px, 1)
+		+span-columns(1)
+		+omega()
+
 .myButton
 	margin-top: .7em
 	background-color: transparent

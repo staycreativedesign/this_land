@@ -8,13 +8,25 @@ $article-bg: 			rgb(255,250,246)
 
 
 =article_type
-	img
-		border: 1px solid black
 	+border-bottom($article-border)
 	p:nth-child(4)
 		text-transform: uppercase
 		color: $article-border
 
+=article-category
+	text-transform: uppercase
+	color: $article-border
+	
+	
 =reset-height
 	min-height: 0
 	max-height: none
+
+.floats
+	&.left
+		float: left
+	&.right
+		float: right
+	&.ad
+		margin-top: 5em
+

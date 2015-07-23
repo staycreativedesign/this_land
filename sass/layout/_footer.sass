@@ -8,6 +8,7 @@ footer
 	background-color: rgb(26,45,61)
 	color: white
 
+
 	.footer-wrapper
 		+span-columns(8)
 		+shift(2)
@@ -32,3 +33,13 @@ footer
 		margin-top: .7em
 		width: 100%
 		padding:.5em
+
+	@include media(min-width 320px max-width 560px, 1)
+		+span-columns(1)
+		
+		.footer-wrapper
+			+span-columns(20 of 24)
+			+shift(1)
+
+		ul
+			+span-columns(1)

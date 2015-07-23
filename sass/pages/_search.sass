@@ -1,8 +1,11 @@
 main.search  
 	padding-top: 3em
+
+	.filter
+		display: none
 	
 	aside
-		@include span-columns(2)
+		+span-columns(2)
 
 		li:nth-child(2n)
 			padding: 1.2em 0
@@ -13,11 +16,11 @@ main.search
 	.search_bar
 		margin-bottom: 1.2em
 		@include direction-context(right-to-left)
-			@include span-columns(3 of 12)
+			+span-columns(3 of 12)
 		
 		input
-			@include direction-context(right-to-left)
-				@include span-columns(10)
+			+direction-context(right-to-left)
+				+span-columns(10)
 			
 			border: none
 			border-bottom: 1px solid black
@@ -26,20 +29,52 @@ main.search
 
 	section
 		text-align: center
-		@include span-columns(10)
+		+span-columns(10)
 
 		article
+			background-color: white
 			margin-top: 1em
-			@include span-columns(3 of 12)
+			padding: 0
+			+span-columns(3 of 12)
 			+article_type
-			@include omega(4n)
+			+omega(4n)
 
 		.load-more
 			text-align: left
-			@include span-columns(3 of 12)
+			+span-columns(3 of 12)
 			clear: both
 			padding-top: 2em
 			margin-bottom: 2em
+
+	@include media(min-width 320px max-width 560px, 1)
+		+span-columns(1)
+		padding: 3em 0 0 0
+
+		.filter
+			display: block
+			text-transform: uppercase
+			text-align: left
+			color: $red
+
+		aside
+			display: none
+		
+		.search_bar
+			display: none
+
+		section
+			+span-columns(1)
+
+			article
+				+span-columns(1)
+				+omega()
+
+			.load-more
+				+span-columns(1)
+				text-align: center			
+
+
+
 	
 				
 			

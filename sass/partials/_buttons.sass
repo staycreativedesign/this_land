@@ -1,17 +1,24 @@
 
 
 .load-story-btn
+	+span-columns(3)
+	+omega()
+	clear: both
 	text-transform: uppercase
-	border: 1px solid black
+	text-align: center
 	color: black
-	width: 100%
-	padding: .5em 1.35em
-
-	@include media(min-width 320px max-width 560px, 1)
+	font-size: .7em
+	border: 1px solid black
+	padding: 5px	
+	margin-top: 2em
+	+font($gotham, bold, normal)
+	@include media(min-width 320px max-width 881px, 1)
 		+span-columns(1)
 		+omega()
+		font-size: 1em
 
 .myButton
+	+font($gotham,normal,normal)
 	margin-top: .7em
 	background-color: transparent
 	border: 1px solid white
@@ -22,3 +29,15 @@
 	padding: .5em 31px
 	text-transform: uppercase
 	text-decoration: none
+
+.inner-addon
+	border: 1px solid black
+	margin-top: -0.50em
+	i
+		transform: translate(6px, 0)
+
+	input
+		border: none
+		height: 27px
+		margin-left: 10px
+		outline: none

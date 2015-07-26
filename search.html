@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <head>
 	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href=" //cloud.typography.com/6579754/612228/css/fonts.css" />	
 	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 	<script type='text/javascript' src="js/html5shiv.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/modernizer.js"></script>
+	<link rel="stylesheet" href="css/slicknav.min.css" />
+	<script src="js/jquery.slicknav.min.js"></script>
 </head>
 	<body>
 		<div class="main-wrapper">
 			<header>
-				<div class="banner-wrapper">
-					<div role="banner" class="logo">
-						<h1>
-							This Land
-						</h1>
-					</div>
-					<nav role="navigation">
-						<ul>
-							<li>
-								Explore
-							</li>
-							<li>
-								Shop
-							</li>
-							<li>
-								Subscribe
-							</li>
-							<li>
-								<input role="textbox">
-							</li>
-						</ul>
-					</div>
+				<div role="banner" class="logo">
+					<h1>
+						This Land
+					</h1>
+				</div>
+				<nav role="navigation">
+					<ul id="menu">
+						<li>
+							Explore
+						</li>
+						<li>
+							Shop
+						</li>
+						<li>
+							Subscribe
+						</li>
+						<li>
+							<div class="main-search inner-addon left-addon">
+						    <i class="fa fa-search"></i>
+						    <input type="text" class="form-control" />
+							</div>
+						</li>
+					</ul>
 				</nav>
 			</header>
 			<main role="search" class="search">
 				<section class="filter">
 					<p>
-						Filter / Sort
+						Filter / Sort <i class="fa fa-caret-down"></i>
 					</p>
 				</section>
 				<aside>
@@ -45,7 +51,7 @@
 							<h2>Order</h2>
 						</li>
 						<li>
-							Date Published
+							Date Published <i class="fa fa-caret-down"></i>
 						</li>
 						<li>
 							Author Name
@@ -73,120 +79,67 @@
 						</li>
 					</ul>
 				</aside>
-				<div class="search_bar">
-					<input placeholder="Search Archives">
-				</div>
 				<section class="search">
+				<div class="sub-category-search inner-addon left-addon">
+			    <i class="fa fa-search"></i>
+			    <input type="text" class="form-control" placeholder="Search Archives" />
+				</div>
 					<article>
-						<figure>
-							<img src="images/sub_category.jpg" alt="">			
-						</figure>
-						
-						<h1>This is something really amazing here</h1>
+						<img src="images/sub_category.jpg" alt="">
+						<h2>
+							Chicken Fat
+						</h2>
 						<p>
-							lore
+							Memorie of a president's fintess quinea pig
 						</p>
 						<p>
-							Non-Fiction
-						</p>
+							Non Fiction
+						</p>	
 					</article>
 					<article>
-						<figure>
-							<img src="images/sub_category.jpg" alt="">			
-						</figure>
-						
-						<h1>This is something really amazing here</h1>
+						<img src="images/sub_category.jpg" alt="">
+						<h2>
+							Chicken Fat
+						</h2>
 						<p>
-							lore
+							Memorie of a president's fintess quinea pig
 						</p>
 						<p>
-							Non-Fiction
-						</p>
+							Non Fiction
+						</p>	
 					</article>
 					<article>
-						<figure>
-							<img src="images/sub_category.jpg" alt="">			
-						</figure>
-						
-						<h1>This is something really amazing here</h1>
+						<img src="images/sub_category.jpg" alt="">
+						<h2>
+							Chicken Fat
+						</h2>
 						<p>
-							lore
+							Memorie of a president's fintess quinea pig
 						</p>
 						<p>
-							Non-Fiction
-						</p>
+							Non Fiction
+						</p>	
 					</article>
 					<article>
-						<figure>
-							<img src="images/sub_category.jpg" alt="">			
-						</figure>
-						
-						<h1>This is something really amazing here</h1>
+						<img src="images/sub_category.jpg" alt="">
+						<h2>
+							Chicken Fat
+						</h2>
 						<p>
-							lore
+							Memorie of a president's fintess quinea pig
 						</p>
 						<p>
-							Non-Fiction
-						</p>
+							Non Fiction
+						</p>	
 					</article>
-					<article>
-						<figure>
-							<img src="images/sub_category.jpg" alt="">			
-						</figure>
-						
-						<h1>This is something really amazing here</h1>
-						<p>
-							lore
-						</p>
-						<p>
-							Non-Fiction
-						</p>
-					</article>
-					<article>
-						<figure>
-							<img src="images/sub_category.jpg" alt="">			
-						</figure>
-						
-						<h1>This is something really amazing here</h1>
-						<p>
-							lore
-						</p>
-						<p>
-							Non-Fiction
-						</p>
-					</article>
-					<article>
-						<figure>
-							<img src="images/sub_category.jpg" alt="">			
-						</figure>
-						
-						<h1>This is something really amazing here</h1>
-						<p>
-							lore
-						</p>
-						<p>
-							Non-Fiction
-						</p>
-					</article>
-					<article>
-						<figure>
-							<img src="images/sub_category.jpg" alt="">			
-						</figure>
-						
-						<h1>This is something really amazing here</h1>
-						<p>
-							lore
-						</p>
-						<p>
-							Non-Fiction
-						</p>
-					</article>
-					<div class="load-more">
-						<a href="#" class="load-story-btn">Load more stories</a>
-					</div>
+					<a href="#" class="load-story-btn">Load more stories</a>
 				</section>
-			</main>
-			
+			</main>	
+		</div>
+		<div class="subscribe">
+			<p>
+				Subscribe yo!
+			</p>
 		</div>
 		<footer>
 			<div class="footer-wrapper">
@@ -251,5 +204,14 @@
 				</ul>
 			</div>
 		</footer>
+	<script>
+		$('#menu').slicknav({
+			'label' : '',
+			'brand': 'This Land'
+		});
+
+		
+
+	</script>
 	</body>
 <html>

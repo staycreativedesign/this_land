@@ -23,22 +23,39 @@ img {
   max-width: 100%; }
 
 .load-story-btn {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  margin-right: 0;
+  clear: both;
   text-transform: uppercase;
-  border: 1px solid black;
+  text-align: center;
   color: black;
-  width: 100%;
-  padding: 0.5em 1.35em; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+  font-size: .7em;
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 2em;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-weight: bold;
+  font-style: normal; }
+  .load-story-btn:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     .load-story-btn {
       float: left;
       display: block;
       margin-right: 38.19821%;
       width: 100%;
-      margin-right: 0; }
+      margin-right: 0;
+      font-size: 1em; }
       .load-story-btn:last-child {
         margin-right: 0; } }
 
 .myButton {
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-weight: normal;
+  font-style: normal;
   margin-top: .7em;
   background-color: transparent;
   border: 1px solid white;
@@ -50,12 +67,23 @@ img {
   text-transform: uppercase;
   text-decoration: none; }
 
+.inner-addon {
+  border: 1px solid black;
+  margin-top: -0.50em; }
+  .inner-addon i {
+    transform: translate(6px, 0); }
+  .inner-addon input {
+    border: none;
+    height: 27px;
+    margin-left: 10px;
+    outline: none; }
+
 .main-image {
   padding-bottom: 1em;
   clear: both;
   overflow: hidden;
   border-bottom: 1px solid silver; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     .main-image {
       float: left;
       display: block;
@@ -82,14 +110,7 @@ img {
     margin-right: 0; }
   .article-wrapper:nth-child(odd) {
     margin-right: 0; }
-  .article-wrapper p:nth-child(4) {
-    color: silver;
-    text-transform: uppercase;
-    font-family: "Gotham SSm A", "Gotham SSm B";
-    font-weight: 300;
-    font-style: normal;
-    font-size: .7em; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     .article-wrapper {
       float: left;
       display: block;
@@ -102,47 +123,57 @@ img {
       .article-wrapper:last-child {
         margin-right: 0; } }
 
-main {
+main.index {
   padding-top: 1em;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  main:last-child {
+  main.index:last-child {
     margin-right: 0; }
-  main article {
+  main.index article.main {
     text-align: center;
     background-color: #fffaf6;
     min-height: 340px;
     max-height: 340px;
     padding: 20px; }
-  main h1 {
-    margin-top: .5em;
-    font-size: 2.5em;
-    font-family: "Surveyor Display A", "Surveyor Display B";
+    main.index article.main h1 {
+      margin-top: .5em;
+      font-size: 2.5em;
+      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-weight: 300;
+      font-style: normal; }
+    main.index article.main p:nth-child(-n+3) {
+      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-weight: 300;
+      font-style: normal; }
+  main.index p:nth-child(4) {
+    font-family: gotham;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    color: silver;
+    font-family: "Gotham SSm A", "Gotham SSm B";
     font-weight: 300;
-    font-style: normal; }
-  main p {
-    font-family: "Surveyor Display A", "Surveyor Display B";
-    font-weight: 300;
-    font-style: normal; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
-    main {
+    font-style: normal;
+    font-size: .7em; }
+  @media screen and (min-width: 320px) and (max-width: 881px) {
+    main.index {
       float: left;
       display: block;
       margin-right: 38.19821%;
       width: 100%;
       min-height: 0;
       max-height: none; }
-      main:last-child {
+      main.index:last-child {
         margin-right: 0; }
-      main main {
+      main.index main {
         padding-top: 0; }
-      main article {
-        min-height: 0; }
-      main h1 {
-        font-size: 2em;
-        margin-top: 0; } }
+        main.index main article.main {
+          min-height: 0; }
+          main.index main article.main h1 {
+            font-size: 2em;
+            margin-top: 0; } }
 
 section.sub-category {
   clear: both;
@@ -175,7 +206,7 @@ section.sub-category {
       font-weight: 300;
       font-style: normal;
       font-size: .7em; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     section.sub-category {
       float: left;
       display: block;
@@ -227,7 +258,7 @@ section.sub-category {
     width: 23.23176%; }
     .ecommerce article:last-child {
       margin-right: 0; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     .ecommerce {
       float: left;
       display: block;
@@ -253,13 +284,23 @@ main.search {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 14.70196%; }
+    width: 14.70196%;
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase; }
     main.search aside:last-child {
       margin-right: 0; }
     main.search aside li:nth-child(2n) {
       padding: 1.2em 0; }
     main.search aside li:nth-child(1) {
       color: #b80405; }
+    main.search aside li:nth-child(2) {
+      font-weight: bold; }
+    main.search aside h2 {
+      font-size: 1.4em; }
+    main.search aside li {
+      font-size: .6em; }
   main.search .search_bar {
     margin-bottom: 1.2em;
     float: right;
@@ -287,36 +328,63 @@ main.search {
     width: 82.94039%; }
     main.search section:last-child {
       margin-right: 0; }
-    main.search section article {
-      background-color: white;
-      margin-top: 1em;
-      padding: 0;
+    main.search section .sub-category-search {
+      float: right;
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 23.23176%;
-      border-bottom: 1px solid silver; }
+      margin-left: 76.76824%; }
+      main.search section .sub-category-search:last-child {
+        margin-right: 0; }
+    main.search section .inner-addon {
+      margin-top: 0;
+      border: none;
+      border-bottom: 1px solid black; }
+      main.search section .inner-addon i.fa {
+        transform: translate(6px, 0) !important;
+        float: left;
+        margin-top: 5px; }
+      main.search section .inner-addon input {
+        min-width: 83%; }
+    main.search section article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      border-bottom: 1px solid silver;
+      border-bottom: 1px solid silver;
+      margin-top: 2em; }
+      main.search section article:nth-child(5n) {
+        margin-right: 0; }
+      main.search section article:nth-child(5n+1) {
+        clear: left; }
       main.search section article:last-child {
         margin-right: 0; }
       main.search section article p:nth-child(4) {
         text-transform: uppercase;
         color: silver; }
-      main.search section article:nth-child(4n) {
-        margin-right: 0; }
-      main.search section article:nth-child(4n+1) {
-        clear: left; }
+      main.search section article p:nth-child(2n) {
+        margin-top: 5em; }
+      main.search section article h2 {
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: bold;
+        font-style: normal;
+        font-size: 1em; }
+      main.search section article p {
+        font-family: "Surveyor Display A", "Surveyor Display B";
+        font-weight: 300;
+        font-style: normal; }
+      main.search section article p:nth-child(4) {
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: 300;
+        font-style: normal;
+        font-size: .7em; }
+      main.search section article img {
+        border: 1px solid black; }
     main.search section .load-more {
-      text-align: left;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%;
-      clear: both;
-      padding-top: 2em;
-      margin-bottom: 2em; }
-      main.search section .load-more:last-child {
-        margin-right: 0; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+      clear: both; }
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     main.search {
       float: left;
       display: block;
@@ -326,10 +394,16 @@ main.search {
       main.search:last-child {
         margin-right: 0; }
       main.search .filter {
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: bold;
+        font-style: normal;
         display: block;
         text-transform: uppercase;
         text-align: left;
-        color: #b80405; }
+        color: #b80405;
+        font-size: 1.5em; }
+        main.search .filter p {
+          margin: 0; }
       main.search aside {
         display: none; }
       main.search .search_bar {
@@ -346,9 +420,14 @@ main.search {
           display: block;
           margin-right: 38.19821%;
           width: 100%;
-          margin-right: 0; }
+          margin-right: 0;
+          margin-top: 2em;
+          p: nth-child(4);
+          padding-bottom: 1em; }
           main.search section article:last-child {
             margin-right: 0; }
+        main.search section article:nth-child(n+5) {
+          margin-top: 0; }
         main.search section .load-more {
           float: left;
           display: block;
@@ -356,7 +435,31 @@ main.search {
           width: 100%;
           text-align: center; }
           main.search section .load-more:last-child {
-            margin-right: 0; } }
+            margin-right: 0; }
+      main.search section.search .inner-addon {
+        display: none; } }
+  @media screen and (min-width: 1035px) {
+    main.search aside {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      font-family: "Gotham SSm A", "Gotham SSm B";
+      font-weight: normal;
+      font-style: normal;
+      text-transform: uppercase; }
+      main.search aside:last-child {
+        margin-right: 0; }
+      main.search aside li:nth-child(2n) {
+        padding: 1.2em 0; }
+      main.search aside li:nth-child(1) {
+        color: #b80405; }
+      main.search aside li:nth-child(2) {
+        font-weight: bold; }
+      main.search aside h2 {
+        font-size: 1.5em; }
+      main.search aside li {
+        font-size: .7em; } }
 
 main.story section {
   margin-top: 2em;
@@ -371,12 +474,16 @@ main.story section {
     display: block;
     margin-right: 2.35765%;
     width: 14.70196%;
-    min-height: 439px; }
+    position: relative;
+    height: 439px; }
     main.story section aside:nth-child(1):last-child {
       margin-right: 0; }
-    main.story section aside:nth-child(1) figure {
-      margin-top: 265px; }
-    @media screen and (min-width: 320px) and (max-width: 560px) {
+    main.story section aside:nth-child(1) img {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      float: right; }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
       main.story section aside:nth-child(1) {
         display: none; } }
   main.story section header {
@@ -386,11 +493,11 @@ main.story section {
     width: 40.29137%;
     border-bottom: 1px solid black;
     padding-bottom: 1em;
-    min-height: 439px;
-    max-height: 439px; }
+    height: 439px;
+    position: relative; }
     main.story section header:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 320px) and (max-width: 560px) {
+    @media screen and (min-width: 320px) and (max-width: 881px) {
       main.story section header {
         float: left;
         display: block;
@@ -402,8 +509,12 @@ main.story section {
           margin-right: 0; } }
     main.story section header h1 {
       margin: 0;
-      text-transform: uppercase; }
-      @media screen and (min-width: 320px) and (max-width: 560px) {
+      text-transform: uppercase;
+      font-size: 2.7em;
+      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-weight: normal;
+      font-style: normal; }
+      @media screen and (min-width: 320px) and (max-width: 881px) {
         main.story section header h1 {
           display: none; } }
     main.story section header h4 {
@@ -411,14 +522,28 @@ main.story section {
       padding: 1em 0;
       border-top: 1px solid black;
       border-bottom: 1px solid black;
-      font-weight: normal; }
-      @media screen and (min-width: 320px) and (max-width: 560px) {
+      font-size: 1em;
+      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-weight: normal;
+      font-style: normal; }
+      @media screen and (min-width: 320px) and (max-width: 881px) {
         main.story section header h4 {
           display: none; } }
-    main.story section header p:nth-child(n+4) {
-      margin-top: 0;
-      text-transform: uppercase; }
-    @media screen and (min-width: 320px) and (max-width: 560px) {
+    main.story section header .date-category {
+      position: absolute;
+      bottom: 0; }
+      main.story section header .date-category p {
+        text-transform: uppercase;
+        color: silver;
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: 300;
+        font-style: normal;
+        font-size: .7em; }
+      main.story section header .date-category p:nth-child(1) {
+        margin-bottom: 0; }
+      main.story section header .date-category p:nth-child(2) {
+        margin-top: 0; }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
       main.story section header {
         float: left;
         display: block;
@@ -438,8 +563,7 @@ main.story section {
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%;
-    margin-right: 0;
-    min-height: 600px; }
+    margin-right: 0; }
     main.story section aside:nth-child(3):last-child {
       margin-right: 0; }
     main.story section aside:nth-child(3) figure {
@@ -448,19 +572,25 @@ main.story section {
       margin-right: 2.35765%;
       width: 100%;
       margin-right: 0;
-      text-align: right;
-      min-height: 439px;
-      max-height: 600px; }
+      text-align: right; }
       main.story section aside:nth-child(3) figure:last-child {
         margin-right: 0; }
+    main.story section aside:nth-child(3) img {
+      max-height: 439px;
+      min-width: 440px;
+      width: 100%;
+      object-fit: cover; }
     main.story section aside:nth-child(3) figcaption {
+      font-family: "Gotham SSm A", "Gotham SSm B";
+      font-weight: normal;
+      font-style: normal;
       margin-top: 2em;
       padding-bottom: 2em;
       text-align: justify;
       color: gray;
       font-size: .8em;
       border-bottom: 1px solid black; }
-    @media screen and (min-width: 320px) and (max-width: 560px) {
+    @media screen and (min-width: 320px) and (max-width: 881px) {
       main.story section aside:nth-child(3) {
         float: left;
         display: block;
@@ -468,7 +598,9 @@ main.story section {
         width: 100%;
         min-height: 0; }
         main.story section aside:nth-child(3):last-child {
-          margin-right: 0; } }
+          margin-right: 0; }
+        main.story section aside:nth-child(3) img {
+          max-width: 100%; } }
   main.story section article {
     float: left;
     display: block;
@@ -477,19 +609,35 @@ main.story section {
     margin-left: 17.05961%;
     text-align: left;
     padding: 0;
-    margin-top: -8.3em;
-    background-color: white; }
+    margin-top: -8.3em; }
     main.story section article:last-child {
       margin-right: 0; }
-    main.story section article p, main.story section article blockquote:nth-child(2) {
-      margin-top: 0; }
+    main.story section article p, main.story section article blockquote {
+      font-family: "Surveyor Text A", "Surveyor Text B";
+      font-weight: normal;
+      font-style: normal; }
+    main.story section article p:nth-child(1) {
+      margin-top: 10%; }
     main.story section article blockquote {
       padding: 1em; }
     main.story section article .spacer {
       font-size: 2em;
-      text-align: center;
       padding-bottom: .5em; }
-    @media screen and (min-width: 320px) and (max-width: 560px) {
+      @media screen and (min-width: 320px) and (max-width: 1680px) {
+        main.story section article .spacer {
+          float: left;
+          display: block;
+          margin-right: 38.19821%;
+          width: 100%;
+          text-align: center; }
+          main.story section article .spacer:last-child {
+            margin-right: 0; } }
+    main.story section article figure figcaption {
+      font-family: "Gotham SSm A", "Gotham SSm B";
+      font-weight: normal;
+      font-style: normal;
+      font-size: .6em; }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
       main.story section article {
         float: left;
         display: block;
@@ -499,6 +647,8 @@ main.story section {
         margin-top: 1em; }
         main.story section article:last-child {
           margin-right: 0; }
+        main.story section article p:nth-child(1) {
+          margin-top: 2em; }
         main.story section article blockquote {
           padding: 1em 0; } }
   main.story section aside:nth-child(5) {
@@ -509,9 +659,12 @@ main.story section {
     main.story section aside:nth-child(5):last-child {
       margin-right: 0; }
     main.story section aside:nth-child(5) p {
+      font-family: "Surveyor Text A", "Surveyor Text B";
+      font-weight: normal;
+      font-style: normal;
       font-size: 2em;
       line-height: 1.5em; }
-    @media screen and (min-width: 320px) and (max-width: 560px) {
+    @media screen and (min-width: 320px) and (max-width: 881px) {
       main.story section aside:nth-child(5) {
         float: left;
         display: block;
@@ -524,6 +677,85 @@ main.story section {
           clear: both; }
         main.story section aside:nth-child(5) .ad {
           margin-top: auto; } }
+
+section.ecommerce-story {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 2em; }
+  section.ecommerce-story:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 881px) {
+    section.ecommerce-story {
+      display: none; } }
+  section.ecommerce-story article.bottom {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    text-align: center;
+    background-color: #fffaf6;
+    min-height: 340px;
+    max-height: 340px;
+    padding: 20px; }
+    section.ecommerce-story article.bottom:last-child {
+      margin-right: 0; }
+    section.ecommerce-story article.bottom h1 {
+      margin-top: .5em;
+      font-size: 2.5em;
+      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-weight: 300;
+      font-style: normal; }
+    section.ecommerce-story article.bottom p:nth-child(-n+3) {
+      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-weight: 300;
+      font-style: normal; }
+    section.ecommerce-story article.bottom p:nth-child(4) {
+      text-transform: uppercase;
+      color: silver;
+      font-family: "Gotham SSm A", "Gotham SSm B";
+      font-weight: 300;
+      font-style: normal;
+      font-size: .7em; }
+  section.ecommerce-story aside.sub-category {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    height: 340px; }
+    section.ecommerce-story aside.sub-category:last-child {
+      margin-right: 0; }
+    section.ecommerce-story aside.sub-category article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      position: relative;
+      height: 100%; }
+      section.ecommerce-story aside.sub-category article:last-child {
+        margin-right: 0; }
+      section.ecommerce-story aside.sub-category article p:nth-child(2n) {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0px; }
+      section.ecommerce-story aside.sub-category article h2 {
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: bold;
+        font-style: normal;
+        font-size: 1em; }
+      section.ecommerce-story aside.sub-category article p {
+        font-family: "Surveyor Display A", "Surveyor Display B";
+        font-weight: 300;
+        font-style: normal; }
+      section.ecommerce-story aside.sub-category article p:nth-child(4) {
+        text-transform: uppercase;
+        color: silver;
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: 300;
+        font-style: normal;
+        font-size: .7em; }
 
 a {
   text-decoration: none; }
@@ -539,9 +771,6 @@ main {
   clear: both;
   overflow: hidden;
   border-top: 1px solid silver; }
-
-span.italics {
-  font-style: italic; }
 
 blockquote {
   padding-right: .2em;
@@ -560,6 +789,9 @@ figure.left {
 
 figure.right {
   float: right; }
+
+span {
+  font-style: italic; }
 
 body {
   margin: 0; }
@@ -580,7 +812,7 @@ body {
   font-family: "Surveyor Text A", "Surveyor Text B";
   font-weight: 700;
   font-style: normal; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     .slicknav_menu {
       display: block; } }
   .slicknav_menu .slicknav_brand {
@@ -616,8 +848,8 @@ body {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%; }
+  width: 91.4702%;
+  margin-left: 4.2649%; }
   .main-wrapper:last-child {
     margin-right: 0; }
   .main-wrapper header {
@@ -630,8 +862,8 @@ body {
     .main-wrapper header .logo {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%;
+      margin-right: 0.77372%;
+      width: 27.21898%;
       text-transform: uppercase;
       color: #b80405; }
       .main-wrapper header .logo:last-child {
@@ -641,18 +873,19 @@ body {
         font-weight: 700;
         font-style: normal;
         font-size: 2em; }
-    @media screen and (min-width: 320px) and (max-width: 560px) {
+    @media screen and (min-width: 320px) and (max-width: 881px) {
       .main-wrapper header {
         display: none; } }
     .main-wrapper header nav {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 74.41059%;
+      margin-right: 0.77372%;
+      width: 72.0073%;
       font-family: "Gotham SSm A", "Gotham SSm B";
       font-weight: 700;
       font-style: normal;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      float: right; }
       .main-wrapper header nav:last-child {
         margin-right: 0; }
       .main-wrapper header nav ul {
@@ -668,14 +901,7 @@ body {
         padding-right: 0;
         margin-top: 0;
         vertical-align: middle; }
-        .main-wrapper header nav li:nth-child(4) .search {
-          margin-top: -1em;
-          position: relative;
-          top: 0px;
-          padding: 5px 25px 5px 20px;
-          border: 1px solid #ccc;
-          background: white url(http://i.imgur.com/lFkqn.png) left center no-repeat; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     .main-wrapper {
       float: left;
       display: block;
@@ -700,14 +926,15 @@ nav {
   float: left;
   display: block;
   margin-right: 1.16509%;
-  width: 83.13915%;
-  margin-left: 8.43042%;
+  width: 91.56958%;
+  margin-left: 4.21521%;
+  margin-top: 2em;
   text-align: center;
   text-transform: uppercase;
   border-top: 1px solid black; }
   .subscribe:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     .subscribe {
       float: left;
       display: block;
@@ -749,16 +976,22 @@ footer {
     width: 23.23176%; }
     footer ul:last-child {
       margin-right: 0; }
-    footer ul li:nth-child(2n) {
+    footer ul li:nth-child(1n+2) {
+      font-family: "Surveyor Text A", "Surveyor Text B";
+      font-weight: normal;
+      font-style: normal;
       margin: .7em 0; }
   footer ul:nth-child(-n+3) li:nth-child(1) {
     text-transform: uppercase;
-    border-bottom: 1px solid white; }
+    border-bottom: 1px solid white;
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-weight: normal;
+    font-style: normal; }
   footer input[type="text"] {
     margin-top: .7em;
     width: 100%;
     padding: .5em; }
-  @media screen and (min-width: 320px) and (max-width: 560px) {
+  @media screen and (min-width: 320px) and (max-width: 881px) {
     footer {
       float: left;
       display: block;

@@ -6,12 +6,23 @@ main.search
 	
 	aside
 		+span-columns(2)
+		+font($gotham, normal, normal)
+		text-transform: uppercase
 
 		li:nth-child(2n)
 			padding: 1.2em 0
 
 		li:nth-child(1)
 			color: $red
+
+		li:nth-child(2)
+			font-weight: bold
+
+		h2
+			font-size: 1.4em
+
+		li
+			font-size: .6em
 
 	.search_bar
 		margin-bottom: 1.2em
@@ -31,30 +42,46 @@ main.search
 		text-align: center
 		+span-columns(10)
 
+		.sub-category-search
+			float: right
+			+span-columns(3)
+			+shift(9)
+
+		.inner-addon
+			margin-top: 0
+			border: none
+			border-bottom: 1px solid black
+			i.fa
+				transform: translate(6px, 0)!important
+				float: left
+				margin-top: 5px
+			input
+				min-width: 83%
+
 		article
-			background-color: white
-			margin-top: 1em
-			padding: 0
-			+span-columns(3 of 12)
-			+article_type
-			+omega(4n)
+		 +omega(5n)
+		 +sub-article
+		 margin-top: 2em
+		 img
+		 	border: 1px solid black		
 
 		.load-more
-			text-align: left
-			+span-columns(3 of 12)
 			clear: both
-			padding-top: 2em
-			margin-bottom: 2em
 
-	@include media(min-width 320px max-width 560px, 1)
+	@include media(min-width 320px max-width 881px, 1)
 		+span-columns(1)
 		padding: 3em 0 0 0
 
 		.filter
+			+font($gotham, bold, normal)
 			display: block
 			text-transform: uppercase
 			text-align: left
 			color: $red
+			font-size: 1.5em
+
+			p
+				margin: 0
 
 		aside
 			display: none
@@ -68,13 +95,42 @@ main.search
 			article
 				+span-columns(1)
 				+omega()
+				margin-top: 2em
+
+				p:nth-child(4)
+				padding-bottom: 1em
+
+			article:nth-child(n+5)
+				margin-top: 0	
 
 			.load-more
 				+span-columns(1)
-				text-align: center			
+				text-align: center
+
+		section.search
+			.inner-addon
+				display: none
+
+	@include media(min-width 1035px)
+		aside
+			+span-columns(2)
+			+font($gotham, normal, normal)
+			text-transform: uppercase
+
+			li:nth-child(2n)
+				padding: 1.2em 0
+
+			li:nth-child(1)
+				color: $red
+
+			li:nth-child(2)
+				font-weight: bold
+
+			h2
+				font-size: 1.5em
+
+			li
+				font-size: .7em
 
 
-
-	
-				
 			

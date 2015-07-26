@@ -11,7 +11,7 @@ body
 	border: none
 	display: none
 	+font($surveyor,700, normal)
-	+media(min-width 320px max-width 560px, 12)
+	+media(min-width 320px max-width 881px, 12)
 		display: block
 
 	.slicknav_brand
@@ -43,25 +43,26 @@ body
 			display: none
 
 .main-wrapper
-	+span-columns(10)
-	+shift(1)
+	+span-columns(11)
+	+shift(0.5)
 
 	header
 		+span-columns(12)
 		.logo 
-			+span-columns(3)
+			+span-columns(10 of 36)
 			text-transform: uppercase
 			color: $red
 			h1
 				+font($gotham, 700, normal)
 				font-size: 2em
-		+media(min-width 320px max-width 560px, 1)
+		+media(min-width 320px max-width 881px, 1)
 				display: none
 
 		nav
-			+span-columns(9)
+			+span-columns(26 of 36)
 			+font($gotham, 700, normal)
 			text-transform: uppercase
+			float: right
 			ul
 				text-align: right
 			li
@@ -77,14 +78,8 @@ body
 				input
 				margin-top: 0
 				vertical-align: middle
-				.search
-			    margin-top: -1em
-			    position:relative; top:0px
-			    padding: 5px 25px 5px 20px
-			    border:1px solid #ccc
-			    background:white url(http://i.imgur.com/lFkqn.png) left center no-repeat
 
-	+media(min-width 320px max-width 560px, 24)
+	+media(min-width 320px max-width 881px, 24)
 		+span-columns(22)
 		+shift(1)
 		border-top: 0

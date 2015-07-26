@@ -6,30 +6,35 @@ main.story
 
 		aside:nth-child(1)
 			+span-columns(2)
-			min-height: 439px
-
+			position: relative
+			height: 439px
+			img				
+				width: 100%
+				position: absolute
+				bottom: 0
+				float: right
 			figure
-				margin-top: 265px
-
-			+media(min-width 320px max-width 560px, 1)
+				
+			+media(min-width 320px max-width 881px, 1)
 				display: none
 
 		header
 			+span-columns(5)
 			+border-bottom(black)
 			padding-bottom: 1em
-			min-height: 439px
-			max-height: 439px
-			
-			+media(min-width 320px max-width 560px, 1)
+			height: 439px
+			position: relative			 
+			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
 				min-height: 0
 				max-height: none
 			h1
 				margin: 0
 				text-transform: uppercase
+				font-size: 2.7em
+				+font($surveyor-display,normal, normal)
 
-				+media(min-width 320px max-width 560px, 1)
+				+media(min-width 320px max-width 881px, 1)
 					display: none				
 
 			h4
@@ -37,18 +42,27 @@ main.story
 				padding: 1em 0
 				border-top: 1px solid black
 				border-bottom: 1px solid black
-				font-weight: normal
+				font-size: 1em
+				+font($surveyor-display,normal, normal)
 
-				+media(min-width 320px max-width 560px, 1)
+
+				+media(min-width 320px max-width 881px, 1)
 					display: none
 
 
+			.date-category
+				position: absolute
+				bottom: 0
+				p
+					+article-category
 
-			p:nth-child(n+4)
-				margin-top: 0
-				text-transform: uppercase
-		
-			+media(min-width 320px max-width 560px, 1)
+				p:nth-child(1)
+					margin-bottom: 0
+				p:nth-child(2)
+					margin-top: 0
+
+
+			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
 				
 				p:nth-child(n+4)
@@ -64,17 +78,20 @@ main.story
 		aside:nth-child(3)
 			+span-columns(5)
 			+omega()
-			min-height: 600px
+
 
 			figure
 				+span-columns(12)
 				+omega()
 				text-align: right
-				min-height: 439px
-				max-height: 600px
-
-
+			img
+				max-height: 439px
+				min-width: 440px
+				width: 100%
+				object-fit: cover
+			
 			figcaption
+				+font($gotham,normal,normal)
 				margin-top: 2em
 				padding-bottom: 2em
 				text-align: justify
@@ -82,9 +99,13 @@ main.story
 				font-size: .8em
 				+border-bottom(black)
 
-			+media(min-width 320px max-width 560px, 1)
+			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
 				min-height: 0
+
+				img
+					max-width: 100%;
+
 
 		article
 			+span-columns(5)
@@ -92,23 +113,38 @@ main.story
 			text-align: left
 			padding: 0
 			margin-top: -8.3em
-			background-color: white
+			
 
-			p, blockquote:nth-child(2)
-				margin-top: 0
+			p, blockquote			
+				+font($surveyor-text,normal,normal)
+
+			p:nth-child(1)
+				margin-top: 10%
 
 			blockquote
 				padding: 1em
 
+			p
 			.spacer
 				font-size: 2em
-				text-align: center
 				padding-bottom: .5em
+								
+				+media(min-width 320px max-width 1680px, 1)
+					+span-columns(1)
+					text-align: center 
 
-			+media(min-width 320px max-width 560px, 1)
+			figure
+				figcaption
+					+font($gotham,normal,normal)
+					font-size: .6em
+
+			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
 				+shift(0)
 				margin-top: 1em
+
+				p:nth-child(1)
+					margin-top: 2em
 
 				blockquote
 					padding: 1em 0
@@ -116,12 +152,14 @@ main.story
 		aside:nth-child(5)
 			+span-columns(5)
 			p
+				+font($surveyor-text,normal,normal)
 				font-size: 2em
 				line-height: 1.5em
 
+
 			.ad
 
-			+media(min-width 320px max-width 560px, 1)
+			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
 				
 				p
@@ -129,3 +167,42 @@ main.story
 					clear: both
 				.ad
 					margin-top: auto
+
+section.ecommerce-story
+	+span-columns(12)
+	margin-top: 1em
+	margin-bottom: 2em
+
+	+media(min-width 320px max-width 881px, 1)
+		display: none
+
+	article.bottom
+		+span-columns(6)
+		+article-main
+
+		p:nth-child(4)
+			+article-category
+		
+	aside.sub-category
+		+span-columns(6)
+		height: 340px
+
+		article
+			+span-columns(6 of 12)
+			position: relative
+			height: 100%
+			p:nth-child(2n)
+				position: absolute
+				bottom: 0
+				margin-bottom: 0px
+
+			h2
+				+font($gotham, bold, normal)
+				font-size: 1em
+
+			p
+				+font($surveyor-display,300,normal)
+
+			p:nth-child(4)
+				+article-category
+

@@ -1,12 +1,12 @@
 .subscribe
-	+span-columns(20 of 24)
-	+shift(2)
-
+	+span-columns(22 of 24)
+	+shift(1)
+	margin-top: 2em
 	text-align: center
 	text-transform: uppercase
 	border-top: 1px solid black
 
-	+media(min-width 320px max-width 560px, 1)
+	+media(min-width 320px max-width 881px, 1)
 		+span-columns(22 of 24)
 		+shift(1)
 		margin-top: 1em
@@ -30,20 +30,21 @@ footer
 	ul
 		+span-columns(3)
 
-		li:nth-child(2n)
+		li:nth-child(1n+2)
+			+font($surveyor-text,normal,normal)
 			margin: .7em 0
 
 	ul:nth-child(-n+3)
 		li:nth-child(1)
 			text-transform: uppercase
 			+border-bottom(white)
-
+			+font($gotham,normal,normal)
+	
 	input[type="text"]
 		margin-top: .7em
 		width: 100%
 		padding:.5em
-
-	+media(min-width 320px max-width 560px, 1)
+	+media(min-width 320px max-width 881px, 1)
 		+span-columns(1)
 		
 		.footer-wrapper

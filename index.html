@@ -3,7 +3,7 @@
 	<title>Test</title>
 	<link rel="stylesheet" type="text/css" href=" //cloud.typography.com/6579754/612228/css/fonts.css" />	
 	<link rel="stylesheet" href="css/main.css" />
-
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 	<script type='text/javascript' src="js/html5shiv.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -12,7 +12,6 @@
 	<script src="js/jquery.slicknav.min.js"></script>
 </head>
 	<body>
-		<div class="banner-wrapper"></div>
 		<div class="main-wrapper">
 			<header>
 				<div role="banner" class="logo">
@@ -32,17 +31,20 @@
 							Subscribe
 						</li>
 						<li>
-							<input type="text" class="search left rounded" value="" />
+							<div class="main-search inner-addon left-addon">
+						    <i class="fa fa-search"></i>
+						    <input type="text" class="form-control" />
+							</div>
 						</li>
 					</ul>
 				</nav>
 			</header>
-			<main role="main" class="main">
+			<main role="main" class="index">
 				<div class="main-image">
 					<img src="images/main-image.jpg" alt="">
 				</div>
 				<div class="article-wrapper">
-					<article>
+					<article class="main">
 						<h1>Tinkering with the Machinery of Death</h1>
 						<p>
 							An investigation into the conspicuous age of lethal injection in Texas and Oklahoma.
@@ -57,7 +59,7 @@
 				</div>	
 				
 				<div class="article-wrapper">
-					<article>
+					<article class="main">
 						<h1>This is something really amazing here</h1>
 						<p>
 							On the road with Oklahoma's best horse dentist.
@@ -71,7 +73,7 @@
 					</article>
 				</div>
 				<div class="article-wrapper">
-					<article>
+					<article class="main">
 						<h1>Trail</h1>
 						<p>
 							On Tahlequah and the difference between a place of memory and a place of dreams, a place longed for and the place of the present.
@@ -85,7 +87,7 @@
 					</article>
 				</div>
 				<div class="article-wrapper">
-					<article>
+					<article class="main">
 						<h1>The Opening of Oklahoma from the European Perspective</h1>
 						<p>
 							An investigation into the conspicuous age of lethal injection in Texas and Oklahoma. 
@@ -100,7 +102,7 @@
 				</div>			
 			</main>
 			<section class="sub-category">
-				<article>
+				<article class="main">
 					<img src="images/sub_category.jpg" alt="">
 					<h2>
 						Chicken Fat

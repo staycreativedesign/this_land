@@ -981,6 +981,10 @@ footer {
       font-weight: normal;
       font-style: normal;
       margin: .7em 0; }
+  footer ul:nth-child(3) li {
+    margin-top: .7em; }
+  footer ul:nth-child(3) img {
+    margin-right: 5px; }
   footer ul:nth-child(-n+3) li:nth-child(1) {
     text-transform: uppercase;
     border-bottom: 1px solid white;

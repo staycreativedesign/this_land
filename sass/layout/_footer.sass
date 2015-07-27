@@ -30,9 +30,18 @@ footer
 	ul
 		+span-columns(3)
 
+			display: inline
+
 		li:nth-child(1n+2)
 			+font($surveyor-text,normal,normal)
 			margin: .7em 0
+
+	ul:nth-child(3)
+		li
+			margin-top: .7em
+
+		img
+			margin-right: 5px	
 
 	ul:nth-child(-n+3)
 		li:nth-child(1)

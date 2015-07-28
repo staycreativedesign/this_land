@@ -19,7 +19,7 @@ footer
 
 
 	.footer-wrapper
-		+span-columns(10)
+		+span-columns(22 of 24)
 		+shift(1)
 		overflow: hidden
 		border-top: 1px solid white
@@ -29,7 +29,6 @@ footer
 		padding-bottom: 2em
 	ul
 		+span-columns(3)
-
 			display: inline
 
 		li:nth-child(1n+2)
@@ -41,13 +40,24 @@ footer
 			margin-top: .7em
 
 		img
-			margin-right: 5px	
+			margin-right: 5px
+			height: 21px
 
 	ul:nth-child(-n+3)
+		
+		li
+			font-size: .7em
+
 		li:nth-child(1)
 			text-transform: uppercase
 			+border-bottom(white)
 			+font($gotham,normal,normal)
+			font-size: .7em
+
+	ul:nth-child(4)
+		li:nth-child(1)
+			+font($surveyor-text,normal,normal)
+			font-size: .8em
 	
 	input[type="text"]
 		margin-top: .7em

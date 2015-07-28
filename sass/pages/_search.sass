@@ -1,6 +1,4 @@
 main.search  
-	padding-top: 3em
-
 	.filter
 		display: none
 	
@@ -26,7 +24,7 @@ main.search
 
 	.search_bar
 		margin-bottom: 1.2em
-		@include direction-context(right-to-left)
+		+direction-context(right-to-left)
 			+span-columns(3 of 12)
 		
 		input
@@ -59,18 +57,22 @@ main.search
 				min-width: 83%
 
 		article
-		 +omega(5n)
-		 +sub-article
-		 margin-top: 2em
-		 img
-		 	border: 1px solid black		
+		 	+omega(5n)
+		 	+sub-article
+		 	margin-top: 2em
+		 	position: relative
+		 	height: 265px
+		 	font-size: .65em
+
+		 	p
+		 		padding-top: 1em
 
 		.load-more
 			clear: both
 
-	@include media(min-width 320px max-width 881px, 1)
+	+media(min-width 320px max-width 881px, 1)
 		+span-columns(1)
-		padding: 3em 0 0 0
+		padding: 1em 0
 
 		.filter
 			+font($gotham, bold, normal)
@@ -78,7 +80,10 @@ main.search
 			text-transform: uppercase
 			text-align: left
 			color: $red
-			font-size: 1.5em
+			font-size: 1em
+
+			i
+				color: $nav-brown
 
 			p
 				margin: 0
@@ -96,9 +101,10 @@ main.search
 				+span-columns(1)
 				+omega()
 				margin-top: 2em
+				height: auto
 
 				p:nth-child(4)
-				padding-bottom: 1em
+					padding-bottom: 1em
 
 			article:nth-child(n+5)
 				margin-top: 0	
@@ -111,7 +117,7 @@ main.search
 			.inner-addon
 				display: none
 
-	@include media(min-width 1035px)
+	+media(min-width 1035px)
 		aside
 			+span-columns(2)
 			+font($gotham, normal, normal)
@@ -131,6 +137,4 @@ main.search
 
 			li
 				font-size: .7em
-
-
 			

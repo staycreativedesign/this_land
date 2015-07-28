@@ -11,8 +11,7 @@
 
 .article-wrapper
 	overflow: hidden
-	min-height: 370px
-	max-height: 370px
+	height: 370px
 	border-bottom: 1px solid $article-border
 	display: flex!important
 	align-items: center
@@ -34,6 +33,12 @@ main.index
 
 	article.main
 		+article-main
+
+	p:nth-child(2)
+		font-size: .8em
+
+	p:nth-child(3)
+		font-size:	.8em
 		
 	p:nth-child(4)
 		+font(gotham,normal,normal)
@@ -70,14 +75,15 @@ section.sub-category
 
 		h2
 			+font($gotham, bold, normal)
-			font-size: 1em
+			font-size: .7em
 
 		p
 			+font($surveyor-display,300,normal)
+			font-size: .7em
 
 		p:nth-child(4)
-			+font($gotham, 300, normal)
-			font-size: .7em
+			+article-category
+			font-size: .5em
 
 	@include media(min-width 320px max-width 881px, 1)
 		+span-columns(1)
@@ -97,7 +103,7 @@ section.sub-category
 
 			p:nth-child(2n)
 				margin-top: 0
-				font-size: .7em
+				font-size: .5em
 
 
 
@@ -110,7 +116,7 @@ section.sub-category
 		padding: 1em
 		margin-bottom: 2em
 		text-align: center
-		font-weight: bold
+		font-size: .7em
 		+font($gotham, bold, normal)
 		+span-columns(3)
 

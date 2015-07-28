@@ -475,7 +475,7 @@ main.story section {
     margin-right: 2.35765%;
     width: 14.70196%;
     position: relative;
-    height: 439px; }
+    height: 380px; }
     main.story section aside:nth-child(1):last-child {
       margin-right: 0; }
     main.story section aside:nth-child(1) img {
@@ -489,11 +489,11 @@ main.story section {
   main.story section header {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 40.29137%;
+    margin-right: 0.87128%;
+    width: 46.41213%;
     border-bottom: 1px solid black;
     padding-bottom: 1em;
-    height: 439px;
+    height: 380px;
     position: relative; }
     main.story section header:last-child {
       margin-right: 0; }
@@ -561,8 +561,8 @@ main.story section {
   main.story section aside:nth-child(3) {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 40.29137%;
+    margin-right: 0.87128%;
+    width: 33.80322%;
     margin-right: 0; }
     main.story section aside:nth-child(3):last-child {
       margin-right: 0; }
@@ -570,13 +570,13 @@ main.story section {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 100%;
+      width: 108.5298%;
       margin-right: 0;
       text-align: right; }
       main.story section aside:nth-child(3) figure:last-child {
         margin-right: 0; }
     main.story section aside:nth-child(3) img {
-      max-height: 439px;
+      max-height: 380px;
       min-width: 440px;
       width: 100%;
       object-fit: cover; }
@@ -869,6 +869,7 @@ body {
       .main-wrapper header .logo:last-child {
         margin-right: 0; }
       .main-wrapper header .logo h1 {
+        margin-bottom: 0;
         font-family: "Gotham SSm A", "Gotham SSm B";
         font-weight: 700;
         font-style: normal;
@@ -892,7 +893,7 @@ body {
         text-align: right; }
       .main-wrapper header nav li {
         margin-top: .67em;
-        font-size: .8em;
+        font-size: 10px;
         display: inline-block;
         padding: 10px 50px 5px 15px;
         border-left: 1px solid #6c4b35;

@@ -24,10 +24,13 @@ main.story
 			padding-bottom: 1em
 			height: 380px
 			position: relative			 
+			
 			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
-				min-height: 0
-				max-height: none
+				padding-bottom: 0
+				height: auto
+				margin-bottom: 10px
+
 			h1
 				margin: 0
 				text-transform: uppercase
@@ -35,7 +38,7 @@ main.story
 				+font($surveyor-display,normal, normal)
 
 				+media(min-width 320px max-width 881px, 1)
-					display: none				
+					font-size: 2em
 
 			h4
 				margin-top: 0
@@ -44,11 +47,6 @@ main.story
 				border-bottom: 1px solid black
 				font-size: 1em
 				+font($surveyor-display,normal, normal)
-
-
-				+media(min-width 320px max-width 881px, 1)
-					display: none
-
 
 			.date-category
 				position: absolute
@@ -61,9 +59,14 @@ main.story
 				p:nth-child(2)
 					margin-top: 0
 
+				+media(min-width 320px max-width 881px, 1)
+					display: none
 
 			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
+				
+				.date-category
+					display: none
 				
 				p:nth-child(n+4)
 					display: none
@@ -81,98 +84,135 @@ main.story
 
 
 			figure
-				+span-columns(13)
-				+omega()
+				+span-columns(12.5)
 				text-align: right
+
 			img
 				max-height: 380px
 				min-width: 440px
 				width: 100%
 				object-fit: cover
 			
+			+media(min-width 320px max-width 881px, 1)
+				+span-columns(1)
+
+				figure
+					+span-columns(1)
+				
+				img
+					max-height: none
+					min-width: 0
+
 			figcaption
 				+font($gotham,normal,normal)
 				margin-top: 2em
 				padding-bottom: 2em
 				text-align: justify
 				color: gray
-				font-size: .8em
+				font-size: .5em
 				+border-bottom(black)
-
-			+media(min-width 320px max-width 881px, 1)
-				+span-columns(1)
-				min-height: 0
-
-				img
-					max-width: 100%;
 
 
 		article
-			+span-columns(5)
+			+span-columns(10)
 			+shift(2)
 			text-align: left
 			padding: 0
-			margin-top: -8.3em
-
-			
-
-			p, blockquote			
-				+font($surveyor-text,normal,normal)
-
-			p:nth-child(1)
-				margin-top: 10%
-
-			blockquote
-				padding: 1em
-
-			p
-			.spacer
-				font-size: 2em
-				padding-bottom: .5em
-								
-				+media(min-width 320px max-width 1680px, 1)
-					+span-columns(1)
-					text-align: center 
-
-			figure
-				figcaption
-					+font($gotham,normal,normal)
-					font-size: .6em
+			margin-top: -8.3em	
 
 			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
 				+shift(0)
-				margin-top: 1em
+				margin-top: 0
 
-				p:nth-child(1)
-					margin-top: 2em
 
-				blockquote
-					padding: 1em 0
+			p, blockquote
+				+font($surveyor-text,normal,normal)
+				overflow: hidden
 
-		aside:nth-child(5)
-			+span-columns(5)
 			p
+				+span-columns(18 of 32)
+
+				+media(min-width 320px max-width 881px, 1)
+					+span-columns(1)
+
+			blockquote
+			 +span-columns(17 of 32)
+			 +media(min-width 320px max-width 881px, 1)
+			 	+span-columns(1)
+
+
+			.float-right
+				+span-columns(14 of 32)
+				float: right!important
+				margin-right: 0
+				clear: both
+				+media(min-width 320px max-width 881px, 1)
+					+span-columns(1)
+					float: none!important
+
+			p:nth-child(1)
+				margin-top: 10%
+
+				+media(min-width 320px max-width 881px, 1)
+					+span-columns(1)
+					margin-top: 1em
+			
+			.spacer
+				+span-columns(18 of 32)		
+				font-size: 1.4em
+				padding-bottom: .5em
+				text-align: center
+
+				+media(min-width 320px max-width 881px, 1)
+					+span-columns(1)
+
+
+			figure
+				+span-columns(18 of 32)
+				+media(min-width 320px max-width 881px, 1)
+					+span-columns(1)
+
+				&.full-image
+					+span-columns(32 of 32)
+					+media(min-width 320px max-width 881px, 1)
+						+span-columns(1)
+
+				figcaption
+					+font($gotham,normal,normal)
+					font-size: .5em	
+
+			p.float-none
+				overflow: hidden
+				float: initial!important
+				width: 50%
+
+				+media(min-width 320px max-width 881px, 1)
+					+span-columns(1)
+
+			.quote-text
 				+font($surveyor-text,normal,normal)
 				font-size: 2em
 				line-height: 1.5em
 
+				+media(min-width 320px max-width 881px, 1)
+					+span-columns(1)
 
-			.ad
 
-			+media(min-width 320px max-width 881px, 1)
-				+span-columns(1)
-				
-				p
-					text-align: center
-					clear: both
-				.ad
-					margin-top: auto
 
+			.quote
+				+span-columns(28 of 32)
+				text-align: center
+
+				+media(min-width 320px max-width 881px, 1)
+					+span-columns(1)
+			
 section.ecommerce-story
 	+span-columns(12)
 	margin-top: 1em
 	margin-bottom: 2em
+	position: relative
+	height: 340px
 
 	+media(min-width 320px max-width 881px, 1)
 		display: none
@@ -186,24 +226,24 @@ section.ecommerce-story
 		
 	aside.sub-category
 		+span-columns(6)
-		height: 340px
+		omega()
 
 		article
-			+span-columns(6 of 12)
-			position: relative
-			height: 100%
-			p:nth-child(2n)
-				position: absolute
-				bottom: 0
-				margin-bottom: 0px
+			+span-columns(6)
+			+article_type
+			height: 340px
 
 			h2
 				+font($gotham, bold, normal)
-				font-size: 1em
+				font-size: .7em
+				margin-top: 1.8em
+
 
 			p
 				+font($surveyor-display,300,normal)
+				font-size: .7em
 
-			p:nth-child(4)
-				+article-category
+			p:nth-child(2n)
+				position: absolute
+				bottom: 0
 

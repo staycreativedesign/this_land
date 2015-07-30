@@ -1,12 +1,25 @@
 body
 	margin: 0
 
-
 .banner-wrapper
 	+span-columns(12)
 	overflow: hidden
-	
+	text-align: center
+	background-color: $red
+	color: white
+	+font($surveyor,normal, normal)
+	font-size: .9em
+
+	p
+		margin: .5em 0
+
+	+media(min-width 320px max-width 881px, 1)
+		font-size: .7em
+		position: fixed
+		top: 0
+
 .slicknav_menu
+	margin-top: 1em
 	background-color: white!important
 	border: none
 	display: none

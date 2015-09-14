@@ -26,23 +26,25 @@
 		max-height: none
 		margin-bottom: 1em
 		padding-bottom: 1em
-	
-main.index 
+
+main.index
 	padding-top: 1em
 	+span-columns(12)
 
 	article.main
 		+article-main
 		position: relative
+		width: 100%
 
 	p:nth-child(2)
-		font-size: .8em
+		font-size: 1em
+		padding: 0 20%
 
 	p:nth-child(3)
 		margin-top: 2em
-		font-size:	.8em
-		
-	p:nth-child(4)
+		font-size:	1em
+
+	p:nth-child(4), .post-categories li a
 		+font(gotham,normal,normal)
 		position: absolute
 		bottom: 2em
@@ -63,7 +65,8 @@ main.index
 
 			article.main
 				min-height: 0
-				
+				background-color: red
+
 				h1
 					font-size: 2em
 					margin-top: 0
@@ -73,7 +76,7 @@ main.index
 section.sub-category
 	clear: both
 	padding-top: 1.5em
-	
+
 
 	article
 		+span-columns(3)
@@ -84,11 +87,12 @@ section.sub-category
 
 		h2
 			+font($gotham, bold, normal)
-			font-size: .7em
+			font-size: 1em
 
 		p
-			+font($surveyor-display,300,normal)
-			font-size: .7em
+			+font($surveyor-text,300,normal)
+			font-size: 1em
+			line-height: 1.4em
 
 		p:nth-child(4)
 			+article-category
@@ -99,7 +103,7 @@ section.sub-category
 		height: auto
 		padding-top: 0
 		padding-bottom: 2em
-		
+
 		article
 			text-align: center
 			+span-columns(1)
@@ -135,4 +139,4 @@ section.sub-category
 		article
 			+span-columns(1)
 			+omega()
-			
+

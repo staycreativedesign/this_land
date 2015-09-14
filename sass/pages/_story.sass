@@ -8,13 +8,13 @@ main.story
 			+span-columns(2)
 			position: relative
 			height: 380px
-			img				
+			img
 				width: 100%
 				position: absolute
 				bottom: 0
 				float: right
 			figure
-				
+
 			+media(min-width 320px max-width 881px, 1)
 				display: none
 
@@ -23,8 +23,8 @@ main.story
 			+border-bottom(black)
 			padding-bottom: 1em
 			height: 380px
-			position: relative			 
-			
+			position: relative
+
 			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
 				padding-bottom: 0
@@ -64,10 +64,10 @@ main.story
 
 			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
-				
+
 				.date-category
 					display: none
-				
+
 				p:nth-child(n+4)
 					display: none
 
@@ -92,13 +92,13 @@ main.story
 				min-width: 440px
 				width: 100%
 				object-fit: cover
-			
+
 			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
 
 				figure
 					+span-columns(1)
-				
+
 				img
 					max-height: none
 					min-width: 0
@@ -118,7 +118,7 @@ main.story
 			+shift(2)
 			text-align: left
 			padding: 0
-			margin-top: -8.3em	
+			margin-top: -8.3em
 
 			+media(min-width 320px max-width 881px, 1)
 				+span-columns(1)
@@ -147,9 +147,11 @@ main.story
 				float: right!important
 				margin-right: 0
 				clear: both
+				padding-left: 20px
 				+media(min-width 320px max-width 881px, 1)
 					+span-columns(1)
 					float: none!important
+					padding-left: 0
 
 			p:nth-child(1)
 				margin-top: 10%
@@ -157,9 +159,9 @@ main.story
 				+media(min-width 320px max-width 881px, 1)
 					+span-columns(1)
 					margin-top: 1em
-			
+
 			.spacer
-				+span-columns(18 of 32)		
+				+span-columns(18 of 32)
 				font-size: 1.4em
 				padding-bottom: .5em
 				text-align: center
@@ -180,7 +182,7 @@ main.story
 
 				figcaption
 					+font($gotham,normal,normal)
-					font-size: .5em	
+					font-size: .5em
 
 			p.float-none
 				overflow: hidden
@@ -201,12 +203,12 @@ main.story
 
 
 			.quote
-				+span-columns(28 of 32)
+				+span-columns(32 of 32)
 				text-align: center
 
 				+media(min-width 320px max-width 881px, 1)
 					+span-columns(1)
-			
+
 section.ecommerce-story
 	+span-columns(12)
 	margin-top: 1em
@@ -223,7 +225,7 @@ section.ecommerce-story
 
 		p:nth-child(4)
 			+article-category
-		
+
 	aside.sub-category
 		+span-columns(6)
 		omega()

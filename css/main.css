@@ -132,11 +132,12 @@ main.index {
     margin-right: 0; }
   main.index article.main {
     text-align: center;
-    background-color: #fffaf6;
+    background-color: #fff9f5;
     min-height: 340px;
     max-height: 340px;
     padding: 20px;
-    position: relative; }
+    position: relative;
+    width: 100%; }
     main.index article.main h1 {
       margin-top: .5em;
       font-size: 2.5em;
@@ -148,11 +149,12 @@ main.index {
       font-weight: 300;
       font-style: normal; }
   main.index p:nth-child(2) {
-    font-size: .8em; }
+    font-size: 1em;
+    padding: 0 20%; }
   main.index p:nth-child(3) {
     margin-top: 2em;
-    font-size: .8em; }
-  main.index p:nth-child(4) {
+    font-size: 1em; }
+  main.index p:nth-child(4), main.index .post-categories li a {
     font-family: gotham;
     font-weight: normal;
     font-style: normal;
@@ -180,7 +182,8 @@ main.index {
       main.index main {
         padding-top: 0; }
         main.index main article.main {
-          min-height: 0; }
+          min-height: 0;
+          background-color: red; }
           main.index main article.main h1 {
             font-size: 2em;
             margin-top: 0; } }
@@ -214,12 +217,13 @@ section.sub-category {
       font-family: "Gotham SSm A", "Gotham SSm B";
       font-weight: bold;
       font-style: normal;
-      font-size: .7em; }
+      font-size: 1em; }
     section.sub-category article p {
-      font-family: "Surveyor Display A", "Surveyor Display B";
+      font-family: "Surveyor Text A", "Surveyor Text B";
       font-weight: 300;
       font-style: normal;
-      font-size: .7em; }
+      font-size: 1em;
+      line-height: 1.4em; }
     section.sub-category article p:nth-child(4) {
       text-transform: uppercase;
       color: silver;
@@ -713,7 +717,8 @@ main.story section {
       width: 43.2599%;
       float: right !important;
       margin-right: 0;
-      clear: both; }
+      clear: both;
+      padding-left: 20px; }
       main.story section article .float-right:last-child {
         margin-right: 0; }
       @media screen and (min-width: 320px) and (max-width: 881px) {
@@ -722,7 +727,8 @@ main.story section {
           display: block;
           margin-right: 38.19821%;
           width: 100%;
-          float: none !important; }
+          float: none !important;
+          padding-left: 0; }
           main.story section article .float-right:last-child {
             margin-right: 0; } }
     main.story section article p:nth-child(1) {
@@ -819,7 +825,7 @@ main.story section {
       float: left;
       display: block;
       margin-right: 0.87128%;
-      width: 87.39109%;
+      width: 100%;
       text-align: center; }
       main.story section article .quote:last-child {
         margin-right: 0; }
@@ -852,7 +858,7 @@ section.ecommerce-story {
     margin-right: 2.35765%;
     width: 48.82117%;
     text-align: center;
-    background-color: #fffaf6;
+    background-color: #fff9f5;
     min-height: 340px;
     max-height: 340px;
     padding: 20px; }
@@ -918,7 +924,8 @@ section.ecommerce-story {
         bottom: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 ul {
   list-style-type: none;
@@ -975,8 +982,8 @@ body {
     margin: .5em 0; }
   @media screen and (min-width: 320px) and (max-width: 881px) {
     .banner-wrapper {
-      font-size: .7em;
-      position: fixed;
+      font-size: .8em;
+      position: absolute;
       top: 0; } }
 
 .slicknav_menu {
@@ -1022,13 +1029,9 @@ body {
     display: none; }
 
 .main-wrapper {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%;
-  margin-left: 4.2649%; }
-  .main-wrapper:last-child {
-    margin-right: 0; }
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 20px; }
   .main-wrapper header {
     float: left;
     display: block;
@@ -1040,7 +1043,7 @@ body {
       float: left;
       display: block;
       margin-right: 0.77372%;
-      width: 27.21898%;
+      width: 21.62044%;
       text-transform: uppercase;
       color: #b80405; }
       .main-wrapper header .logo:last-child {
@@ -1070,16 +1073,24 @@ body {
         text-align: right; }
       .main-wrapper header nav li {
         margin-top: .67em;
-        font-size: 10px;
+        font-size: 13px;
         display: inline-block;
-        padding: 10px 50px 5px 15px;
+        padding: 10px 88px 5px 26px;
         border-left: 1px solid #6c4b35;
         height: 35px;
-        letter-spacing: 2px; }
+        letter-spacing: 2px;
+        width: 17%; }
+      .main-wrapper header nav li:nth-child(3) {
+        margin-right: 15px; }
       .main-wrapper header nav li:nth-child(4) {
         padding-right: 0;
+        width: 31%;
         margin-top: 0;
         vertical-align: middle; }
+        .main-wrapper header nav li:nth-child(4) input {
+          width: 74%; }
+      .main-wrapper header nav .inner-addon i {
+        transform: translate(0px, 0); }
   @media screen and (min-width: 320px) and (max-width: 881px) {
     .main-wrapper {
       float: left;

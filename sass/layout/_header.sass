@@ -14,8 +14,8 @@ body
 		margin: .5em 0
 
 	+media(min-width 320px max-width 881px, 1)
-		font-size: .7em
-		position: fixed
+		font-size: .8em
+		position: absolute
 		top: 0
 
 .slicknav_menu
@@ -59,13 +59,14 @@ body
 			display: none
 
 .main-wrapper
-	+span-columns(11)
-	+shift(0.5)
+	max-width: 1220px
+	margin: 0 auto;
+	padding: 0 20px
 
 	header
 		+span-columns(12)
-		.logo 
-			+span-columns(10 of 36)
+		.logo
+			+span-columns(8 of 36)
 			text-transform: uppercase
 			color: $red
 			h1
@@ -84,23 +85,35 @@ body
 				text-align: right
 			li
 				margin-top: .67em
-				font-size: 10px 
+				font-size: 13px
 				display: inline-block
-				padding: 10px 50px 5px 15px
+				padding: 10px 88px 5px 26px
 				border-left: 1px solid $nav-brown
 				height: 35px
 				letter-spacing: 2px
+				width: 17%
+
+			li:nth-child(3)
+				margin-right: 15px
 			li:nth-child(4)
 				padding-right: 0
-				input
+				width: 31%
 				margin-top: 0
 				vertical-align: middle
+
+				input
+					width: 74%
+
+			.inner-addon i
+				transform: translate(0px, 0)
+
+
 
 	+media(min-width 320px max-width 881px, 24)
 		+span-columns(22)
 		+shift(1)
 		border-top: 0
-		
+
 		nav, .logo
 			display: none
 
@@ -111,3 +124,4 @@ body
 
 nav
 	color: $nav-brown
+

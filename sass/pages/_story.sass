@@ -19,7 +19,7 @@ main.story
 				display: none
 
 		header
-			+span-columns(15 of 32)
+			+span-columns(5.3 of 12)
 			+border-bottom(black)
 			padding-bottom: 1em
 			height: 380px
@@ -51,8 +51,11 @@ main.story
 			.date-category
 				position: absolute
 				bottom: 0
-				p
+				+article-category
+				ul.post-categories
+					margin-top: 0
 					+article-category
+					font-size: 1em
 
 				p:nth-child(1)
 					margin-bottom: 0
@@ -79,7 +82,7 @@ main.story
 
 
 		aside:nth-child(3)
-			+span-columns(11 of 32)
+			+span-columns(13.7 of 36)
 			+omega()
 
 
@@ -109,12 +112,12 @@ main.story
 				padding-bottom: 2em
 				text-align: justify
 				color: gray
-				font-size: .5em
+				font-size: .7em
 				+border-bottom(black)
 
 
 		article
-			+span-columns(10)
+			+span-columns(9)
 			+shift(2)
 			text-align: left
 			padding: 0
@@ -129,6 +132,11 @@ main.story
 			p, blockquote
 				+font($surveyor-text,normal,normal)
 				overflow: hidden
+				font-size: 22px
+				color: rgba(0, 0, 0, 0.8)
+				letter-spacing: .01rem
+				line-height: 1.5;
+
 
 			p
 				+span-columns(18 of 32)
@@ -137,9 +145,10 @@ main.story
 					+span-columns(1)
 
 			blockquote
-			 +span-columns(17 of 32)
-			 +media(min-width 320px max-width 881px, 1)
-			 	+span-columns(1)
+				+font($surveyor-display,normal,normal)
+				+span-columns(17 of 32)
+				+media(min-width 320px max-width 881px, 1)
+					+span-columns(1)
 
 
 			.float-right
@@ -182,7 +191,7 @@ main.story
 
 				figcaption
 					+font($gotham,normal,normal)
-					font-size: .5em
+					font-size: .8em
 
 			p.float-none
 				overflow: hidden
@@ -223,8 +232,12 @@ section.ecommerce-story
 		+span-columns(6)
 		+article-main
 
-		p:nth-child(4)
-			+article-category
+		p:nth-child(2)
+			line-height: 1.4em
+		ul.post-categories
+							margin-top: 0
+							+article-category
+							font-size: .7em!important
 
 	aside.sub-category
 		+span-columns(6)
@@ -240,12 +253,13 @@ section.ecommerce-story
 				font-size: .7em
 				margin-top: 1.8em
 
-
 			p
 				+font($surveyor-display,300,normal)
 				font-size: .7em
 
-			p:nth-child(2n)
+			ul.post-categories
+				margin-top: 0
+				+article-category
+				font-size: .7em!important
 				position: absolute
 				bottom: 0
-

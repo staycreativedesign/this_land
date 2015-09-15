@@ -1,12 +1,12 @@
 <section class="ecommerce">
 	<?php
 
-	   $args = array('tag=ecommerce_item');
-	   $category_posts = new WP_Query($args);
+	   $args = array('cat=2');
+	   $ecommerce_item = new WP_Query('tag=ecommerce_item_main&showposts=4');
 
-	   if($category_posts->have_posts()) :
-	      while($category_posts->have_posts()) :
-	         $category_posts->the_post();
+	   if($ecommerce_item->have_posts()) :
+	      while($ecommerce_item->have_posts()) :
+	         $ecommerce_item->the_post();
 	?>
 					 <article>
 		         <div class='post-content'><?php the_content() ?></div>

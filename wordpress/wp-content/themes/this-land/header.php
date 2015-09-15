@@ -37,7 +37,7 @@
 											border: none;
 											background-color: white;
 									"><i class="fa fa-search"></i></button>
-									<input type="text" class="form-control" value="<?php echo wp_specialchars($b, 1); ?>" name="s" id="s" />
+									<input type="text" class="form-control" value="<?php echo esc_html($s, 1); ?>" name="s" id="s" />
 								</form>
 							</div>
 						</li>

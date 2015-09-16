@@ -598,13 +598,7 @@ main.story section {
     main.story section aside:nth-child(3):last-child {
       margin-right: 0; }
     main.story section aside:nth-child(3) figure {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 104.2649%;
       text-align: right; }
-      main.story section aside:nth-child(3) figure:last-child {
-        margin-right: 0; }
     main.story section aside:nth-child(3) img {
       max-height: 380px;
       min-width: 440px;
@@ -723,7 +717,7 @@ main.story section {
           main.story section article .float-right:last-child {
             margin-right: 0; } }
     main.story section article p:nth-child(1) {
-      margin-top: 10%; }
+      margin-top: 7.5%; }
       @media screen and (min-width: 320px) and (max-width: 881px) {
         main.story section article p:nth-child(1) {
           float: left;

@@ -4,6 +4,7 @@
 	$author_id=$post->post_author;
 ?>
 	<main role="main" class="story">
+			<?php echo get_post_meta( $post->ID, 'large-image-caption', true );?>
 			<section>
 					<aside>
 						<figure>

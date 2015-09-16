@@ -133,6 +133,8 @@ function large_image_caption()
 
 add_action("add_meta_boxes", "large_image_caption");
 
+
+
 function save_large_image_caption($post_id, $post, $update)
 {
     if (!isset($_POST["caption-metabox"]) || !wp_verify_nonce($_POST["caption-metabox"], basename(__FILE__)))
@@ -208,4 +210,76 @@ function truncate_search_excerpt(){
 	$the_str = substr($excerpt, 0, 100);
 return $the_str;
 }
+
+
+function select_first_story($object)
+{
+    wp_nonce_field(basename(__FILE__), "select_first_save_meta");
+
+    ?>
+        <div>
+            <p>Please select the first story to appear with this post.</p>
+            <select name="first-select-dropdown">
+                <?php
+                    $args = array(
+                        'numberposts' => 15,
+                        'category_name' => 'POETRY, NON-FICTION, FILM, AUDIO'
+                    );
+                    $posts = get_posts($args);
+
+                    foreach($posts as $post)
+                    {
+                    ?>
+                    <option value"<?php echo $post->ID; ?>"><?php echo $post->post_title; ?></option>
+                    <?php
+                    }
+                ?>
+                wp_die(var_dump($post));
+            </select>
+        </div>
+    <?php
+}
+
+
+function select_first_story_meta_box()
+{
+    add_meta_box("first-story-save", "First Story Selection", "select_first_story", "post", "normal", "core", null);
+}
+
+add_action("add_meta_boxes", "select_first_story_meta_box");
+
+function save_first_story($post_id, $post, $update)
+{
+    if (!isset($_POST["select_first_save_meta"]) || !wp_verify_nonce($_POST["select_first_save_meta"], basename(__FILE__)))
+        return $post_id;
+
+    if(!current_user_can("edit_post", $post_id))
+        return $post_id;
+
+    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
+        return $post_id;
+
+    $slug = "post";
+    if($slug != $post->post_type)
+        return $post_id;
+
+    $meta_box_dropdown_value = "";
+
+    if(isset($_POST["first-story-save"]))
+    {
+        $meta_box_dropdown_value = $_POST["first-story-save"];
+
+    }
+    update_post_meta($post_id, "first-story-save", $meta_box_dropdown_value);
+}
+
+add_action("save_post", "save_first_story", 10, 3);
+
+
+
+
+
+
+
+
 ?>

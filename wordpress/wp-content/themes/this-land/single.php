@@ -58,9 +58,4 @@
 		</aside>
 	</section>
 	</div>
-	<div class="subscribe">
-		<p>
-			<a href="<?php echo site_url('/subscriptions'); ?>">Subscribe yo!</a>
-		</p>
-	</div>
 <?php get_footer(); ?>

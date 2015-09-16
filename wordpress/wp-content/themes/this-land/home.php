@@ -48,9 +48,4 @@
 		</section>
 	</main>
 	</div>
-	<div class="subscribe">
-			<p>
-				Subscribe yo!
-			</p>
-		</div>
 <?php get_footer(); ?>

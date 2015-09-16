@@ -1,3 +1,8 @@
+<div class="subscribe">
+		<p>
+			<a href="<?php echo site_url('/subscriptions'); ?>">Subscribe yo!</a>
+		</p>
+	</div>
 		<footer>
 			<div class="footer-wrapper">
 				<ul>

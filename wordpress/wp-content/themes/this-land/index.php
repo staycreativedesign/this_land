@@ -29,11 +29,6 @@
 			<?php get_template_part('content', 'sub-category'); ?>
 			<?php get_template_part('content', 'ecommerce'); ?>
 		</div>
-		<div class="subscribe">
-		<p>
-			<a href="<?php echo site_url('/subscriptions'); ?>">Subscribe yo!</a>
-		</p>
-	</div>
 	</div>
 
 	<?php get_footer(); ?>

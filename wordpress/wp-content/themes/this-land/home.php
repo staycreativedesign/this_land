@@ -9,12 +9,18 @@
 			<?php get_template_part('content', 'aside'); ?>
 			<?php get_template_part('content', 'categories'); ?>
 		</aside>
-		<form method="get" id="searchformtwo" action="<?php bloginfo('home'); ?>/">
+		<?php
+			search_form(array(
+				'placeholder' => 'Search Archives',
+				'container'		=> 'content-searchbox',
+			));
+		?>
+		<!-- <form method="get" id="" action="<?php bloginfo('home'); ?>/">
 			<div class="content-searchbox">
-			  <button type"submit"  class="button-submit" style="border: none;background-color: white;"><i class="fa fa-search"></i></button>
-			  <input type="text" class="form-control" value="<?php echo esc_html($s, 1); ?>" name="s" id="s" />
+			  <button type"submit"  class="button-submit"><i class="fa fa-search"></i></button>
+			  <input type="text" class="form-control" value="<?php echo esc_attr(get_search_query()); ?>" name="s" id="s" />
 			</div>
-		</form>
+		</form> -->
 		<section class="search">
 
 		<?php

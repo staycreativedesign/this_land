@@ -85,13 +85,11 @@ main.story
 			+span-columns(13.7 of 36)
 			+omega()
 
-
 			figure
 				text-align: right
 
 			img
-				max-height: 380px
-				min-width: 440px
+				height: 380px
 				width: 100%
 				object-fit: cover
 
@@ -107,12 +105,16 @@ main.story
 
 			figcaption
 				+font($gotham,normal,normal)
+				height: 79px
 				margin-top: 2em
 				padding-bottom: 2em
 				text-align: justify
 				color: gray
 				font-size: .7em
 				+border-bottom(black)
+
+		aside.no_large_image_story
+			height: 485.391px
 
 
 		article
@@ -128,8 +130,7 @@ main.story
 				margin-top: 0
 
 
-			p, blockquote
-				+font($surveyor-text,normal,normal)
+			p, blockquote p
 				overflow: hidden
 				font-size: 22px
 				color: rgba(0, 0, 0, 0.8)
@@ -139,12 +140,15 @@ main.story
 
 			p
 				+span-columns(18 of 32)
+				+font($surveyor-text,normal,normal)
 
 				+media(min-width 320px max-width 881px, 1)
 					+span-columns(1)
 
-			blockquote
+			blockquote p
 				+font($surveyor-display,normal,normal)
+				// once again wordpress adds a p element inside blockquote
+				margin: 0!important
 				+span-columns(17 of 32)
 				+media(min-width 320px max-width 881px, 1)
 					+span-columns(1)
@@ -161,8 +165,8 @@ main.story
 					float: none!important
 					padding-left: 0
 
-			p:nth-child(1)
-				margin-top: 7.5%
+			p:first-child
+				margin-top: 5.5%
 
 				+media(min-width 320px max-width 881px, 1)
 					+span-columns(1)
@@ -182,7 +186,9 @@ main.story
 				+span-columns(18 of 32)
 				+media(min-width 320px max-width 881px, 1)
 					+span-columns(1)
-
+				// hack for wordpress not to display p in figure (weird bug)
+				p
+					display: none
 				&.full-image
 					+span-columns(32 of 32)
 					+media(min-width 320px max-width 881px, 1)

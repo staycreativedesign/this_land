@@ -1,15 +1,13 @@
 <?php get_header(); ?>
-<?php
-	global $post;
-	$author_id=$post->post_author;
-?>
 	<main role="main" class="story">
-			<?php echo get_post_meta( $post->ID, 'large-image-caption', true );?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<?php endwhile; else: ?>
+		<p> <?php _e('Sorry, no posts matched your criteria.'); ?> </p>
+		<?php endif; ?>
 			<section>
 					<aside>
 						<figure>
-							<img src= <?php echo get_post_meta( $post->ID, 'small-image-meta', true );?>>
-
+						<?php check_small_image($post); ?>
 						</figure>
 
 					</aside>
@@ -21,7 +19,7 @@
 							<?php the_title(); ?>
 						</h1>
 						<p>
-							<span class="italics">by </span><?php the_author_meta('display_name', $author_id); ?>
+							<span class="italics">by </span><?php the_author(); ?>
 						</p>
 						<div class="date-category">
 							<p>
@@ -30,17 +28,11 @@
 							<?php the_category(); ?>
 						</div>
 					</header>
-					<aside>
-						<figure>
-							<img src= <?php echo get_post_meta( $post->ID, 'large-meta-box-text', true );?>>
-							<figcaption>
-								<?php echo get_post_meta( $post->ID, 'large-image-caption', true );?>
-
-							</figcaption>
-						</figure>
-					</aside>
+					<?php large_image_set($post);	?>
 					<article>
-					<?php echo $post->post_content; ?>
+					<?php
+						the_content();
+					?>
 					</article>
 		</section>
 	</main>

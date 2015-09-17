@@ -23,6 +23,9 @@ function js_styles() {
 
 add_action( 'wp_enqueue_scripts', 'js_styles' );
 
+
+
+
 function custom_meta_box_markup($object)
 {
     wp_nonce_field(basename(__FILE__), "meta-box-nonce");
@@ -172,28 +175,6 @@ function html5_insert_image($html, $id, $caption, $title, $align, $url) {
 }
 add_filter( 'image_send_to_editor', 'html5_insert_image', 10, 9 );
 
-function SearchFilter($query) {
-if ($query->is_search) {
-$query->set('post_type', 'post');
-}
-return $query;
-}
-
-add_filter('pre_get_posts','SearchFilter');
-
-function SearchAuthor($authors) {
-$args = array(
-    'orderby' => 'author',
-    'order' => 'ASC'
-);
-
-if ($authors->is_search) {
-$author->set( $args );
-}
-return $authors;
-}
-
-add_filter('pre_get_posts','SearchFilter');
 
 function truncate_excerpt(){
 	$excerpt = get_the_content();
@@ -214,7 +195,7 @@ return $the_str;
 
 function select_first_story($object)
 {
-    wp_nonce_field(basename(__FILE__), "select_first_save_meta");
+    wp_nonce_field("select_first_save_meta", "select_first_save_meta");
 
     ?>
         <div>
@@ -230,16 +211,15 @@ function select_first_story($object)
                     foreach($posts as $post)
                     {
                     ?>
-                    <option value"<?php echo $post->ID; ?>"><?php echo $post->post_title; ?></option>
+                    <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'first-story-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
                     <?php
                     }
                 ?>
-                wp_die(var_dump($post));
+                wp_die(var_dump($post=));
             </select>
         </div>
     <?php
 }
-
 
 function select_first_story_meta_box()
 {
@@ -250,8 +230,9 @@ add_action("add_meta_boxes", "select_first_story_meta_box");
 
 function save_first_story($post_id, $post, $update)
 {
-    if (!isset($_POST["select_first_save_meta"]) || !wp_verify_nonce($_POST["select_first_save_meta"], basename(__FILE__)))
+    if (!isset($_POST["select_first_save_meta"]) || !wp_verify_nonce($_POST["select_first_save_meta"], "select_first_save_meta")) {
         return $post_id;
+    }
 
     if(!current_user_can("edit_post", $post_id))
         return $post_id;
@@ -259,27 +240,134 @@ function save_first_story($post_id, $post, $update)
     if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
         return $post_id;
 
-    $slug = "post";
-    if($slug != $post->post_type)
-        return $post_id;
-
-    $meta_box_dropdown_value = "";
-
-    if(isset($_POST["first-story-save"]))
-    {
-        $meta_box_dropdown_value = $_POST["first-story-save"];
-
-    }
-    update_post_meta($post_id, "first-story-save", $meta_box_dropdown_value);
+    update_post_meta($post_id, "first-story-save", absint($_POST['first-select-dropdown']));
 }
 
 add_action("save_post", "save_first_story", 10, 3);
 
+function select_second_story($object)
+{
+    wp_nonce_field("select_second_story", "select_second_story");
+
+    ?>
+        <div>
+            <p>Please select the first story to appear with this post.</p>
+            <select name="second-select-dropdown">
+                <?php
+                    $args = array(
+                        'numberposts' => 15,
+                        'category_name' => 'POETRY, NON-FICTION, FILM, AUDIO'
+                    );
+                    $posts = get_posts($args);
+
+                    foreach($posts as $post)
+                    {
+                    ?>
+                    <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'second-story-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
+                    <?php
+                    }
+                ?>
+                wp_die(var_dump($post=));
+            </select>
+        </div>
+    <?php
+}
+
+function select_second_story_meta_box()
+{
+    add_meta_box("second-story-save", "Second Story Selection", "select_second_story", "post", "normal", "core", null);
+}
+
+add_action("add_meta_boxes", "select_second_story_meta_box");
+
+function save_second_story($post_id, $post, $update)
+{
+    if (!isset($_POST["select_second_story"]) || !wp_verify_nonce($_POST["select_second_story"], "select_second_story")) {
+        return $post_id;
+    }
+
+    if(!current_user_can("edit_post", $post_id))
+        return $post_id;
+
+    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
+        return $post_id;
+
+    update_post_meta($post_id, "second-story-save", absint($_POST['second-select-dropdown']));
+}
+
+add_action("save_post", "save_second_story", 10, 3);
+
+function check_small_image($post) {
+        $small_image = get_post_meta( $post->ID, 'small-image-meta', true );
+
+        if ($small_image) {
+            ?><img src="<?php echo get_post_meta( $post->ID, 'small-image-meta', true );?>"><?php
+        }
+        else {
+           echo wp_get_attachment_image( 231 );
+        }
+
+}
 
 
+function check_large_image($post) {
+        $large_image = get_post_meta( $post->ID, 'large-meta-box-text', true );
+
+        if ($large_image) {
+            ?><img src="<?php echo get_post_meta( $post->ID, 'large-meta-box-text', true );?>"><?php
+        }
+        else {
+            echo wp_get_attachment_image( 230 );
+        }
+
+}
+
+function check_large_caption($post) {
+        $large_caption = get_post_meta( $post->ID, 'large-image-caption', true );
+        if ( $large_caption ) {
+          echo get_post_meta( $post->ID, 'large-image-caption', true );
+        }
+        else {
+        }
+}
+
+function large_image_set($post){
+    $check_image = get_post_meta( $post->ID, 'large-meta-box-text', true );
+
+    if ( $check_image ) {
+        ?><aside>
+            <figure>
+                <?php check_large_image($post); ?>
+                <figcaption>
+                    <?php check_large_caption($post); ?>
+
+                </figcaption>
+            </figure>
+            </aside><?php
+    }
+    else {
+        ?><aside class="no_large_image_story"></aside><?php
+    }
+}
 
 
-
-
-
+if ( ! function_exists('search_form') ) {
+    function search_form( $args ) {
+        $args = wp_parse_args( $args, array(
+            'placeholder' => '',
+            'form_id' => '',
+            'form_class' => '',
+            'container' => '',
+            'button_id' => '',
+            'input_id' => '',
+        ));
 ?>
+        <form method="get" id="<?php echo esc_attr($args['form_id']); ?>" class="<?php echo esc_attr($args['form_class']); ?>" action="<?php site_url(); ?>">
+        <?php if ( ! empty( $args['container'] ) ) echo '<div class="' . esc_attr($args['container']) . '">'; ?>
+            <button id="<?php echo esc_attr($args['button_id']); ?>" type="submit" class="button-submit" style="border: none;background-color: white;"><i class="fa fa-search"></i></button>
+            <input id="<?php echo esc_attr($args['input_id']); ?>" type="text" class="form-control" value="<?php echo esc_attr(get_search_query()); ?>" name="s" id="s" placeholder="<?php echo esc_attr($args['placeholder']); ?>">
+        <?php if ( ! empty( $args['container'] ) ) echo '</div>'; ?>
+        </form>
+<?php
+    }
+}

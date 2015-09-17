@@ -32,13 +32,7 @@
 						</li>
 						<li>
 							<div class="main-search inner-addon left-addon">
-								<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-									<button type="submit" id="searchsubmit" class="button-submit" style="
-											border: none;
-											background-color: white;
-									"><i class="fa fa-search"></i></button>
-									<input type="text" class="form-control" value="<?php echo esc_html($s, 1); ?>" name="s" id="s" />
-								</form>
+								<?php get_search_form(); ?>
 							</div>
 						</li>
 					</ul>

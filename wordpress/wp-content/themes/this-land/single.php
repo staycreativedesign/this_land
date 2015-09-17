@@ -23,7 +23,7 @@
 						</p>
 						<div class="date-category">
 							<p>
-								10/12/2015
+							<?php the_date( 'm/d/Y' ); ?>
 							</p>
 							<?php the_category(); ?>
 						</div>

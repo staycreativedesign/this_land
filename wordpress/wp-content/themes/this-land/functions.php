@@ -11,11 +11,8 @@ add_action( 'wp_enqueue_scripts', 'css_styles' );
 
 function js_styles() {
 	wp_enqueue_script( 'modernizer_js', get_template_directory_uri() . '/js/modernizer.js', '', '', false );
-
 	wp_enqueue_script( 'slicknav_js', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '', false );
-
 	wp_enqueue_script( 'html5_shiv_js', get_template_directory_uri() . '/js/html5shiv.min.js', '', '', false );
-
 	wp_enqueue_script( 'bottom_js', get_template_directory_uri() . '/js/bottom.js', array('jquery', 'slicknav_js'), '', true );
 
 
@@ -207,15 +204,14 @@ function select_first_story($object)
                         'category_name' => 'POETRY, NON-FICTION, FILM, AUDIO'
                     );
                     $posts = get_posts($args);
-
                     foreach($posts as $post)
                     {
                     ?>
+                    <option value="">Please select story</option>
                     <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'first-story-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
                     <?php
                     }
                 ?>
-                wp_die(var_dump($post=));
             </select>
         </div>
     <?php
@@ -263,11 +259,12 @@ function select_second_story($object)
                     foreach($posts as $post)
                     {
                     ?>
+                    <option value="">Please select story</option>
                     <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'second-story-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
                     <?php
                     }
                 ?>
-                wp_die(var_dump($post=));
+
             </select>
         </div>
     <?php
@@ -296,6 +293,128 @@ function save_second_story($post_id, $post, $update)
 }
 
 add_action("save_post", "save_second_story", 10, 3);
+
+
+
+
+
+
+
+function select_first_ecommerce_item($object)
+{
+    wp_nonce_field("select_first_ecommerce_item", "select_first_ecommerce_item");
+
+    ?>
+        <div>
+            <p>Please select the first story to appear with this post.</p>
+            <select name="first-ecommerce-item">
+                <?php
+                    $args = array(
+                        'numberposts' => 15,
+                        'category_name' => 'STORE'
+                    );
+                    $posts = get_posts($args);
+
+                    foreach($posts as $post)
+                    {
+                    ?>
+                    <option value="">Please select item</option>
+                    <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'first-ecommerce-item-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
+                    <?php
+                    }
+                ?>
+
+            </select>
+        </div>
+    <?php
+}
+
+function first_ecommerce_meta_box()
+{
+    add_meta_box("first-ecommerce-item-save", "First Ecommerce Item", "select_first_ecommerce_item", "post", "normal", "core", null);
+}
+
+add_action("add_meta_boxes", "first_ecommerce_meta_box");
+
+function save_first_ecommerce_item($post_id, $post, $update)
+{
+    if (!isset($_POST["select_first_ecommerce_item"]) || !wp_verify_nonce($_POST["select_first_ecommerce_item"], "select_first_ecommerce_item")) {
+        return $post_id;
+    }
+
+    if(!current_user_can("edit_post", $post_id))
+        return $post_id;
+
+    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
+        return $post_id;
+
+    update_post_meta($post_id, "first-ecommerce-item-save", absint($_POST['first-ecommerce-item']));
+}
+
+add_action("save_post", "save_first_ecommerce_item", 10, 3);
+
+
+function select_second_ecommerce_item($object)
+{
+    wp_nonce_field("select_second_ecommerce_item", "select_second_ecommerce_item");
+
+    ?>
+        <div>
+            <p>Please select the first story to appear with this post.</p>
+            <select name="second-ecommerce-item">
+                <?php
+                    $args = array(
+                        'numberposts' => 15,
+                        'category_name' => 'STORE'
+                    );
+                    $posts = get_posts($args);
+
+                    foreach($posts as $post)
+                    {
+                    ?>
+                    <option value="">Please select story</option>
+                    <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'second-ecommerce-item-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
+                    <?php
+                    }
+                ?>
+
+            </select>
+        </div>
+    <?php
+}
+
+function second_ecommerce_meta_box()
+{
+    add_meta_box("second-ecommerce-item-save", "Second Ecommerce Item", "select_second_ecommerce_item", "post", "normal", "core", null);
+}
+
+add_action("add_meta_boxes", "second_ecommerce_meta_box");
+
+function save_second_ecommerce_item($post_id, $post, $update)
+{
+    if (!isset($_POST["select_second_ecommerce_item"]) || !wp_verify_nonce($_POST["select_second_ecommerce_item"], "select_second_ecommerce_item")) {
+        return $post_id;
+    }
+
+    if(!current_user_can("edit_post", $post_id))
+        return $post_id;
+
+    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
+        return $post_id;
+
+    update_post_meta($post_id, "second-ecommerce-item-save", absint($_POST['second-ecommerce-item']));
+}
+
+add_action("save_post", "save_second_ecommerce_item", 10, 3);
+
+
+
+
+
+
+
+
+
 
 function check_small_image($post) {
         $small_image = get_post_meta( $post->ID, 'small-image-meta', true );

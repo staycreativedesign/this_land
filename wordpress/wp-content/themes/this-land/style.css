@@ -924,6 +924,8 @@ section.ecommerce-story {
         font-size: 0.7em !important;
         position: absolute;
         bottom: 0; }
+  section.ecommerce-story .border-fix {
+    border: 1px solid silver; }
 
 main.about {
   font-family: "Surveyor Text A", "Surveyor Text B";
@@ -1046,6 +1048,9 @@ figure.right {
 
 span {
   font-style: italic; }
+
+.text-center {
+  text-align: center; }
 
 body {
   margin: 0; }

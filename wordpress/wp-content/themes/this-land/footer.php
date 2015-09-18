@@ -21,7 +21,7 @@
 						<a href="about">Contact</a>
 					</li>
 					<li>
-						Stockists
+						<a href="stockists">Stockists</a>
 					</li>
 				</ul>
 				<ul>

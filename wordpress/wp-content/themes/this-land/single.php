@@ -37,17 +37,7 @@
 		</section>
 	</main>
 	<hr>
-	<section class="ecommerce-story">
-		<?php get_template_part('content', 'sub-category-show-left'); ?>
-		<aside class="sub-category">
-			<?php get_template_part('content', 'sub-category-show'); ?>
-		</aside>
-	</section>
-	<section class="ecommerce-story">
-		<?php get_template_part('content', 'sub-category-show-left-2'); ?>
-		<aside class="sub-category">
-			<?php get_template_part('content', 'sub-category-show-2'); ?>
-		</aside>
-	</section>
+		<?php get_template_part('content', 'sub-category-show'); ?>
+
 	</div>
 <?php get_footer(); ?>

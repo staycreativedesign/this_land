@@ -1,7 +1,7 @@
-	<?php $second_story  = get_post_meta( get_the_ID(), 'second-story-save', true ); ?>
-	<?php $first_story	 = get_post_meta( get_the_ID(), 'first-story-save', true ); ?>
-	<?php $first_ecommerce	 = get_post_meta( get_the_ID(), 'first-ecommerce-item-save', true ); ?>
-	<?php $second_ecommerce	 = get_post_meta( get_the_ID(), 'second-ecommerce-item-save', true ); ?>
+	<?php $second_story  			= get_post_meta( get_the_ID(), 'second-story-save', true ); ?>
+	<?php $first_story	 			= get_post_meta( get_the_ID(), 'first-story-save', true ); ?>
+	<?php $first_ecommerce	 	= get_post_meta( get_the_ID(), 'first-ecommerce-item-save', true ); ?>
+	<?php $second_ecommerce		= get_post_meta( get_the_ID(), 'second-ecommerce-item-save', true ); ?>
 
 <section class="ecommerce-story">
 		<?php {
@@ -43,9 +43,9 @@
 			  		'orderby'						=> 'rand',
 			  	);
 			  }
-				$story = new WP_Query( $args );
+				$first_story = new WP_Query( $args );
 			?>
-			<?php if( $story->have_posts() ) : while( $story->have_posts() ) : $story->the_post(); ?>
+			<?php if( $first_story->have_posts() ) : while( $first_story->have_posts() ) : $first_story->the_post(); ?>
 				<a href="<?php echo esc_url( get_permalink() ); ?>">
 				<article>
 				<img src= <?php echo get_post_meta( get_the_ID(), 'meta-box-text', true );?>>
@@ -74,9 +74,9 @@
 			  		'orderby'						=> 'rand',
 			  	);
 			  }
-				$story = new WP_Query( $args );
+				$second_story = new WP_Query( $args );
 			?>
-			<?php if( $story->have_posts() ) : while( $story->have_posts() ) : $story->the_post(); ?>
+			<?php if( $second_story->have_posts() ) : while( $second_story->have_posts() ) : $second_story->the_post(); ?>
 				<a href="<?php echo esc_url( get_permalink() ); ?>">
 				<article>
 				<img src= <?php echo get_post_meta( get_the_ID(), 'meta-box-text', true );?>>
@@ -125,7 +125,7 @@
 			  } else {
 			  	$args = array(
 			  		'posts_per_page'		=> 1,
-			  		'category__in' 					=> array( 12 ),
+			  		'category__in' 					=> array( 10 ),
 			  		'post_type'					=> 'post',
 			  		'orderby'						=> 'rand',
 			  	);
@@ -152,7 +152,7 @@
 						  } else {
 						  	$args = array(
 						  		'posts_per_page'		=> 1,
-						  		'category__in' 					=> array( 12 ),
+						  		'category__in' 					=> array( 10 ),
 						  		'post_type'					=> 'post',
 						  		'orderby'						=> 'rand',
 						  	);

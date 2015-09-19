@@ -14,6 +14,7 @@ function js_styles() {
 	wp_enqueue_script( 'slicknav_js', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '', false );
 	wp_enqueue_script( 'html5_shiv_js', get_template_directory_uri() . '/js/html5shiv.min.js', '', '', false );
 	wp_enqueue_script( 'bottom_js', get_template_directory_uri() . '/js/bottom.js', array('jquery', 'slicknav_js'), '', true );
+    wp_enqueue_script( 'nav_js', get_template_directory_uri() . '/js/nav.js', array('jquery'), '', true );
 
 
 }
@@ -204,10 +205,11 @@ function select_first_story($object)
                         'category_name' => 'POETRY, NON-FICTION, FILM, AUDIO'
                     );
                     $posts = get_posts($args);
+                    ?> <option value="">Please select story</option> <?php
+
                     foreach($posts as $post)
                     {
                     ?>
-                    <option value="">Please select story</option>
                     <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'first-story-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
                     <?php
                     }
@@ -256,10 +258,10 @@ function select_second_story($object)
                     );
                     $posts = get_posts($args);
 
+                    ?> <option value="">Please select story</option> <?php
                     foreach($posts as $post)
                     {
                     ?>
-                    <option value="">Please select story</option>
                     <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'second-story-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
                     <?php
                     }
@@ -315,10 +317,10 @@ function select_first_ecommerce_item($object)
                     );
                     $posts = get_posts($args);
 
+                    ?> <option value="">Please select story</option> <?php
                     foreach($posts as $post)
                     {
                     ?>
-                    <option value="">Please select item</option>
                     <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'first-ecommerce-item-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
                     <?php
                     }
@@ -368,11 +370,10 @@ function select_second_ecommerce_item($object)
                         'category_name' => 'STORE'
                     );
                     $posts = get_posts($args);
-
+                ?> <option value="">Please select story</option> <?php
                     foreach($posts as $post)
                     {
                     ?>
-                    <option value="">Please select story</option>
                     <option value="<?php echo esc_attr( $post->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'second-ecommerce-item-save', true) == $post->ID ) echo 'selected'; ?>><?php echo $post->post_title; ?></option>
                     <?php
                     }

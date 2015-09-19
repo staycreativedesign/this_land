@@ -65,59 +65,6 @@ body
 	overflow: hidden
 	margin-bottom: 30px
 
-	header
-		+span-columns(12)
-		.logo
-			+span-columns(8 of 36)
-			text-transform: uppercase
-			color: $red
-			h1
-				margin-bottom: 0
-				+font($gotham, 700, normal)
-				font-size: 2em
-		+media(min-width 320px max-width 881px, 1)
-				display: none
-
-		nav
-			+span-columns(26 of 36)
-			+font($gotham, 700, normal)
-			text-transform: uppercase
-			float: right
-			ul
-				text-align: right
-			li
-				margin-top: .67em
-				font-size: 13px
-				display: inline-block
-				padding: 10px 88px 5px 26px
-				border-left: 1px solid $nav-brown
-				height: 35px
-				letter-spacing: 2px
-				width: 17%
-
-			li:nth-child(3)
-				margin-right: 15px
-			li:nth-child(4)
-				padding-right: 0
-				width: 33%
-				margin-top: 0
-				vertical-align: middle
-
-				input
-					width: 74%
-
-			form
-				position: relative
-				width: 100%
-
-
-			.inner-addon i
-				position: absolute
-				top: 31%
-				right: 92%
-
-
-
 	+media(min-width 320px max-width 881px, 24)
 		+span-columns(22)
 		+shift(1)
@@ -126,6 +73,8 @@ body
 		nav, .logo
 			display: none
 
+
+
 .banner
 	+omega()
 	text-align: center
@@ -133,4 +82,72 @@ body
 
 nav
 	color: $nav-brown
+
+.nav-wrapper
+  background: white
+  height: 60px
+  width: 100%
+  position: fixed
+  top: 0
+  transition: top 0.2s ease-in-out
+  z-index: 10000
+
+  header
+  	margin: 0 auto
+  	max-width: 1220px
+  	padding: 0 20px
+  	overflow: hidden
+  	display: block
+
+  .logo
+  	+span-columns(8 of 36)
+  	text-transform: uppercase
+  	color: $red
+  	h1
+  		margin-top: 10px
+  		+font($gotham, 700, normal)
+  		font-size: 2em
+  +media(min-width 320px max-width 881px, 1)
+  		display: none
+
+  nav
+  	+span-columns(26 of 36)
+  	+font($gotham, 700, normal)
+  	text-transform: uppercase
+  	float: right
+  	ul
+  		text-align: right
+  	li
+  		margin-top: 0
+  		font-size: 13px
+  		display: inline-block
+  		padding: 10px 88px 5px 26px
+  		border-left: 1px solid $nav-brown
+  		height: 35px
+  		letter-spacing: 2px
+  		width: 17%
+
+  	li:nth-child(3)
+  		margin-right: 15px
+  	li:nth-child(4)
+  		padding-right: 0
+  		width: 33%
+  		margin-top: 0
+  		vertical-align: middle
+
+  		input
+  			width: 74%
+
+  	form
+  		position: relative
+  		width: 100%
+
+
+  	.inner-addon i
+  		position: absolute
+  		top: 31%
+  		right: 92%
+
+.nav-up
+  top: -100px
 

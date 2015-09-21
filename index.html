@@ -9,9 +9,20 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/modernizer.js"></script>
 	<link rel="stylesheet" href="css/slicknav.min.css" />
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	        $('.slicknav_menu').prepend('<a href="/"><img class="logo" src="images/this-land-logo.png" alt="Website Logo" /></a>');
+	    });
+	</script>
 	<script src="js/jquery.slicknav.min.js"></script>
+
 </head>
 	<body>
+	<aside class="banner-wrapper mobile">
+		<p>
+			LAUNCH PARTY FOR OUR NEW ISSUE. FACEBOOK DETAILS
+		</p>
+	</aside>
 		<div class="nav-wrapper nav-down">
 			<aside class="banner-wrapper">
 				<p>
@@ -255,7 +266,6 @@
 		<script>
 			$('#menu').slicknav({
 				'label' : '',
-				'brand': 'This Land'
 			});
 
 

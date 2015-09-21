@@ -1075,7 +1075,7 @@ body {
     margin: .5em 0; }
   @media screen and (min-width: 320px) and (max-width: 881px) {
     .banner-wrapper {
-      font-size: .8em;
+      font-size: .6em;
       position: absolute;
       top: 0; } }
 
@@ -1090,6 +1090,11 @@ body {
   @media screen and (min-width: 320px) and (max-width: 881px) {
     .slicknav_menu {
       display: block; } }
+  .slicknav_menu .logo {
+    margin-top: 1em;
+    width: 60%;
+    float: left;
+    padding-left: 20px; }
   .slicknav_menu .slicknav_icon-bar {
     box-shadow: 0 5px 0 #6c4b35 !important; }
   .slicknav_menu .slicknav_brand {

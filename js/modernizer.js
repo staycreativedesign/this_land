@@ -43,3 +43,7 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+$('#menu').slicknav();
+
+$('.slicknav_menu').prepend('<div class="logo">LOGO</div>');

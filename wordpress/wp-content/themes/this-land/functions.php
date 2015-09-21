@@ -4,17 +4,23 @@ function css_styles() {
 	wp_enqueue_style( 'slicknav_css', get_template_directory_uri() . '/css/slicknav.min.css');
 	wp_enqueue_style( 'font_awesome_css', get_template_directory_uri() . '/css/Font-Awesome/css/font-awesome.min.css');
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'nivo_main', get_template_directory_uri() . '/css/nivo-slider.css' );
+    wp_enqueue_style( 'nivo_theme', get_template_directory_uri() . '/css/themes/default/default.css' );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'css_styles' );
 
 
 function js_styles() {
-	wp_enqueue_script( 'modernizer_js', get_template_directory_uri() . '/js/modernizer.js', '', '', false );
+    wp_enqueue_script( 'modernizer_js', get_template_directory_uri() . '/js/modernizer.js', '', '', false );
 	wp_enqueue_script( 'slicknav_js', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '', false );
 	wp_enqueue_script( 'html5_shiv_js', get_template_directory_uri() . '/js/html5shiv.min.js', '', '', false );
 	wp_enqueue_script( 'bottom_js', get_template_directory_uri() . '/js/bottom.js', array('jquery', 'slicknav_js'), '', true );
     wp_enqueue_script( 'nav_js', get_template_directory_uri() . '/js/nav.js', array('jquery'), '', true );
+    wp_enqueue_script( 'slicknav_js', get_template_directory_uri() . '/js/jquery.xxx.min.js', array('jquery'), '', false );
+    wp_enqueue_script( 'nivo_slider', get_template_directory_uri() . '/js/jquery.nivo.slider.js', array('jquery'), '', true );
+
 
 
 }
@@ -470,7 +476,6 @@ function large_image_set($post){
     }
 }
 
-
 if ( ! function_exists('search_form') ) {
     function search_form( $args ) {
         $args = wp_parse_args( $args, array(
@@ -480,7 +485,8 @@ if ( ! function_exists('search_form') ) {
             'container' => '',
             'button_id' => '',
             'input_id' => '',
-        ));
+            'type' => 'post',
+    ));
 ?>
         <form method="get" id="<?php echo esc_attr($args['form_id']); ?>" class="<?php echo esc_attr($args['form_class']); ?>" action="<?php site_url(); ?>">
         <?php if ( ! empty( $args['container'] ) ) echo '<div class="' . esc_attr($args['container']) . '">'; ?>

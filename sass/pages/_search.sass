@@ -42,10 +42,16 @@ main.search
 			border: 0
 			font-size: 1em
 			padding: 7px
+		+media(min-width 320px max-width 881px, 1)
+			+span-columns(1)
+			display: none
+			float: none
+			margin: 10px 0
 	section
 		text-align: center
 		+span-columns(9)
-
+		+media(min-width 320px max-width 881px, 1)
+			+span-columns(1)
 		.inner-addon
 			margin-top: 0
 			border: none
@@ -56,6 +62,9 @@ main.search
 				margin-top: 5px
 			input
 				min-width: 83%
+			+media(min-width 320px max-width 881px, 1)
+				+span-columns(1)
+				float: none
 
 		article
 		 	+span-columns(4 of 12)
@@ -83,7 +92,7 @@ main.search
 		 		font-size: .6em
 		 		width: 100%
 		 	@include media(min-width 320px max-width 881px, 1)
-
+		 		+span-columns(1)
 		 		.post-categories
 		 			margin-top: 2em
 
@@ -106,6 +115,7 @@ main.search
 			text-align: left
 			color: $red
 			font-size: 1em
+			width: 100%
 
 			i
 				color: $nav-brown

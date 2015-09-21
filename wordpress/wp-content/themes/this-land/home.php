@@ -22,7 +22,6 @@
 			</div>
 		</form> -->
 		<section class="search">
-
 		<?php
 
 		   $args = array('cat=2');

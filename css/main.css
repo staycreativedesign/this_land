@@ -175,7 +175,7 @@ main.index {
         margin-right: 0; } }
   main.index article.main {
     text-align: center;
-    background-color: red;
+    background-color: #fff9f5;
     height: 340px;
     padding: 20px;
     position: relative;
@@ -410,6 +410,17 @@ main.search {
       border: 0;
       font-size: 1em;
       padding: 7px; }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
+      main.search .content-searchbox {
+        float: left;
+        display: block;
+        margin-right: 38.19821%;
+        width: 100%;
+        display: none;
+        float: none;
+        margin: 10px 0; }
+        main.search .content-searchbox:last-child {
+          margin-right: 0; } }
   main.search section {
     text-align: center;
     float: left;
@@ -418,6 +429,14 @@ main.search {
     width: 74.41059%; }
     main.search section:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
+      main.search section {
+        float: left;
+        display: block;
+        margin-right: 38.19821%;
+        width: 100%; }
+        main.search section:last-child {
+          margin-right: 0; } }
     main.search section .inner-addon {
       margin-top: 0;
       border: none;
@@ -428,6 +447,15 @@ main.search {
         margin-top: 5px; }
       main.search section .inner-addon input {
         min-width: 83%; }
+      @media screen and (min-width: 320px) and (max-width: 881px) {
+        main.search section .inner-addon {
+          float: left;
+          display: block;
+          margin-right: 38.19821%;
+          width: 100%;
+          float: none; }
+          main.search section .inner-addon:last-child {
+            margin-right: 0; } }
     main.search section article {
       float: left;
       display: block;
@@ -461,8 +489,15 @@ main.search {
         font-size: .6em;
         width: 100%; }
       @media screen and (min-width: 320px) and (max-width: 881px) {
-        main.search section article .post-categories {
-          margin-top: 2em; } }
+        main.search section article {
+          float: left;
+          display: block;
+          margin-right: 38.19821%;
+          width: 100%; }
+          main.search section article:last-child {
+            margin-right: 0; }
+          main.search section article .post-categories {
+            margin-top: 2em; } }
       main.search section article p {
         padding-top: 1em; }
     main.search section .load-more {
@@ -484,7 +519,8 @@ main.search {
         text-transform: uppercase;
         text-align: left;
         color: #b80405;
-        font-size: 1em; }
+        font-size: 1em;
+        width: 100%; }
         main.search .filter i {
           color: #6c4b35; }
         main.search .filter p {
@@ -872,7 +908,7 @@ section.ecommerce-story {
     margin-right: 2.35765%;
     width: 48.82117%;
     text-align: center;
-    background-color: red;
+    background-color: #fff9f5;
     height: 340px;
     padding: 20px; }
     section.ecommerce-story article.bottom:last-child {
@@ -1076,7 +1112,7 @@ main {
   clear: both;
   overflow: hidden;
   border-top: 1px solid silver;
-  margin-top: 68px; }
+  margin-top: 40px; }
   @media screen and (min-width: 320px) and (max-width: 881px) {
     main {
       margin-top: 0; } }
@@ -1217,8 +1253,7 @@ nav {
   position: fixed;
   top: 0;
   transition: top 0.2s ease-in-out;
-  z-index: 10000;
-  opacity: 0.9; }
+  z-index: 10000; }
   .nav-wrapper header {
     margin: 0 auto;
     max-width: 1220px;

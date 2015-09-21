@@ -4,6 +4,8 @@
 	<link rel="stylesheet" type="text/css" href=" //cloud.typography.com/6579754/612228/css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/themes/default/default.css">
+	<link rel="stylesheet" href="css/nivo-slider.css">
 	<script type='text/javascript' src="js/html5shiv.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -63,9 +65,28 @@
 		</div>
 		<div class="main-wrapper">
 			<main role="main" class="index">
-				<div class="main-image">
-					<img src="images/main-image.jpg" alt="">
-				</div>
+
+								<div class="slider-wrapper theme-default main-image">
+				          <div id="slider" class="nivoSlider">
+					          <img src="images/main-image.jpg" alt="">
+					          <img src="images/main-image-2.jpg" alt="">
+				          </div>
+				      </div>
+				      <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+				          <script type="text/javascript">
+				          $(window).load(function() {
+				              $('#slider').nivoSlider({
+				              	directionNav: false,             // Next & Prev navigation
+				              	    controlNav: false,                 // 1,2,3... navigation
+				              	    controlNavThumbs: false,         // Use thumbnails for Control Nav
+				              	    pauseOnHover: false,
+				              });
+				          });
+				          </script>
+
+
+
+
 				<div class="article-wrapper">
 					<article class="main"><a href="http://devthisland.wpengine.com/2015/09/02/this-is-something-amazing/">
 											<h1>Everything is is old in with the new</h1>

@@ -5,9 +5,12 @@
 ?>
   <?php get_header(); ?>
     <main role="main" class="index">
-      <div class="main-image">
+        <div class="slider-wrapper theme-default main-image">
+          <div id="slider" class="nivoSlider">
           <img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/main-image1.jpg" alt="">
-        </div>
+            <img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/main-image-21.jpg" alt="">
+          </div>
+      </div>
       <?php if(is_home() || is_front_page()) {
         $query = new WP_Query( 'tag=main_top&showposts=4' );
        } ?>

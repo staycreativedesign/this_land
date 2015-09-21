@@ -10,10 +10,8 @@ body
 	+font($surveyor,normal, normal)
 	font-size: .9em
 
-	p
-		margin: .5em 0
-
-	+media(min-width 320px max-width 500px, 1)
+	+media(min-width 320px max-width 850px, 1)
+		+span-columns(1)
 		font-size: .8em
 		position: absolute
 		top: 0
@@ -24,7 +22,7 @@ body
 	border: none
 	display: none
 	+font($surveyor,700, normal)
-	+media(min-width 320px max-width 500px, 12)
+	+media(min-width 320px max-width 850px, 12)
 		display: block
 
 	.logo
@@ -92,13 +90,17 @@ nav
 	color: $nav-brown
 
 .nav-wrapper
-  background: white
-  height: 100px
-  width: 100%
-  position: fixed
-  top: 0
-  transition: top 0.2s ease-in-out
-  z-index: 10000
+	+media(max-width 850px, 12)
+		display: none
+	+media(min-width 851px, 12)
+		+span-columns(12)
+	  background: white
+	  height: 100px
+	  width: 100%
+	  position: fixed
+	  top: 0
+    transition: top 0.2s ease-in-out
+    z-index: 10000
 
   header
   	margin: 0 auto

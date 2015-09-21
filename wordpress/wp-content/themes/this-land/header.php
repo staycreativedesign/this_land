@@ -21,7 +21,7 @@
 			<header>
 				<div role="banner" class="logo">
 					<h1>
-						<a href="<?php echo site_url(); ?>"><?php echo wp_get_attachment_image( 38, 'full' ); ?></a>
+						<a href="<?php echo site_url(); ?>"><img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/this-land-logo.png"></a>
 					</h1>
 				</div>
 				<nav role="navigation ">

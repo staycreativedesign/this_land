@@ -36,14 +36,14 @@
 						<?php the_excerpt(); ?>
 						<?php the_category(); ?>
 					</article>
-					<?php endwhile; else : ?>		
+					<?php endwhile; else : ?>
 							<p>
 								<?php _e( 'Sorry, no posts matched your criteria'); ?>
 							</p>
 					<?php endif; ?>
 					<!-- <a href="#" class="load-story-btn">Load more stories</a> -->
 				</section>
-			</main>	
+			</main>
 		</div>
 
 <?php get_footer(); ?>

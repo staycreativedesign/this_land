@@ -5,7 +5,7 @@ $article-bg: 			#fff9f5
 
 
 =mobile
-	media(min-width 320px max-width 881px, 1)
+	media(min-width 320px max-width 500px, 1)
 
 
 =border-bottom($color)
@@ -20,7 +20,7 @@ $article-bg: 			#fff9f5
 		+font($gotham, normal, normal)
 		font-size: .6em
 		width: 100%
-	@include media(min-width 320px max-width 881px, 1)
+	@include media(min-width 320px max-width 500px, 1)
 		p:nth-child(4)
 			margin-top: 2em
 
@@ -29,21 +29,21 @@ $article-bg: 			#fff9f5
 	color: $article-border
 	+font($gotham, 300, normal)
 	font-size: .8em
-	@include media(min-width 320px max-width 881px, 1)
+	@include media(min-width 320px max-width 500px, 1)
 		font-size: .7em
 =article-main
 	text-align: center
 	background-color: $article-bg
 	height: 340px
 	padding: 20px
-	@include media(min-width 320px max-width 881px, 1)
+	@include media(min-width 320px max-width 500px, 1)
 		height: auto
 
 	h1
 		margin-top: .5em
 		font-size: 2.5em
 		+font($surveyor-display,300,normal)
-		@include media(min-width 320px max-width 881px, 1)
+		@include media(min-width 320px max-width 500px, 1)
 			font-size: 1em
 			margin-top: 3em
 
@@ -79,7 +79,7 @@ $article-bg: 			#fff9f5
 	p
 		+font($surveyor-display,300,normal)
 
-	@include media(min-width 320px max-width 881px, 1)
+	@include media(min-width 320px max-width 500px, 1)
 		p:nth-child(2n)
 			position: relative
 			bottom: auto

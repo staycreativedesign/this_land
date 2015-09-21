@@ -13,18 +13,18 @@ body
 	p
 		margin: .5em 0
 
-	+media(min-width 320px max-width 881px, 1)
-		font-size: .6em
+	+media(min-width 320px max-width 500px, 1)
+		font-size: .8em
 		position: absolute
 		top: 0
 
 .slicknav_menu
-	margin-top: 1em
+	margin-top: 2em
 	background-color: white!important
 	border: none
 	display: none
 	+font($surveyor,700, normal)
-	+media(min-width 320px max-width 881px, 12)
+	+media(min-width 320px max-width 500px, 12)
 		display: block
 
 	.logo
@@ -41,7 +41,8 @@ body
 		width: 68%
 		color: $red
 		margin: 11px 5px 6px
-		font-size: 2em!important
+		+media(min-width 320px max-width 500px, 1)
+			font-size: 2em!important
 	.slicknav_btn
 		background-color: white
 		color: black
@@ -71,7 +72,7 @@ body
 	overflow: hidden
 	margin-bottom: 30px
 
-	+media(min-width 320px max-width 881px, 24)
+	+media(min-width 320px max-width 500px, 24)
 		+span-columns(22)
 		+shift(1)
 		border-top: 0
@@ -114,7 +115,7 @@ nav
   		margin-top: 10px
   		+font($gotham, 700, normal)
   		font-size: 2em
-  +media(min-width 320px max-width 881px, 1)
+  +media(min-width 320px max-width 500px, 1)
   		display: none
 
   nav
@@ -143,7 +144,7 @@ nav
   		vertical-align: middle
 
   		input
-  			width: 87%
+  			width: 80%
 
   	form
   		position: relative

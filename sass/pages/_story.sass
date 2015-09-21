@@ -1,7 +1,7 @@
 main.story
 	section
 		margin-top: 2em
-		+media(min-width 320px max-width 881px, 1)
+		+media(min-width 320px max-width 500px, 1)
 			margin-top: 0
 		+span-columns(12)
 
@@ -10,7 +10,7 @@ main.story
 			+span-columns(2)
 			position: relative
 			height: 380px
-			+media(min-width 320px max-width 881px, 1)
+			+media(min-width 320px max-width 500px, 1)
 				display: none
 
 			img
@@ -28,7 +28,7 @@ main.story
 			height: 380px
 			position: relative
 
-			+media(min-width 320px max-width 881px, 1)
+			+media(min-width 320px max-width 500px, 1)
 				+span-columns(1)
 				padding-bottom: 0
 				height: auto
@@ -40,7 +40,7 @@ main.story
 				font-size: 2.7em
 				+font($surveyor-display,normal, normal)
 
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					font-size: 2em
 
 			h4
@@ -50,7 +50,8 @@ main.story
 				border-bottom: 1px solid black
 				font-size: 1em
 				+font($surveyor-display,normal, normal)
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
+					padding: 0
 					border-top: none
 					border-bottom: 1px solid silver
 			.date-category
@@ -67,10 +68,10 @@ main.story
 				p:nth-child(2)
 					margin-top: 0
 
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					display: none
 
-			+media(min-width 320px max-width 881px, 1)
+			+media(min-width 320px max-width 500px, 1)
 				+span-columns(1)
 
 				.date-category
@@ -84,7 +85,10 @@ main.story
 					margin-top: 9em
 					margin-bottom: 0
 					+border-bottom($article-border)
-
+					+media(min-width 320px max-width 500px, 1)
+						border-bottom: none
+		h1.second-area
+			height: 100px
 
 		aside:nth-child(3)
 			+span-columns(13.7 of 36)
@@ -98,8 +102,9 @@ main.story
 				width: 100%
 				object-fit: cover
 
-			+media(min-width 320px max-width 881px, 1)
+			+media(min-width 320px max-width 500px, 1)
 				+span-columns(1)
+				padding-top: .9em
 
 				figure
 					+span-columns(1)
@@ -117,6 +122,8 @@ main.story
 				color: gray
 				font-size: .7em
 				+border-bottom(black)
+				+media(min-width 320px max-width 500px, 1)
+					height: auto
 
 		aside.no_large_image_story
 			height: 485.391px
@@ -129,7 +136,7 @@ main.story
 			padding: 0
 			margin-top: -8.3em
 
-			+media(min-width 320px max-width 881px, 1)
+			+media(min-width 320px max-width 500px, 1)
 				+span-columns(1)
 				+shift(0)
 				margin-top: 0
@@ -147,7 +154,7 @@ main.story
 				+span-columns(18 of 32)
 				+font($surveyor-text,normal,normal)
 
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					+span-columns(1)
 
 			blockquote p
@@ -155,7 +162,7 @@ main.story
 				// once again wordpress adds a p element inside blockquote
 				margin: 0!important
 				+span-columns(17 of 32)
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					+span-columns(1)
 
 
@@ -165,7 +172,7 @@ main.story
 				margin-right: 0
 				clear: both
 				padding-left: 20px
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					+span-columns(1)
 					float: none!important
 					padding-left: 0
@@ -173,7 +180,7 @@ main.story
 			p:first-child
 				margin-top: 5.5%
 
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					+span-columns(1)
 					margin-top: 1em
 
@@ -183,20 +190,20 @@ main.story
 				padding-bottom: .5em
 				text-align: center
 
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					+span-columns(1)
 
 
 			figure
 				+span-columns(18 of 32)
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					+span-columns(1)
 				// hack for wordpress not to display p in figure (weird bug)
 				p
 					display: none
 				&.full-image
 					+span-columns(32 of 32)
-					+media(min-width 320px max-width 881px, 1)
+					+media(min-width 320px max-width 500px, 1)
 						+span-columns(1)
 
 				figcaption
@@ -208,7 +215,7 @@ main.story
 				float: initial!important
 				width: 50%
 
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					+span-columns(1)
 
 			.quote-text
@@ -216,7 +223,7 @@ main.story
 				font-size: 2em
 				line-height: 1.5em
 
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					+span-columns(1)
 
 
@@ -225,7 +232,7 @@ main.story
 				+span-columns(32 of 32)
 				text-align: center
 
-				+media(min-width 320px max-width 881px, 1)
+				+media(min-width 320px max-width 500px, 1)
 					+span-columns(1)
 
 section.ecommerce-story
@@ -235,7 +242,7 @@ section.ecommerce-story
 	position: relative
 	height: 340px
 
-	+media(min-width 320px max-width 881px, 1)
+	+media(min-width 320px max-width 500px, 1)
 		display: none
 
 	article.bottom
@@ -276,3 +283,7 @@ section.ecommerce-story
 
 	.border-fix
 		border: 1px solid silver
+
+hr
+	+media(min-width 320px max-width 500px, 1)
+		display: none

@@ -34,7 +34,7 @@
 						<a href="stories/">Articles</a>
 					</li>
 					<li>
-						<a href="https://thislandpress.myshopify.com/" target="_blank">Shop</a>
+						<a href="https://thislandpress.myshopify.com/" target="_blank">Store</a>
 					</li>
 					<li>
 						<a href="https://thislandpress.myshopify.com/collections/magazine" target="_blank">Subscribe</a>
@@ -57,7 +57,7 @@
 					<form action="//thislandpress.us2.list-manage.com/subscribe/post?u=54ceddca7014a5ad1a4ea1308&amp;id=f35f6d8a03" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<li>
 							<p>
-								Sign up for our weekly newsletter
+								Sign up for our weekly newsletter:
 							</p>
 						</li>
 							<li>				<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Please enter your email address">

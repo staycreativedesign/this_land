@@ -39,6 +39,9 @@
 						 					<?php the_title(); ?>
 						 				</h2>
 						 				<p><?php echo truncate_search_excerpt(); ?> ...</p>
+						 				<p>
+						 					<?php the_author(); ?>
+						 				</p>
 						 				<?php the_category(); ?>
 						 			</a>
 			 			 </article>

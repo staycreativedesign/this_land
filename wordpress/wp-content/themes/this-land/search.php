@@ -29,6 +29,7 @@ Template Name: Search Page
 							<h2>
 								<?php the_title(); ?>
 							</h2>
+							<?php the_author(); ?>
 							<?php the_excerpt(); ?>
 							<?php the_category(); ?>
 						</a>

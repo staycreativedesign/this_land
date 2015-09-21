@@ -125,7 +125,7 @@ img {
       margin-right: 38.19821%;
       width: 100%;
       margin-top: 0;
-      margin-bottom: 1.5em; }
+      margin-bottom: 1em; }
       .main-image:last-child {
         margin-right: 0; } }
 
@@ -150,8 +150,7 @@ img {
       display: block;
       margin-right: 38.19821%;
       width: 100%;
-      min-height: 0;
-      max-height: none;
+      height: auto;
       margin-bottom: 1em;
       padding-bottom: 1em; }
       .article-wrapper:last-child {
@@ -165,20 +164,35 @@ main.index {
   width: 100%; }
   main.index:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 881px) {
+    main.index {
+      float: left;
+      display: block;
+      margin-right: 38.19821%;
+      width: 100%;
+      margin-top: 0; }
+      main.index:last-child {
+        margin-right: 0; } }
   main.index article.main {
     text-align: center;
-    background-color: #fff9f5;
-    min-height: 340px;
-    max-height: 340px;
+    background-color: red;
+    height: 340px;
     padding: 20px;
     position: relative;
     width: 100%; }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
+      main.index article.main {
+        height: auto; } }
     main.index article.main h1 {
       margin-top: .5em;
       font-size: 2.5em;
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
       font-style: normal; }
+      @media screen and (min-width: 320px) and (max-width: 881px) {
+        main.index article.main h1 {
+          font-size: 1em;
+          margin-top: 3em; } }
     main.index article.main p:nth-child(-n+3) {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
@@ -186,6 +200,9 @@ main.index {
   main.index p:nth-child(2) {
     font-size: 1em;
     padding: 0 20%; }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
+      main.index p:nth-child(2) {
+        padding: 0; } }
   main.index p:nth-child(3) {
     margin-top: 2em;
     font-size: 1em; }
@@ -204,29 +221,23 @@ main.index {
     font-weight: 300;
     font-style: normal;
     font-size: .8em; }
-  @media screen and (min-width: 320px) and (max-width: 881px) {
-    main.index {
-      float: left;
-      display: block;
-      margin-right: 38.19821%;
-      width: 100%;
-      min-height: 0;
-      max-height: none; }
-      main.index:last-child {
-        margin-right: 0; }
-      main.index main {
-        padding-top: 0; }
-        main.index main article.main {
-          min-height: 0;
-          background-color: red; }
-          main.index main article.main h1 {
-            font-size: 2em;
-            margin-top: 0; } }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
+      main.index p:nth-child(4), main.index .post-categories li a {
+        font-size: .7em; } }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
+      main.index p:nth-child(4), main.index .post-categories li a {
+        position: relative;
+        transform: none;
+        bottom: auto;
+        left: auto; } }
 
 section.sub-category {
   clear: both;
   padding-top: 1.5em;
   overflow: hidden; }
+  @media screen and (min-width: 320px) and (max-width: 881px) {
+    section.sub-category {
+      display: none !important; } }
   section.sub-category article {
     float: left;
     display: block;
@@ -487,6 +498,9 @@ main.story section {
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
+  @media screen and (min-width: 320px) and (max-width: 881px) {
+    main.story section {
+      margin-top: 0; } }
   main.story section:last-child {
     margin-right: 0; }
   main.story section aside:nth-child(1) {
@@ -498,14 +512,14 @@ main.story section {
     height: 380px; }
     main.story section aside:nth-child(1):last-child {
       margin-right: 0; }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
+      main.story section aside:nth-child(1) {
+        display: none; } }
     main.story section aside:nth-child(1) img {
       width: 100%;
       position: absolute;
       bottom: 0;
       float: right; }
-    @media screen and (min-width: 320px) and (max-width: 881px) {
-      main.story section aside:nth-child(1) {
-        display: none; } }
   main.story section header {
     float: left;
     display: block;
@@ -547,6 +561,10 @@ main.story section {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: normal;
       font-style: normal; }
+      @media screen and (min-width: 320px) and (max-width: 881px) {
+        main.story section header h4 {
+          border-top: none;
+          border-bottom: 1px solid silver; } }
     main.story section header .date-category {
       position: absolute;
       bottom: 0;
@@ -556,6 +574,9 @@ main.story section {
       font-weight: 300;
       font-style: normal;
       font-size: .8em; }
+      @media screen and (min-width: 320px) and (max-width: 881px) {
+        main.story section header .date-category {
+          font-size: .7em; } }
       main.story section header .date-category ul.post-categories {
         margin-top: 0;
         text-transform: uppercase;
@@ -565,6 +586,9 @@ main.story section {
         font-style: normal;
         font-size: .8em;
         font-size: 1em; }
+        @media screen and (min-width: 320px) and (max-width: 881px) {
+          main.story section header .date-category ul.post-categories {
+            font-size: .7em; } }
       main.story section header .date-category p:nth-child(1) {
         margin-bottom: 0; }
       main.story section header .date-category p:nth-child(2) {
@@ -848,18 +872,24 @@ section.ecommerce-story {
     margin-right: 2.35765%;
     width: 48.82117%;
     text-align: center;
-    background-color: #fff9f5;
-    min-height: 340px;
-    max-height: 340px;
+    background-color: red;
+    height: 340px;
     padding: 20px; }
     section.ecommerce-story article.bottom:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 320px) and (max-width: 881px) {
+      section.ecommerce-story article.bottom {
+        height: auto; } }
     section.ecommerce-story article.bottom h1 {
       margin-top: .5em;
       font-size: 2.5em;
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
       font-style: normal; }
+      @media screen and (min-width: 320px) and (max-width: 881px) {
+        section.ecommerce-story article.bottom h1 {
+          font-size: 1em;
+          margin-top: 3em; } }
     section.ecommerce-story article.bottom p:nth-child(-n+3) {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
@@ -875,6 +905,9 @@ section.ecommerce-story {
       font-style: normal;
       font-size: .8em;
       font-size: 0.7em !important; }
+      @media screen and (min-width: 320px) and (max-width: 881px) {
+        section.ecommerce-story article.bottom ul.post-categories {
+          font-size: .7em; } }
   section.ecommerce-story aside.sub-category {
     float: left;
     display: block;
@@ -924,6 +957,9 @@ section.ecommerce-story {
         font-size: 0.7em !important;
         position: absolute;
         bottom: 0; }
+        @media screen and (min-width: 320px) and (max-width: 881px) {
+          section.ecommerce-story aside.sub-category article ul.post-categories {
+            font-size: .7em; } }
   section.ecommerce-story .border-fix {
     border: 1px solid silver; }
 
@@ -981,6 +1017,14 @@ main.about {
     margin-top: 2em; }
     main.about section:nth-child(3):last-child, main.about section:nth-child(6):last-child {
       margin-right: 0; }
+    @media screen and (min-width: 320px) and (max-width: 500px) {
+      main.about section:nth-child(3), main.about section:nth-child(6) {
+        float: left;
+        display: block;
+        margin-right: 38.19821%;
+        width: 100%; }
+        main.about section:nth-child(3):last-child, main.about section:nth-child(6):last-child {
+          margin-right: 0; } }
   main.about section:nth-child(4), main.about section:nth-child(7) {
     float: left;
     display: block;
@@ -1005,12 +1049,17 @@ main.about {
         main.about section:nth-child(4):last-child, main.about section:nth-child(7):last-child {
           margin-right: 0; }
         main.about section:nth-child(4) p:nth-child(1), main.about section:nth-child(7) p:nth-child(1) {
-          margin-top: 210px; } }
+          margin-top: auto; } }
   main.about h1 {
     font-family: "Surveyor Text A", "Surveyor Text B";
     font-weight: normal;
     font-style: normal;
     font-size: 2.5em; }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    main.about section:nth-child(3) {
+      margin-top: 0;
+      border-top: none;
+      padding-top: 0; } }
 
 a {
   text-decoration: none;
@@ -1028,6 +1077,9 @@ main {
   overflow: hidden;
   border-top: 1px solid silver;
   margin-top: 68px; }
+  @media screen and (min-width: 320px) and (max-width: 881px) {
+    main {
+      margin-top: 0; } }
 
 blockquote {
   padding-right: .2em;
@@ -1053,6 +1105,9 @@ span {
 .text-center {
   text-align: center; }
 
+.dont-display {
+  display: none; }
+
 body {
   margin: 0; }
 
@@ -1075,7 +1130,7 @@ body {
     margin: .5em 0; }
   @media screen and (min-width: 320px) and (max-width: 881px) {
     .banner-wrapper {
-      font-size: .8em;
+      font-size: .6em;
       position: absolute;
       top: 0; } }
 
@@ -1090,6 +1145,11 @@ body {
   @media screen and (min-width: 320px) and (max-width: 881px) {
     .slicknav_menu {
       display: block; } }
+  .slicknav_menu .logo {
+    margin-top: 1em;
+    width: 60%;
+    float: left;
+    padding-left: 20px; }
   .slicknav_menu .slicknav_icon-bar {
     box-shadow: 0 5px 0 #6c4b35 !important; }
   .slicknav_menu .slicknav_brand {
@@ -1097,6 +1157,7 @@ body {
     font-family: "Gotham SSm A", "Gotham SSm B";
     font-weight: 700;
     font-style: normal;
+    width: 68%;
     color: #b80405;
     margin: 11px 5px 6px;
     font-size: 2em !important; }
@@ -1134,7 +1195,8 @@ body {
       margin-right: 1.16509%;
       width: 91.56958%;
       margin-left: 4.21521%;
-      border-top: 0; }
+      border-top: 0;
+      padding: 0; }
       .main-wrapper:last-child {
         margin-right: 0; }
       .main-wrapper nav, .main-wrapper .logo {

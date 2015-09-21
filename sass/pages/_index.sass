@@ -6,7 +6,7 @@
 	@include media(min-width 320px max-width 881px, 1)
 		+span-columns(1)
 		margin-top: 0
-		margin-bottom: 1.5em
+		margin-bottom: 1em
 
 
 .article-wrapper
@@ -22,14 +22,16 @@
 
 	@include media(min-width 320px max-width 881px, 1)
 		+span-columns(1)
-		min-height: 0
-		max-height: none
+		height: auto
 		margin-bottom: 1em
 		padding-bottom: 1em
 
 main.index
 	padding-top: 1em
 	+span-columns(12)
+	@include media(min-width 320px max-width 881px, 1)
+		+span-columns(1)
+		margin-top: 0
 
 	article.main
 		+article-main
@@ -39,6 +41,8 @@ main.index
 	p:nth-child(2)
 		font-size: 1em
 		padding: 0 20%
+		@include media(min-width 320px max-width 881px, 1)
+			padding: 0
 
 	p:nth-child(3)
 		margin-top: 2em
@@ -51,25 +55,14 @@ main.index
 		left: 50%
 		transform: translate(-50%, -50%);
 		margin-top: 4em
-
-
 		+article-category
+		@include media(min-width 320px max-width 881px, 1)
+			position: relative
+			transform: none
+			bottom: auto
+			left: auto
 
-	@include media(min-width 320px max-width 881px, 1)
-		+span-columns(1)
-		min-height: 0
-		max-height: none
 
-		main
-			padding-top: 0
-
-			article.main
-				min-height: 0
-				background-color: red
-
-				h1
-					font-size: 2em
-					margin-top: 0
 
 
 
@@ -77,6 +70,8 @@ section.sub-category
 	clear: both
 	padding-top: 1.5em
 	overflow: hidden
+	@include media(min-width 320px max-width 881px, 1)
+		display: none!important
 
 
 	article

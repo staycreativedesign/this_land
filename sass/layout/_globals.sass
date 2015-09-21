@@ -13,6 +13,8 @@ main
 	overflow: hidden
 	border-top: 1px solid $article-border
 	margin-top: 68px
+	+media(min-width 320px max-width 881px, 1)
+		margin-top: 0
 
 blockquote
 	padding-right: .2em
@@ -36,3 +38,6 @@ span
 
 .text-center
 	text-align: center
+
+.dont-display
+	display: none

@@ -7,6 +7,11 @@
 	<?php wp_head(); ?>
 </head>
 	<body>
+		<aside class="banner-wrapper mobile">
+			<p>
+				LAUNCH PARTY FOR OUR NEW ISSUE. FACEBOOK DETAILS
+			</p>
+		</aside>
 		<div class="nav-wrapper nav-down">
 			<aside class="banner-wrapper">
 				<p>

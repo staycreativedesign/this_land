@@ -1,13 +1,18 @@
 main.story
-
 	section
 		margin-top: 2em
+		+media(min-width 320px max-width 881px, 1)
+			margin-top: 0
 		+span-columns(12)
+
 
 		aside:nth-child(1)
 			+span-columns(2)
 			position: relative
 			height: 380px
+			+media(min-width 320px max-width 881px, 1)
+				display: none
+
 			img
 				width: 100%
 				position: absolute
@@ -15,8 +20,6 @@ main.story
 				float: right
 			figure
 
-			+media(min-width 320px max-width 881px, 1)
-				display: none
 
 		header
 			+span-columns(5.3 of 12)
@@ -47,7 +50,9 @@ main.story
 				border-bottom: 1px solid black
 				font-size: 1em
 				+font($surveyor-display,normal, normal)
-
+				+media(min-width 320px max-width 881px, 1)
+					border-top: none
+					border-bottom: 1px solid silver
 			.date-category
 				position: absolute
 				bottom: 0

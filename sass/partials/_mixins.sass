@@ -1,7 +1,7 @@
 $nav-brown: 			rgb(108,75,53)
 $red: 						rgb(184,4,5)
 $article-border: 	rgb(192,192,192)
-$article-bg: 			#fff9f5
+$article-bg: 			red//#fff9f5
 
 
 =mobile
@@ -29,18 +29,23 @@ $article-bg: 			#fff9f5
 	color: $article-border
 	+font($gotham, 300, normal)
 	font-size: .8em
-
+	@include media(min-width 320px max-width 881px, 1)
+		font-size: .7em
 =article-main
 	text-align: center
 	background-color: $article-bg
-	min-height: 340px
-	max-height: 340px
+	height: 340px
 	padding: 20px
+	@include media(min-width 320px max-width 881px, 1)
+		height: auto
 
 	h1
 		margin-top: .5em
 		font-size: 2.5em
 		+font($surveyor-display,300,normal)
+		@include media(min-width 320px max-width 881px, 1)
+			font-size: 1em
+			margin-top: 3em
 
 	p:nth-child(-n+3)
 		+font($surveyor-display,300,normal)

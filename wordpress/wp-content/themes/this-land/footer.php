@@ -1,6 +1,6 @@
 <div class="subscribe">
 		<p>
-			<a href="<?php echo site_url('/subscriptions'); ?>">Subscribe yo!</a>
+			<a href="https://thislandpress.myshopify.com/collections/magazine" target="_blank">Subscribe yo!</a>
 		</p>
 	</div>
 		<footer>

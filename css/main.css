@@ -1026,7 +1026,8 @@ ul li {
 main {
   clear: both;
   overflow: hidden;
-  border-top: 1px solid silver; }
+  border-top: 1px solid silver;
+  margin-top: 68px; }
 
 blockquote {
   padding-right: .2em;
@@ -1149,12 +1150,13 @@ nav {
 
 .nav-wrapper {
   background: white;
-  height: 60px;
+  height: 100px;
   width: 100%;
   position: fixed;
   top: 0;
   transition: top 0.2s ease-in-out;
-  z-index: 10000; }
+  z-index: 10000;
+  opacity: 0.9; }
   .nav-wrapper header {
     margin: 0 auto;
     max-width: 1220px;
@@ -1210,10 +1212,12 @@ nav {
       margin-top: 0;
       vertical-align: middle; }
       .nav-wrapper nav li:nth-child(4) input {
-        width: 74%; }
+        width: 87%; }
     .nav-wrapper nav form {
       position: relative;
       width: 100%; }
+      .nav-wrapper nav form button {
+        background-color: white; }
     .nav-wrapper nav .inner-addon i {
       position: absolute;
       top: 31%;

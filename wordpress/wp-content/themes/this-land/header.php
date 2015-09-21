@@ -7,19 +7,19 @@
 	<?php wp_head(); ?>
 </head>
 	<body>
-		<aside class="banner-wrapper">
-			<p>
-				<a href="https://www.facebook.com/thislandpress" target="_blank">LAUNCH PARTY FOR OUR NEW ISSUE. FACEBOOK DETAILS</a>
-			</p>
-		</aside>
-		<div class="main-wrapper">
+		<div class="nav-wrapper nav-down">
+			<aside class="banner-wrapper">
+				<p>
+					<a href="https://www.facebook.com/thislandpress" target="_blank">LAUNCH PARTY FOR OUR NEW ISSUE. FACEBOOK DETAILS</a>
+				</p>
+			</aside>
 			<header>
 				<div role="banner" class="logo">
 					<h1>
 						<a href="<?php echo site_url(); ?>"><?php echo wp_get_attachment_image( 38, 'full' ); ?></a>
 					</h1>
 				</div>
-				<nav role="navigation">
+				<nav role="navigation ">
 					<ul id="menu">
 						<li>
 							<a href="<?php echo site_url('/stories'); ?>">Explore</a>
@@ -31,10 +31,10 @@
 							<a href="https://thislandpress.myshopify.com/collections/magazine" target="_blank">Subscribe</a>
 						</li>
 						<li>
-							<div class="main-search inner-addon left-addon">
-								<?php get_search_form(); ?>
-							</div>
+							<?php get_search_form(); ?>
 						</li>
 					</ul>
 				</nav>
 			</header>
+		</div>
+		<div class="main-wrapper">

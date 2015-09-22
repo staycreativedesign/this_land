@@ -1,6 +1,20 @@
 body
 	margin: 0
 
+.banner-wrapper-mobile
+	display:  none
+	+media(min-width 320px max-width 850px, 1)
+		+span-columns(1)
+		overflow: hidden
+		text-align: center
+		background-color: $red
+		color: white
+		+font($surveyor,normal, normal)
+		font-size: .9em
+		font-size: .7em
+		position: absolute
+		top: 0
+
 .banner-wrapper
 	+span-columns(12)
 	overflow: hidden
@@ -12,15 +26,15 @@ body
 
 	+media(min-width 320px max-width 850px, 1)
 		+span-columns(1)
-		font-size: .8em
+		font-size: .7em
 		position: absolute
 		top: 0
 
 .slicknav_menu
+	+media(min-width 320px max-width 850px, 1)
 	margin-top: 2em
 	background-color: white!important
 	border: none
-	display: none
 	+font($surveyor,700, normal)
 	+media(min-width 320px max-width 850px, 12)
 		display: block
@@ -36,11 +50,13 @@ body
 	.slicknav_brand
 		text-transform: uppercase
 		+font($gotham, 700, normal)
-		width: 68%
+		height: 36px
 		color: $red
 		margin: 11px 5px 6px
 		+media(min-width 320px max-width 500px, 1)
 			font-size: 2em!important
+			width: 69%
+			padding-left: 0
 	.slicknav_btn
 		background-color: white
 		color: black
@@ -90,24 +106,24 @@ nav
 	color: $nav-brown
 
 .nav-wrapper
-	+media(max-width 850px, 12)
-		display: none
-	+media(min-width 851px, 12)
-		+span-columns(12)
-	  background: white
-	  height: 100px
-	  width: 100%
-	  position: fixed
-	  top: 0
-    transition: top 0.2s ease-in-out
-    z-index: 10000
+	display: none
+	+media(min-width 320px max-width 850px, 24)
+	display
+  background: white
+  height: 100px
+  width: 100%
+  position: fixed
+  top: 0
+  transition: top 0.2s ease-in-out
+  -webkit-transition: top 0.2s ease-in-out
+  z-index: 10000
 
   header
-  	margin: 0 auto
-  	max-width: 1220px
-  	padding: 0 20px
-  	overflow: hidden
-  	display: block
+		margin: 0 auto
+		max-width: 1220px
+		padding: 0 20px
+		overflow: hidden
+		display: block
 
   .logo
   	+span-columns(8 of 36)

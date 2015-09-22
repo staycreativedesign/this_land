@@ -40,12 +40,15 @@ $article-bg: 			#fff9f5
 		height: auto
 
 	h1
-		margin-top: .5em
-		font-size: 2.5em
 		+font($surveyor-display,300,normal)
-		@include media(min-width 320px max-width 500px, 1)
 			font-size: 1em
 			margin-top: 3em
+		@include media(min-width 501px, 1)
+			font-size: 2em
+			margin-top: 1em
+		@include media(min-width 901px, 1)
+			margin-top: .5em
+			font-size: 2.5em
 
 	p:nth-child(-n+3)
 		+font($surveyor-display,300,normal)

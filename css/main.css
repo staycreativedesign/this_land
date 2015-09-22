@@ -186,15 +186,17 @@ main.index {
       main.index article.main {
         height: auto; } }
     main.index article.main h1 {
-      margin-top: .5em;
-      font-size: 2.5em;
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
       font-style: normal; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 501px) {
         main.index article.main h1 {
-          font-size: 1em;
-          margin-top: 3em; } }
+          font-size: 2em;
+          margin-top: 1em; } }
+      @media screen and (min-width: 901px) {
+        main.index article.main h1 {
+          margin-top: .5em;
+          font-size: 2.5em; } }
     main.index article.main p:nth-child(-n+3) {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
@@ -366,7 +368,7 @@ main.search {
   padding-top: 3em; }
   main.search:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
+  @media screen and (min-width: 320px) and (max-width: 850px) {
     main.search {
       padding-top: 0em; } }
   main.search .filter {
@@ -380,7 +382,8 @@ main.search {
     font-weight: normal;
     font-style: normal;
     text-transform: uppercase;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    margin-top: 2em; }
     main.search aside:last-child {
       margin-right: 0; }
     main.search aside li:nth-child(2n) {
@@ -391,8 +394,14 @@ main.search {
       font-weight: bold; }
     main.search aside h2 {
       font-size: 1.3em; }
+      @media screen and (min-width: 320px) and (max-width: 850px) {
+        main.search aside h2 {
+          font-size: 1.2em; } }
     main.search aside li {
       font-size: 1em; }
+      @media screen and (min-width: 320px) and (max-width: 850px) {
+        main.search aside li {
+          font-size: .8em; } }
   main.search .content-searchbox {
     float: left;
     display: block;
@@ -477,6 +486,8 @@ main.search {
         clear: left; }
       main.search section article h2 {
         padding-top: 1em; }
+      main.search section article p:nth-child(4) {
+        font-weight: bold; }
       main.search section article p:nth-child(3) {
         padding: 1em 20px 0 20px;
         font-size: 1.3em;
@@ -537,7 +548,7 @@ main.story section {
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
+  @media screen and (min-width: 320px) and (max-width: 850px) {
     main.story section {
       margin-top: 0; } }
   main.story section:last-child {
@@ -551,7 +562,7 @@ main.story section {
     height: 380px; }
     main.story section aside:nth-child(1):last-child {
       margin-right: 0; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
+    @media screen and (min-width: 320px) and (max-width: 850px) {
       main.story section aside:nth-child(1) {
         display: none; } }
     main.story section aside:nth-child(1) img {
@@ -570,7 +581,7 @@ main.story section {
     position: relative; }
     main.story section header:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
+    @media screen and (min-width: 320px) and (max-width: 850px) {
       main.story section header {
         float: left;
         display: block;
@@ -588,7 +599,7 @@ main.story section {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: normal;
       font-style: normal; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section header h1 {
           font-size: 2em; } }
     main.story section header h4 {
@@ -600,7 +611,7 @@ main.story section {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: normal;
       font-style: normal; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section header h4 {
           padding: 0;
           border-top: none;
@@ -633,10 +644,10 @@ main.story section {
         margin-bottom: 0; }
       main.story section header .date-category p:nth-child(2) {
         margin-top: 0; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section header .date-category {
           display: none; } }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
+    @media screen and (min-width: 320px) and (max-width: 850px) {
       main.story section header {
         float: left;
         display: block;
@@ -653,7 +664,7 @@ main.story section {
           margin-top: 9em;
           margin-bottom: 0;
           border-bottom: 1px solid silver; } }
-    @media screen and (min-width: 320px) and (max-width: 500px) and (min-width: 320px) and (max-width: 500px) {
+    @media screen and (min-width: 320px) and (max-width: 850px) and (min-width: 320px) and (max-width: 850px) {
       main.story section header p:nth-child(3) {
         border-bottom: none; } }
   main.story section h1.second-area {
@@ -672,7 +683,7 @@ main.story section {
       height: 380px;
       width: 100%;
       object-fit: cover; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
+    @media screen and (min-width: 320px) and (max-width: 850px) {
       main.story section aside:nth-child(3) {
         float: left;
         display: block;
@@ -702,11 +713,17 @@ main.story section {
       color: gray;
       font-size: .7em;
       border-bottom: 1px solid black; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section aside:nth-child(3) figcaption {
-          height: auto; } }
+          margin-top: 0;
+          height: auto;
+          padding-top: 1em;
+          padding-bottom: 1em; } }
   main.story section aside.no_large_image_story {
     height: 485.391px; }
+    @media screen and (min-width: 320px) and (max-width: 850px) {
+      main.story section aside.no_large_image_story {
+        display: none; } }
   main.story section article {
     float: left;
     display: block;
@@ -718,7 +735,7 @@ main.story section {
     margin-top: -8.3em; }
     main.story section article:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
+    @media screen and (min-width: 320px) and (max-width: 850px) {
       main.story section article {
         float: left;
         display: block;
@@ -734,6 +751,9 @@ main.story section {
       color: rgba(0, 0, 0, 0.8);
       letter-spacing: .01rem;
       line-height: 1.5; }
+      @media screen and (min-width: 320px) and (max-width: 850px) {
+        main.story section article p, main.story section article blockquote p {
+          font-size: 1em; } }
     main.story section article p {
       float: left;
       display: block;
@@ -744,7 +764,7 @@ main.story section {
       font-style: normal; }
       main.story section article p:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article p {
           float: left;
           display: block;
@@ -763,7 +783,7 @@ main.story section {
       width: 52.71659%; }
       main.story section article blockquote p:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article blockquote p {
           float: left;
           display: block;
@@ -782,7 +802,7 @@ main.story section {
       padding-left: 20px; }
       main.story section article .float-right:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article .float-right {
           float: left;
           display: block;
@@ -794,7 +814,7 @@ main.story section {
             margin-right: 0; } }
     main.story section article p:first-child {
       margin-top: 5.5%; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article p:first-child {
           float: left;
           display: block;
@@ -813,7 +833,7 @@ main.story section {
       text-align: center; }
       main.story section article .spacer:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article .spacer {
           float: left;
           display: block;
@@ -828,7 +848,7 @@ main.story section {
       width: 55.86881%; }
       main.story section article figure:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article figure {
           float: left;
           display: block;
@@ -845,7 +865,7 @@ main.story section {
         width: 100%; }
         main.story section article figure.full-image:last-child {
           margin-right: 0; }
-        @media screen and (min-width: 320px) and (max-width: 500px) {
+        @media screen and (min-width: 320px) and (max-width: 850px) {
           main.story section article figure.full-image {
             float: left;
             display: block;
@@ -862,7 +882,7 @@ main.story section {
       overflow: hidden;
       float: initial !important;
       width: 50%; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article p.float-none {
           float: left;
           display: block;
@@ -876,12 +896,15 @@ main.story section {
       font-style: normal;
       font-size: 2em;
       line-height: 1.5em; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article .quote-text {
           float: left;
           display: block;
           margin-right: 38.19821%;
-          width: 100%; }
+          width: 100%;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+          padding: 15px 0; }
           main.story section article .quote-text:last-child {
             margin-right: 0; } }
     main.story section article .quote {
@@ -892,7 +915,7 @@ main.story section {
       text-align: center; }
       main.story section article .quote:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article .quote {
           float: left;
           display: block;
@@ -912,7 +935,7 @@ section.ecommerce-story {
   height: 340px; }
   section.ecommerce-story:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
+  @media screen and (min-width: 320px) and (max-width: 850px) {
     section.ecommerce-story {
       display: none; } }
   section.ecommerce-story article.bottom {
@@ -930,15 +953,17 @@ section.ecommerce-story {
       section.ecommerce-story article.bottom {
         height: auto; } }
     section.ecommerce-story article.bottom h1 {
-      margin-top: .5em;
-      font-size: 2.5em;
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
       font-style: normal; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
+      @media screen and (min-width: 501px) {
         section.ecommerce-story article.bottom h1 {
-          font-size: 1em;
-          margin-top: 3em; } }
+          font-size: 2em;
+          margin-top: 1em; } }
+      @media screen and (min-width: 901px) {
+        section.ecommerce-story article.bottom h1 {
+          margin-top: .5em;
+          font-size: 2.5em; } }
     section.ecommerce-story article.bottom p:nth-child(-n+3) {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
@@ -1012,7 +1037,7 @@ section.ecommerce-story {
   section.ecommerce-story .border-fix {
     border: 1px solid silver; }
 
-@media screen and (min-width: 320px) and (max-width: 500px) {
+@media screen and (min-width: 320px) and (max-width: 850px) {
   hr {
     display: none; } }
 
@@ -1139,10 +1164,7 @@ main {
   clear: both;
   overflow: hidden;
   border-top: 1px solid silver;
-  margin-top: 40px; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
-    main {
-      margin-top: 0; } }
+  margin-top: 0; }
 
 blockquote {
   padding-right: .2em;
@@ -1168,11 +1190,41 @@ span {
 .text-center {
   text-align: center; }
 
-.dont-display {
+hr {
+  border: none;
+  height: 1px;
+  background-color: black; }
+
+.mobile {
   display: none; }
+  @media screen and (min-width: 320px) and (max-width: 850px) {
+    .mobile {
+      display: normal; } }
 
 body {
   margin: 0; }
+
+.banner-wrapper-mobile {
+  display: none; }
+  @media screen and (min-width: 320px) and (max-width: 850px) {
+    .banner-wrapper-mobile {
+      float: left;
+      display: block;
+      margin-right: 38.19821%;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      background-color: #b80405;
+      color: white;
+      font-family: "Surveyor Text A", "Surveyor Text B";
+      font-weight: normal;
+      font-style: normal;
+      font-size: .9em;
+      font-size: .7em;
+      position: absolute;
+      top: 0; }
+      .banner-wrapper-mobile:last-child {
+        margin-right: 0; } }
 
 .banner-wrapper {
   float: left;
@@ -1195,7 +1247,7 @@ body {
       display: block;
       margin-right: 38.19821%;
       width: 100%;
-      font-size: .8em;
+      font-size: .7em;
       position: absolute;
       top: 0; }
       .banner-wrapper:last-child {
@@ -1205,7 +1257,6 @@ body {
   margin-top: 2em;
   background-color: white !important;
   border: none;
-  display: none;
   font-family: "Surveyor Text A", "Surveyor Text B";
   font-weight: 700;
   font-style: normal; }
@@ -1224,12 +1275,14 @@ body {
     font-family: "Gotham SSm A", "Gotham SSm B";
     font-weight: 700;
     font-style: normal;
-    width: 68%;
+    height: 36px;
     color: #b80405;
     margin: 11px 5px 6px; }
     @media screen and (min-width: 320px) and (max-width: 500px) {
       .slicknav_menu .slicknav_brand {
-        font-size: 2em !important; } }
+        font-size: 2em !important;
+        width: 69%;
+        padding-left: 0; } }
   .slicknav_menu .slicknav_btn {
     background-color: white;
     color: black;
@@ -1279,45 +1332,41 @@ body {
 nav {
   color: #6c4b35; }
 
-@media screen and (max-width: 850px) {
-  .nav-wrapper {
-    display: none; } }
-
-@media screen and (min-width: 851px) {
-  .nav-wrapper {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .nav-wrapper:last-child {
-      margin-right: 0; }
-    .nav-wrapper header {
-      margin: 0 auto;
-      max-width: 1220px;
-      padding: 0 20px;
-      overflow: hidden;
-      display: block; }
-    .nav-wrapper .logo {
+.nav-wrapper {
+  display: none; }
+  .nav-wrapper display {
+    background: white;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    -webkit-transition: top 0.2s ease-in-out;
+    z-index: 10000;
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 20px;
+    overflow: hidden;
+    display: block; }
+    .nav-wrapper display .logo {
       float: left;
       display: block;
       margin-right: 0.77372%;
       width: 21.62044%;
       text-transform: uppercase;
       color: #b80405; }
-      .nav-wrapper .logo:last-child {
+      .nav-wrapper display .logo:last-child {
         margin-right: 0; }
-      .nav-wrapper .logo h1 {
+      .nav-wrapper display .logo h1 {
         margin-top: 10px;
         font-family: "Gotham SSm A", "Gotham SSm B";
         font-weight: 700;
         font-style: normal;
-        font-size: 2em; } }
-  @media screen and (min-width: 851px) and (min-width: 320px) and (max-width: 500px) {
-    .nav-wrapper {
-      display: none; } }
-
-@media screen and (min-width: 851px) {
-    .nav-wrapper nav {
+        font-size: 2em; }
+    @media screen and (min-width: 320px) and (max-width: 500px) {
+      .nav-wrapper display {
+        display: none; } }
+    .nav-wrapper display nav {
       float: left;
       display: block;
       margin-right: 0.77372%;
@@ -1327,11 +1376,11 @@ nav {
       font-style: normal;
       text-transform: uppercase;
       float: right; }
-      .nav-wrapper nav:last-child {
+      .nav-wrapper display nav:last-child {
         margin-right: 0; }
-      .nav-wrapper nav ul {
+      .nav-wrapper display nav ul {
         text-align: right; }
-      .nav-wrapper nav li {
+      .nav-wrapper display nav li {
         margin-top: 0;
         font-size: 13px;
         display: inline-block;
@@ -1340,24 +1389,24 @@ nav {
         height: 35px;
         letter-spacing: 2px;
         width: 17%; }
-      .nav-wrapper nav li:nth-child(3) {
+      .nav-wrapper display nav li:nth-child(3) {
         margin-right: 15px; }
-      .nav-wrapper nav li:nth-child(4) {
+      .nav-wrapper display nav li:nth-child(4) {
         padding-right: 0;
         width: 33%;
         margin-top: 0;
         vertical-align: middle; }
-        .nav-wrapper nav li:nth-child(4) input {
+        .nav-wrapper display nav li:nth-child(4) input {
           width: 80%; }
-      .nav-wrapper nav form {
+      .nav-wrapper display nav form {
         position: relative;
         width: 100%; }
-        .nav-wrapper nav form button {
+        .nav-wrapper display nav form button {
           background-color: white; }
-      .nav-wrapper nav .inner-addon i {
+      .nav-wrapper display nav .inner-addon i {
         position: absolute;
         top: 31%;
-        right: 92%; } }
+        right: 92%; }
 
 .nav-up {
   top: -100px; }

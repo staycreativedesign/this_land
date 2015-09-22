@@ -18,7 +18,7 @@ function js_styles() {
 	wp_enqueue_script( 'html5_shiv_js', get_template_directory_uri() . '/js/html5shiv.min.js', '', '', false );
 	wp_enqueue_script( 'bottom_js', get_template_directory_uri() . '/js/bottom.js', array('jquery', 'slicknav_js'), '', true );
     wp_enqueue_script( 'nav_js', get_template_directory_uri() . '/js/nav.js', array('jquery'), '', true );
-    wp_enqueue_script( 'slicknav_js', get_template_directory_uri() . '/js/jquery.xxx.min.js', array('jquery'), '', false );
+    wp_enqueue_script( 'slicknav_js', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '', false );
     wp_enqueue_script( 'nivo_slider', get_template_directory_uri() . '/js/jquery.nivo.slider.js', array('jquery'), '', true );
 
 

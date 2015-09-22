@@ -7,7 +7,7 @@
 	<?php wp_head(); ?>
 </head>
 	<body>
-		<aside class="banner-wrapper mobile">
+		<aside class="banner-wrapper-mobile">
 			<p>
 				LAUNCH PARTY FOR OUR NEW ISSUE. FACEBOOK DETAILS
 			</p>

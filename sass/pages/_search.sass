@@ -2,7 +2,7 @@ main.search
 	+span-columns(12)
 	padding-top: 3em
 
-	+media(min-width 320px max-width 500px, 1)
+	+media(min-width 320px max-width 850px, 1)
 		padding-top: 0em
 
 	.filter
@@ -14,6 +14,7 @@ main.search
 		+font($gotham, normal, normal)
 		text-transform: uppercase
 		letter-spacing: 1.5px
+		margin-top: 2em
 		li:nth-child(2n)
 			padding: 1.2em 0
 
@@ -25,9 +26,13 @@ main.search
 
 		h2
 			font-size: 1.3em
+			+media(min-width 320px max-width 850px, 1)
+				font-size: 1.2em
 
 		li
-					font-size: 1em
+			font-size: 1em
+			+media(min-width 320px max-width 850px, 1)
+				font-size: .8em
 
 	.content-searchbox
 		+span-columns(3 of 12)
@@ -78,6 +83,10 @@ main.search
 
 		 	h2
 		 		padding-top: 1em
+
+		 	p:nth-child(4)
+		 		font-weight: bold
+
 		 	p:nth-child(3)
 		 		padding: 1em 20px 0 20px
 		 		font-size: 1.3em

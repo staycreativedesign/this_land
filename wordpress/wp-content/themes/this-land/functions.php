@@ -28,6 +28,10 @@ function js_styles() {
 add_action( 'wp_enqueue_scripts', 'js_styles' );
 
 
+function custom_theme_setup() {
+    add_theme_support( $feature, $arguments );
+}
+add_action( 'post-thumbnails' );
 
 
 function custom_meta_box_markup($object)

@@ -479,7 +479,7 @@ main.search {
       border-bottom: 1px solid silver;
       margin-top: 2em;
       position: relative;
-      height: 390px;
+      height: 450px;
       font-size: .65em; }
       main.search section article:last-child {
         margin-right: 0; }
@@ -487,6 +487,9 @@ main.search {
         margin-right: 0; }
       main.search section article:nth-child(3n+1) {
         clear: left; }
+      main.search section article figure img {
+        height: 200px;
+        object-fit: cover; }
       main.search section article h2 {
         font-family: "Gotham SSm A", "Gotham SSm B";
         font-weight: bold;

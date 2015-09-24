@@ -12,8 +12,7 @@
 		<section class="search">
 		<?php
 
-		   $args = array('cat=2');
-		   $allposts = new WP_Query( array( 'tag__not_in' => array( 8, 9 ) ) );
+		   $allposts = new WP_Query( array( 'tag__not_in' => array( 186, 1 ) ) );
 
 		   if($allposts->have_posts()) :
 		      while($allposts->have_posts()) :

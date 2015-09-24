@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<main role="search" class="search">
+	<main role="search" class="search archive">
 		<section class="filter">
 			<p>
 				Filter / Sort <i class="fa fa-caret-down"></i>
@@ -9,14 +9,15 @@
 			<?php get_template_part('content', 'aside'); ?>
 			<?php get_template_part('content', 'categories'); ?>
 		</aside>
-		<form method="get" id="searchformtwo" action="<?php bloginfo('home'); ?>/">
-			<div class="content-searchbox">
-			  <button type"submit"  class="button-submit" style="border: none;background-color: white;"><i class="fa fa-search"></i></button>
-		    <input type="text" class="form-control" value="<?php echo wp_specialchars($b, 1); ?>" name="s" id="s" />
-			</div>
-		</form>
 		<section class="search">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php
+
+				   $allposts = new WP_Query( array( 'tag__not_in' => array( 186, 1 ) ) );
+
+				   if($allposts->have_posts()) :
+				      while($allposts->have_posts()) :
+				         $allposts->the_post();
+				?>
 			<article>
 			<a href="<?php echo esc_url( get_permalink() ); ?>">
 
@@ -24,7 +25,9 @@
 				<h2>
 					<?php the_title(); ?>
 				</h2>
-				<?php the_excerpt(); ?>
+				<p>
+				<?php echo truncate_search_excerpt(); ?>
+				</p>
 				<?php the_category(); ?>
 			</a>
 			</article>

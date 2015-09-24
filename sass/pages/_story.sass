@@ -149,7 +149,7 @@ main.story
 			+media(min-width 320px max-width 850px, 1)
 				+span-columns(1)
 				+shift(0)
-				margin-top: 0
+				margin-bottom: 0
 
 
 			p, blockquote p
@@ -164,6 +164,7 @@ main.story
 			p
 				+span-columns(18 of 32)
 				+font($surveyor-text,normal,normal)
+				margin-top: 0
 
 				+media(min-width 320px max-width 850px, 1)
 					+span-columns(1)
@@ -171,7 +172,7 @@ main.story
 			blockquote p
 				+font($surveyor-display,normal,normal)
 				// once again wordpress adds a p element inside blockquote
-				margin: 0!important
+				margin: 0 0 20px 0!important
 				+span-columns(17 of 32)
 				+media(min-width 320px max-width 850px, 1)
 					+span-columns(1)

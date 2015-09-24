@@ -759,7 +759,7 @@ main.story section {
         margin-right: 38.19821%;
         width: 100%;
         margin-left: 0%;
-        margin-top: 0; }
+        margin-bottom: 0; }
         main.story section article:last-child {
           margin-right: 0; } }
     main.story section article p, main.story section article blockquote p {
@@ -778,7 +778,8 @@ main.story section {
       width: 55.86881%;
       font-family: "Surveyor Text A", "Surveyor Text B";
       font-weight: normal;
-      font-style: normal; }
+      font-style: normal;
+      margin-top: 0; }
       main.story section article p:last-child {
         margin-right: 0; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
@@ -793,7 +794,7 @@ main.story section {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: normal;
       font-style: normal;
-      margin: 0 !important;
+      margin: 0 0 20px 0 !important;
       float: left;
       display: block;
       margin-right: 0.87128%;

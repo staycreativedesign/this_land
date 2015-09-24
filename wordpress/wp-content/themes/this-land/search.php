@@ -30,7 +30,7 @@ Template Name: Search Page
 								<?php the_title(); ?>
 							</h2>
 							<?php the_author(); ?>
-							<?php the_excerpt(); ?>
+							<?php echo truncate_search_excerpt(); ?>
 							<?php the_category(); ?>
 						</a>
 					</article>

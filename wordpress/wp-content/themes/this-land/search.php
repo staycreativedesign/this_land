@@ -14,9 +14,6 @@ Template Name: Search Page
 					<?php get_template_part('content', 'aside'); ?>
 					<?php get_template_part('content', 'categories'); ?>
 				</aside>
-				<div class="content-searchbox">
-
-				</div>
 				<section class="search">
 				<?php
 					if ( have_posts() ) {

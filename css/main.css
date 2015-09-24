@@ -250,8 +250,11 @@ section.sub-category {
     width: 23.23176%;
     border-bottom: 1px solid silver;
     border-bottom: 1px solid silver;
-    height: 305px;
+    height: 350px;
     position: relative; }
+    section.sub-category article img {
+      height: 200px;
+      background-size: cover; }
     section.sub-category article:last-child {
       margin-right: 0; }
     section.sub-category article p:nth-child(4) {
@@ -996,6 +999,8 @@ section.ecommerce-story {
     width: 48.82117%; }
     section.ecommerce-story aside.sub-category:last-child {
       margin-right: 0; }
+    section.ecommerce-story aside.sub-category img {
+      height: 200px; }
     section.ecommerce-story aside.sub-category article {
       float: left;
       display: block;
@@ -1211,6 +1216,9 @@ hr {
   @media screen and (min-width: 320px) and (max-width: 850px) {
     .mobile {
       display: normal; } }
+
+.no-bottom-border {
+  border-bottom: none !important; }
 
 body {
   margin: 0; }

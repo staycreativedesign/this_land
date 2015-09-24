@@ -17,7 +17,7 @@
 		<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 			<a href="<?php echo esc_url( get_permalink() ); ?>">
 			<article>
-			<img src= <?php echo get_post_meta( $post->ID, 'meta-box-text', true );?>>
+			<?php the_post_thumbnail(); ?>
 			<h2>
 				<?php the_title(); ?>
 			</h2>

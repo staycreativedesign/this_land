@@ -52,7 +52,7 @@
 				<?php if( $first_story->have_posts() ) : while( $first_story->have_posts() ) : $first_story->the_post(); ?>
 					<a href="<?php echo esc_url( get_permalink() ); ?>">
 					<article>
-					<img src= <?php echo get_post_meta( get_the_ID(), 'meta-box-text', true );?>>
+					<?php the_post_thumbnail(); ?>
 					<h2>
 						<?php the_title(); ?>
 					</h2>
@@ -84,7 +84,7 @@
 				<?php if( $second_story->have_posts() ) : while( $second_story->have_posts() ) : $second_story->the_post(); ?>
 					<a href="<?php echo esc_url( get_permalink() ); ?>">
 					<article>
-					<img src= <?php echo get_post_meta( get_the_ID(), 'meta-box-text', true );?>>
+					<?php the_post_thumbnail(); ?>
 					<h2>
 						<?php the_title(); ?>
 					</h2>

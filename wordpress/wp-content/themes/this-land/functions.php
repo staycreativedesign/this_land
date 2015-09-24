@@ -192,6 +192,18 @@ function truncate_excerpt(){
 return $the_str;
 }
 
+function get_the_popular_excerpt(){
+    $excerpt = get_the_content();
+    $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+    $excerpt = strip_shortcodes($excerpt);
+    $excerpt = strip_tags($excerpt);
+    $excerpt = substr($excerpt, 0, 200);
+    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+    $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+    $excerpt = $excerpt.' ...';
+return $excerpt;
+}
+
 function truncate_search_excerpt(){
 	$excerpt = get_the_content();
 	$excerpt = strip_shortcodes($excerpt);
@@ -419,14 +431,6 @@ function save_second_ecommerce_item($post_id, $post, $update)
 add_action("save_post", "save_second_ecommerce_item", 10, 3);
 
 
-
-
-
-
-
-
-
-
 function check_small_image($post) {
         $small_image = get_post_meta( $post->ID, 'small-image-meta', true );
 
@@ -439,45 +443,28 @@ function check_small_image($post) {
 
 }
 
-
-function check_large_image($post) {
-        $large_image = get_post_meta( $post->ID, 'large-meta-box-text', true );
-
-        if ($large_image) {
-            ?><img src="<?php echo get_post_meta( $post->ID, 'large-meta-box-text', true );?>"><?php
-        }
-        else {
-            echo wp_get_attachment_image( 230 );
-        }
-
-}
-
 function check_large_caption($post) {
         $large_caption = get_post_meta( $post->ID, 'large-image-caption', true );
         if ( $large_caption ) {
-          echo get_post_meta( $post->ID, 'large-image-caption', true );
+          ?>
+            <figcaption>
+                <?php echo get_post_meta( $post->ID, 'large-image-caption', true ); ?>
+            </figcaption> <?php
         }
         else {
+            ?> <figcaption class="no-bottom-border"></figcaption> <?php
         }
 }
 
-function large_image_set($post){
-    $check_image = get_post_meta( $post->ID, 'large-meta-box-text', true );
 
-    if ( $check_image ) {
+
+function large_image_set($post){
         ?><aside>
             <figure>
-                <?php check_large_image($post); ?>
-                <figcaption>
-                    <?php check_large_caption($post); ?>
-
-                </figcaption>
+                <?php the_post_thumbnail(); ?>
+                <?php check_large_caption($post) ?>
             </figure>
             </aside><?php
-    }
-    else {
-        ?><aside class="no_large_image_story"></aside><?php
-    }
 }
 
 if ( ! function_exists('search_form') ) {

@@ -28,7 +28,7 @@
 							<?php the_category(); ?>
 						</div>
 					</header>
-					<?php large_image_set($post);	?>
+						<?php large_image_set($post);	?>
 					<article>
 					<?php
 						the_content();

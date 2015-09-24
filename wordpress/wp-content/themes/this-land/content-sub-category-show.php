@@ -22,7 +22,7 @@
 				<a href="<?php echo esc_url( get_permalink() ); ?>">
 					<article class="bottom">
 						<h1><?php the_title(); ?></h1>
-						<?php the_excerpt(); ?>
+						<?php echo get_the_popular_excerpt(); ?>
 						<p>
 							<span class="italics">by</span> <?php the_author(); ?>
 						<?php the_category(); ?>
@@ -56,7 +56,7 @@
 					<h2>
 						<?php the_title(); ?>
 					</h2>
-						<?php the_excerpt(); ?>
+						<?php echo truncate_excerpt(); ?>
 						<?php the_category(); ?>
 					</article>
 					</a>
@@ -88,7 +88,7 @@
 					<h2>
 						<?php the_title(); ?>
 					</h2>
-						<?php the_excerpt(); ?>
+						<?php echo truncate_excerpt(); ?>
 						<?php the_category(); ?>
 					</article>
 					</a>
@@ -115,7 +115,7 @@
 			<a href="<?php echo esc_url( get_permalink() ); ?>">
 			<article class="bottom">
 				<h1><?php the_title(); ?></h1>
-				<?php the_excerpt(); ?>
+				<?php echo get_the_popular_excerpt(); ?>
 				<p>
 					<span class="italics">by</span> <?php the_author(); ?>
 				</p>

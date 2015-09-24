@@ -186,10 +186,14 @@ add_filter( 'image_send_to_editor', 'html5_insert_image', 10, 9 );
 
 function truncate_excerpt(){
 	$excerpt = get_the_content();
-	$excerpt = strip_shortcodes($excerpt);
-	$excerpt = strip_tags($excerpt);
-	$the_str = substr($excerpt, 0, 30);
-return $the_str;
+        $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+        $excerpt = strip_shortcodes($excerpt);
+        $excerpt = strip_tags($excerpt);
+        $excerpt = substr($excerpt, 0, 30);
+        $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+        $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+        $excerpt = $excerpt.' ...';
+return $excerpt;
 }
 
 function get_the_popular_excerpt(){
@@ -206,10 +210,14 @@ return $excerpt;
 
 function truncate_search_excerpt(){
 	$excerpt = get_the_content();
-	$excerpt = strip_shortcodes($excerpt);
-	$excerpt = strip_tags($excerpt);
-	$the_str = substr($excerpt, 0, 100);
-return $the_str;
+    $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+    $excerpt = strip_shortcodes($excerpt);
+    $excerpt = strip_tags($excerpt);
+    $excerpt = substr($excerpt, 0, 100);
+    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+    $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+    $excerpt = $excerpt.' ...';
+return $excerpt;
 }
 
 

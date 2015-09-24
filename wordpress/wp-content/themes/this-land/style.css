@@ -488,7 +488,11 @@ main.search {
       main.search section article:nth-child(3n+1) {
         clear: left; }
       main.search section article h2 {
-        padding-top: 1em; }
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: bold;
+        font-style: normal;
+        padding-top: 1em;
+        font-size: 1.5em; }
       main.search section article p:nth-child(4) {
         font-weight: bold; }
       main.search section article p:nth-child(3) {

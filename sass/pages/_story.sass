@@ -131,7 +131,10 @@ main.story
 					padding-bottom: 1em
 
 		aside.no_large_image_story
+			+span-columns(13.7 of 36)
+			+omega()
 			height: 485.391px
+
 			+media(min-width 320px max-width 850px, 1)
 				display: none
 
@@ -295,5 +298,6 @@ section.ecommerce-story
 		border: 1px solid silver
 
 hr
+	clear: both
 	+media(min-width 320px max-width 850px, 1)
 		display: none

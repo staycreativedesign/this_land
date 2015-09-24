@@ -4,6 +4,9 @@ jQuery(document).ready(function($){
     	'brand': '<img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/this-land-logo.png" width="91%">'
     });
 
+    $('.slicknav_menu').prepend('');
+
+
     $('#slider').nivoSlider({
     			effect: 'fade',
     			animSpeed: 700,

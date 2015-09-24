@@ -5,6 +5,11 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"></script>
 	<?php wp_head(); ?>
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	        $('.slicknav_menu').prepend('<a href="/"><img class="logo" src="images/this-land-logo.png" alt="Website Logo" /></a>');
+	    });
+	</script>
 </head>
 	<body>
 		<aside class="banner-wrapper-mobile">

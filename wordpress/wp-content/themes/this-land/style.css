@@ -720,7 +720,14 @@ main.story section {
           padding-top: 1em;
           padding-bottom: 1em; } }
   main.story section aside.no_large_image_story {
+    float: left;
+    display: block;
+    margin-right: 0.77372%;
+    width: 37.57628%;
+    margin-right: 0;
     height: 485.391px; }
+    main.story section aside.no_large_image_story:last-child {
+      margin-right: 0; }
     @media screen and (min-width: 320px) and (max-width: 850px) {
       main.story section aside.no_large_image_story {
         display: none; } }
@@ -1037,9 +1044,11 @@ section.ecommerce-story {
   section.ecommerce-story .border-fix {
     border: 1px solid silver; }
 
-@media screen and (min-width: 320px) and (max-width: 850px) {
-  hr {
-    display: none; } }
+hr {
+  clear: both; }
+  @media screen and (min-width: 320px) and (max-width: 850px) {
+    hr {
+      display: none; } }
 
 main.about {
   font-family: "Surveyor Text A", "Surveyor Text B";
@@ -1163,8 +1172,10 @@ ul li {
 main {
   clear: both;
   overflow: hidden;
-  border-top: 1px solid silver;
-  margin-top: 0; }
+  border-top: 1px solid silver; }
+  @media screen and (min-width: 851px) {
+    main {
+      margin-top: 85px; } }
 
 blockquote {
   padding-right: .2em;
@@ -1254,6 +1265,7 @@ body {
         margin-right: 0; } }
 
 .slicknav_menu {
+  display: none;
   margin-top: 2em;
   background-color: white !important;
   border: none;
@@ -1333,80 +1345,85 @@ nav {
   color: #6c4b35; }
 
 .nav-wrapper {
+  background-color: white;
+  height: 113px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  -webkit-transition: top 0.2s ease-in-out;
+  z-index: 10000; }
+  @media screen and (min-width: 320px) and (max-width: 850px) {
+    .nav-wrapper {
+      display: none; } }
+
+header {
+  margin: 0 auto;
+  max-width: 1220px;
+  padding: 0 20px;
+  overflow: hidden;
+  display: block; }
+
+.logo {
+  float: left;
+  display: block;
+  margin-right: 0.77372%;
+  width: 21.62044%;
+  text-transform: uppercase;
+  color: #b80405; }
+  .logo:last-child {
+    margin-right: 0; }
+  .logo h1 {
+    margin-top: 10px;
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em; }
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
   display: none; }
-  .nav-wrapper display {
-    background: white;
-    height: 100px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    transition: top 0.2s ease-in-out;
-    -webkit-transition: top 0.2s ease-in-out;
-    z-index: 10000;
-    margin: 0 auto;
-    max-width: 1220px;
-    padding: 0 20px;
-    overflow: hidden;
-    display: block; }
-    .nav-wrapper display .logo {
-      float: left;
-      display: block;
-      margin-right: 0.77372%;
-      width: 21.62044%;
-      text-transform: uppercase;
-      color: #b80405; }
-      .nav-wrapper display .logo:last-child {
-        margin-right: 0; }
-      .nav-wrapper display .logo h1 {
-        margin-top: 10px;
-        font-family: "Gotham SSm A", "Gotham SSm B";
-        font-weight: 700;
-        font-style: normal;
-        font-size: 2em; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
-      .nav-wrapper display {
-        display: none; } }
-    .nav-wrapper display nav {
-      float: left;
-      display: block;
-      margin-right: 0.77372%;
-      width: 72.0073%;
-      font-family: "Gotham SSm A", "Gotham SSm B";
-      font-weight: 700;
-      font-style: normal;
-      text-transform: uppercase;
-      float: right; }
-      .nav-wrapper display nav:last-child {
-        margin-right: 0; }
-      .nav-wrapper display nav ul {
-        text-align: right; }
-      .nav-wrapper display nav li {
-        margin-top: 0;
-        font-size: 13px;
-        display: inline-block;
-        padding: 10px 88px 5px 26px;
-        border-left: 1px solid #6c4b35;
-        height: 35px;
-        letter-spacing: 2px;
-        width: 17%; }
-      .nav-wrapper display nav li:nth-child(3) {
-        margin-right: 15px; }
-      .nav-wrapper display nav li:nth-child(4) {
-        padding-right: 0;
-        width: 33%;
-        margin-top: 0;
-        vertical-align: middle; }
-        .nav-wrapper display nav li:nth-child(4) input {
-          width: 80%; }
-      .nav-wrapper display nav form {
-        position: relative;
-        width: 100%; }
-        .nav-wrapper display nav form button {
-          background-color: white; }
-      .nav-wrapper display nav .inner-addon i {
-        position: absolute;
-        top: 31%;
-        right: 92%; }
+
+nav {
+  float: left;
+  display: block;
+  margin-right: 0.77372%;
+  width: 72.0073%;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  float: right; }
+  nav:last-child {
+    margin-right: 0; }
+  nav ul {
+    text-align: right; }
+  nav li {
+    margin-top: 0;
+    font-size: 13px;
+    display: inline-block;
+    padding: 10px 88px 5px 26px;
+    border-left: 1px solid #6c4b35;
+    height: 35px;
+    letter-spacing: 2px;
+    width: 17%; }
+  nav li:nth-child(3) {
+    margin-right: 15px; }
+  nav li:nth-child(4) {
+    padding-right: 0;
+    width: 33%;
+    margin-top: 0;
+    vertical-align: middle; }
+    nav li:nth-child(4) input {
+      width: 80%; }
+  nav form {
+    position: relative;
+    width: 100%; }
+    nav form button {
+      background-color: white; }
+  nav .inner-addon i {
+    position: absolute;
+    top: 31%;
+    right: 92%; }
 
 .nav-up {
   top: -100px; }

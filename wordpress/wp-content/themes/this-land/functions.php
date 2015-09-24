@@ -29,9 +29,9 @@ add_action( 'wp_enqueue_scripts', 'js_styles' );
 
 
 function custom_theme_setup() {
-    add_theme_support( $feature, $arguments );
+    add_theme_support( 'post-thumbnails' );
 }
-add_action( 'post-thumbnails' );
+add_action( 'after_setup_theme', 'custom_theme_setup' );
 
 
 function custom_meta_box_markup($object)

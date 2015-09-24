@@ -31,6 +31,7 @@ body
 		top: 0
 
 .slicknav_menu
+	display: none // remove to appear
 	+media(min-width 320px max-width 850px, 1)
 	margin-top: 2em
 	background-color: white!important
@@ -106,76 +107,75 @@ nav
 	color: $nav-brown
 
 .nav-wrapper
-	display: none
+	background-color: white
+	height: 113px
+	width: 100%
+	position: fixed
+	top: 0
+	transition: top 0.2s ease-in-out
+	-webkit-transition: top 0.2s ease-in-out
+	z-index: 10000
 	+media(min-width 320px max-width 850px, 24)
-	display
-  background: white
-  height: 100px
-  width: 100%
-  position: fixed
-  top: 0
-  transition: top 0.2s ease-in-out
-  -webkit-transition: top 0.2s ease-in-out
-  z-index: 10000
+		display: none
 
-  header
-		margin: 0 auto
-		max-width: 1220px
-		padding: 0 20px
-		overflow: hidden
-		display: block
+header
+	margin: 0 auto
+	max-width: 1220px
+	padding: 0 20px
+	overflow: hidden
+	display: block
 
-  .logo
-  	+span-columns(8 of 36)
-  	text-transform: uppercase
-  	color: $red
-  	h1
-  		margin-top: 10px
-  		+font($gotham, 700, normal)
-  		font-size: 2em
-  +media(min-width 320px max-width 500px, 1)
-  		display: none
+.logo
+	+span-columns(8 of 36)
+	text-transform: uppercase
+	color: $red
+	h1
+		margin-top: 10px
+		+font($gotham, 700, normal)
+		font-size: 2em
++media(min-width 320px max-width 500px, 1)
+		display: none
 
-  nav
-  	+span-columns(26 of 36)
-  	+font($gotham, 700, normal)
-  	text-transform: uppercase
-  	float: right
-  	ul
-  		text-align: right
-  	li
-  		margin-top: 0
-  		font-size: 13px
-  		display: inline-block
-  		padding: 10px 88px 5px 26px
-  		border-left: 1px solid $nav-brown
-  		height: 35px
-  		letter-spacing: 2px
-  		width: 17%
+nav
+	+span-columns(26 of 36)
+	+font($gotham, 700, normal)
+	text-transform: uppercase
+	float: right
+	ul
+		text-align: right
+	li
+		margin-top: 0
+		font-size: 13px
+		display: inline-block
+		padding: 10px 88px 5px 26px
+		border-left: 1px solid $nav-brown
+		height: 35px
+		letter-spacing: 2px
+		width: 17%
 
-  	li:nth-child(3)
-  		margin-right: 15px
-  	li:nth-child(4)
-  		padding-right: 0
-  		width: 33%
-  		margin-top: 0
-  		vertical-align: middle
+	li:nth-child(3)
+		margin-right: 15px
+	li:nth-child(4)
+		padding-right: 0
+		width: 33%
+		margin-top: 0
+		vertical-align: middle
 
-  		input
-  			width: 80%
+		input
+			width: 80%
 
-  	form
-  		position: relative
-  		width: 100%
+	form
+		position: relative
+		width: 100%
 
-  		button
-  			background-color: white
+		button
+			background-color: white
 
 
-  	.inner-addon i
-  		position: absolute
-  		top: 31%
-  		right: 92%
+	.inner-addon i
+		position: absolute
+		top: 31%
+		right: 92%
 
 .nav-up
   top: -100px

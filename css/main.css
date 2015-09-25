@@ -345,6 +345,8 @@ section.sub-category {
     width: 23.23176%; }
     .ecommerce article:last-child {
       margin-right: 0; }
+    .ecommerce article figure img {
+      height: 223px; }
   @media screen and (min-width: 320px) and (max-width: 500px) {
     .ecommerce {
       float: left;

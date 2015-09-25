@@ -35,7 +35,7 @@
 				<?php
 				  if ( $first_story ) {
 				  	$args = array(
-				  		'post__in' => array( absint( $first_story ) ),
+				  		'post__in' => array( $first_story ) ,
 				  	);
 				  } else {
 				  	$args = array(
@@ -67,7 +67,7 @@
 
 				  if ( $second_story ) {
 				  	$args = array(
-				  		'post__in' => array( absint( $second_story ) ),
+				  		'post__in' => array( $second_story ),
 				  	);
 				  } else {
 				  	$args = array(
@@ -99,7 +99,7 @@
 	<section class="ecommerce-story">
 		<?php {
 			$currentID = get_the_ID();
-			 		$exclude_ids = array( $currentID, $second_story, $first_story, 1, $first_ecommerce, $second_ecommerce );
+			 		$exclude_ids = array( $currentID );
 			 		$args = array(
 			 			'showposts' => 1,
 			 			'post__not_in' => $exclude_ids,
@@ -128,7 +128,7 @@
 				<?php
 				  if ( $first_ecommerce ) {
 				  	$args = array(
-				  		'post__in' => array( absint( $first_ecommerce ) ),
+				  		'post__in' => array( $first_ecommerce ),
 				  	);
 				  } else {
 				  	$args = array(
@@ -142,41 +142,38 @@
 				?>
 				<?php if( $first_ecommerce->have_posts() ) : while( $first_ecommerce->have_posts() ) : $first_ecommerce->the_post(); ?>
 					<a href="<?php echo esc_url( get_permalink() ); ?>">
-					<article class="border-fix">
-					<img src= <?php echo get_post_meta( get_the_ID(), 'meta-box-text', true );?>>
+					<article class="border-fix second-ecommerce first">
 						<?php the_content(); ?>
 						<h2 class="text-center">
 							<?php the_title(); ?>
 						</h2>
 					</article>
 					</a>
-			<?php endwhile; endif; wp_reset_postdata(); ?>
-
-				<?php
-							  if ( $second_ecommerce ) {
-							  	$args = array(
-							  		'post__in' => array( absint( $second_ecommerce ) ),
-							  	);
-							  } else {
-							  	$args = array(
-							  		'posts_per_page'		=> 1,
-							  		'category__in' 					=> array( 10 ),
-							  		'post_type'					=> 'post',
-							  		'orderby'						=> 'rand',
-							  	);
-							  }
-								$second_ecommerce = new WP_Query( $args );
-							?>
-							<?php if( $second_ecommerce->have_posts() ) : while( $second_ecommerce->have_posts() ) : $second_ecommerce->the_post(); ?>
-								<a href="<?php echo esc_url( get_permalink() ); ?>">
-								<article class="border-fix">
-								<img src= <?php echo get_post_meta( get_the_ID(), 'meta-box-text', true );?>>
-									<?php the_content(); ?>
-									<h2 class="text-center">
-										<?php the_title(); ?>
-									</h2>
-								</article>
-								</a>
-						<?php endwhile; endif; wp_reset_postdata(); ?>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
+					<?php
+					  if ( $second_ecommerce ) {
+					  	$args = array(
+					  		'post__in' => array( $second_ecommerce ),
+					  	);
+					  } else {
+					  	$args = array(
+					  		'posts_per_page'		=> 1,
+					  		'category__in' 					=> array( 10 ),
+					  		'post_type'					=> 'post',
+					  		'orderby'						=> 'rand',
+					  	);
+					  }
+						$second_ecommerce = new WP_Query( $args );
+					?>
+					<?php if( $second_ecommerce->have_posts() ) : while( $second_ecommerce->have_posts() ) : $second_ecommerce->the_post(); ?>
+						<a href="<?php echo esc_url( get_permalink() ); ?>">
+						<article class="border-fix second-ecommerce">
+							<?php the_content(); ?>
+							<h2 class="text-center">
+								<?php the_title(); ?>
+							</h2>
+						</article>
+						</a>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
 		</aside>
 	</section>

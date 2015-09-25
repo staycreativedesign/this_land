@@ -5,10 +5,16 @@
 ?>
   <?php get_header(); ?>
     <main role="main" class="index">
+      <?php {
+           $rotator = new WP_Query( 'tag=main_rotating' );
+         } ?>
         <div class="slider-wrapper theme-default main-image">
           <div id="slider" class="nivoSlider">
-          <img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/main-image1.jpg" alt="">
-            <img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/main-image-21.jpg" alt="">
+            <?php if( $rotator->have_posts() ) : while( $rotator->have_posts() ) : $rotator->the_post(); ?>
+              <a href="<?php echo esc_url( get_permalink() ); ?>">
+              <img src="<?php echo get_post_meta( get_the_ID(), 'large-meta-box-text', true ); ?>">
+            </a>
+            <?php endwhile; endif; wp_reset_postdata(); ?>
           </div>
       </div>
       <?php if(is_home() || is_front_page()) {

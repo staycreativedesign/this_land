@@ -1,7 +1,6 @@
 <section class="ecommerce">
 	<?php
 
-	   $args = array('cat=2');
 	   $ecommerce_item = new WP_Query('tag=ecommerce_item_main&showposts=4');
 
 	   if($ecommerce_item->have_posts()) :

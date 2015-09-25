@@ -93,7 +93,7 @@ function story_image_large($object)
 
 function large_image_metabox()
 {
-    add_meta_box("large-image-meta", "Large Story Image Link", "story_image_large", "post", "normal", "core", null);
+    add_meta_box("large-image-meta", "Front Rotating Image", "story_image_large", "post", "normal", "core", null);
 }
 
 add_action("add_meta_boxes", "large_image_metabox");

@@ -13,7 +13,7 @@
 		'feed'               => '',
 		'feed_type'          => '',
 		'feed_image'         => '',
-		'exclude'            => '1, 186',
+		'exclude'            => '1, 186, 1307',
 		'exclude_tree'       => '',
 		'include'            => '',
 		'hierarchical'       => 1,

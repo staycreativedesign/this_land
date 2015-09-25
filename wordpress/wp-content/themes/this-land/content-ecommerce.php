@@ -9,8 +9,10 @@
 	         $ecommerce_item->the_post();
 	?>
 					 <article>
-		         <div class='post-content'><?php the_content() ?></div>
-		         <h1><?php the_title() ?></h1>
+					 	<a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+			         <div class='post-content'><?php the_content(); ?></div>
+			         <h1><?php the_title() ?></h1>
+			      </a>
 	         </article>
 	<?php endwhile;else: ?>
 

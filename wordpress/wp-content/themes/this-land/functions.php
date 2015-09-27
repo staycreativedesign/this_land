@@ -1,5 +1,4 @@
 <?php
-
 function css_styles() {
 	wp_enqueue_style( 'slicknav_css', get_template_directory_uri() . '/css/slicknav.min.css');
 	wp_enqueue_style( 'font_awesome_css', get_template_directory_uri() . '/css/Font-Awesome/css/font-awesome.min.css');
@@ -48,7 +47,7 @@ function custom_meta_box_markup($object)
 
 function add_custom_meta_box()
 {
-    add_meta_box("demo-meta-box", "Small Sub Category Image Link", "custom_meta_box_markup", "post", "normal", "core", null);
+    add_meta_box("demo-meta-box", "Mobile Rotating Image", "custom_meta_box_markup", "post", "normal", "high", null);
 }
 
 add_action("add_meta_boxes", "add_custom_meta_box");
@@ -131,7 +130,7 @@ function story_image_caption_large($object)
 
     ?>
         <div>
-            <p>Upload the image via Media > Add New.  Than copy the link into the box and click update</p>
+            <p>Enter the caption for the main image.</p>
             <input name="large-image-caption" type="text" value="<?php echo get_post_meta($object->ID, "large-image-caption", true); ?>">
         </div>
     <?php
@@ -279,7 +278,7 @@ function select_second_story($object)
 
     ?>
         <div>
-            <p>Please select the first story to appear with this post.</p>
+            <p>Please select the second story to appear with this post.</p>
             <select name="second-select-dropdown">
                 <?php
                     $args = array(
@@ -338,7 +337,7 @@ function select_first_ecommerce_item($object)
 
     ?>
         <div>
-            <p>Please select the first story to appear with this post.</p>
+            <p>Please select the first ecommerce item to appear with this post.</p>
             <select name="first-ecommerce-item">
                 <?php
                     $args = array(
@@ -392,7 +391,7 @@ function select_second_ecommerce_item($object)
 
     ?>
         <div>
-            <p>Please select the first story to appear with this post.</p>
+            <p>Please select the second ecommerce item</p>
             <select name="second-ecommerce-item">
                 <?php
                     $args = array(
@@ -400,7 +399,7 @@ function select_second_ecommerce_item($object)
                         'category_name' => 'STORE'
                     );
                     $posts = get_posts($args);
-                ?> <option value="">Please select story</option> <?php
+                ?> <option value="">Please select item</option> <?php
                     foreach($posts as $post)
                     {
                     ?>
@@ -534,3 +533,65 @@ function db_filter_user_query( &$user_query ) {
         $user_query->query_where = str_replace( "user_nicename LIKE", "display_name LIKE", $user_query->query_where );
     return $user_query;
 }
+
+function wpb_mce_buttons_2($buttons) {
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+function my_mce_before_init_insert_formats( $init_array ) {
+
+// Define the style_formats array
+
+    $style_formats = array(
+        // Each array child is a format with it's own settings
+        array(
+            'title' => 'Quote to the right',
+            'block' => 'span',
+            'classes' => 'float-right quote-text',
+            'wrapper' => true,
+
+        ),
+        array(
+            'title' => 'Full quote text',
+            'block' => 'p',
+            'classes' => 'quote quote-text',
+            'wrapper' => true,
+        ),
+        array(
+            'title' => 'Red Button',
+            'block' => 'p',
+            'classes' => 'red-button',
+            'wrapper' => true,
+        ),
+
+        array(
+            'title' => '3 Dot Spacer',
+            'block' => 'div',
+            'classes' => 'spacer',
+            'wrapper' => true,
+        ),
+
+        array(
+            'title' => 'Advertisement Float Right',
+            'block' => 'p',
+            'classes' => 'ad float-right',
+            'wrapper' => true,
+        ),
+
+        array(
+            'title' => 'Full Image',
+            'block' => 'p',
+            'classes' => 'full-image',
+            'wrapper' => true,
+        ),
+    );
+    // Insert the array, JSON ENCODED, into 'style_formats'
+    $init_array['style_formats'] = json_encode( $style_formats );
+
+    return $init_array;
+
+}
+// Attach callback to 'tiny_mce_before_init'
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );

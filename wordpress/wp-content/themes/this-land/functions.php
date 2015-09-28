@@ -483,10 +483,10 @@ function foo_search_filter($query) {
     // You need to check to make sure you are not viewing admin
     if(!is_admin()) {
         // Check to make sure we are modifying the MAIN query only
-        if($query->is_main_query()) {
+        if($query->is_main_query() && is_archive() || is_home() || is_search() ) {
             // NOW check to make sure we are searching
-            if($query->is_search) {
-              $query->set('post_type', 'post');
+            if($query->is_search || $query->is_home) {
+               $query->set('post_type', 'post');
                $query->set('cat', '-1307,-1');
             }
         }

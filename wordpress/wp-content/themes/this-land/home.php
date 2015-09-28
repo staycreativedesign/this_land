@@ -10,14 +10,7 @@
 			<?php get_template_part('content', 'categories'); ?>
 		</aside>
 		<section class="search">
-		<?php
-
-		   $allposts = new WP_Query( array( 'tag__not_in' => array( 186, 1 ) ) );
-
-		   if($allposts->have_posts()) :
-		      while($allposts->have_posts()) :
-		         $allposts->the_post();
-		?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						 <article>
 						 			<a href="<?php echo esc_url( get_permalink() ); ?>">
 						 			<figure>

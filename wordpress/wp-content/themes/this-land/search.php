@@ -29,6 +29,9 @@ Template Name: Search Page
 								<?php the_title(); ?>
 							</h2>
 							<?php echo truncate_search_excerpt(); ?>
+							<p>
+								<?php the_author(); ?>
+							</p>
 							<?php the_category(); ?>
 						</a>
 					</article>

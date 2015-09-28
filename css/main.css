@@ -409,37 +409,6 @@ main.search {
       @media screen and (min-width: 320px) and (max-width: 850px) {
         main.search aside li {
           font-size: .8em; } }
-  main.search .content-searchbox {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    margin-right: 0;
-    float: right !important;
-    border-bottom: 1px solid black !important;
-    display: block;
-    margin: 7px 0 28px 0; }
-    main.search .content-searchbox:last-child {
-      margin-right: 0; }
-    main.search .content-searchbox input {
-      font-family: "Surveyor Text A", "Surveyor Text B";
-      font-weight: normal;
-      font-style: normal;
-      outline: none;
-      border: 0;
-      font-size: 1em;
-      padding: 7px; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
-      main.search .content-searchbox {
-        float: left;
-        display: block;
-        margin-right: 38.19821%;
-        width: 100%;
-        display: none;
-        float: none;
-        margin: 10px 0; }
-        main.search .content-searchbox:last-child {
-          margin-right: 0; } }
   main.search section {
     text-align: center;
     float: left;
@@ -773,6 +742,7 @@ main.story section {
         margin-right: 38.19821%;
         width: 100%;
         margin-left: 0%;
+        margin-top: 0;
         margin-bottom: 0; }
         main.story section article:last-child {
           margin-right: 0; } }
@@ -925,9 +895,7 @@ main.story section {
     main.story section article .quote-text {
       font-family: "Surveyor Text A", "Surveyor Text B";
       font-weight: normal;
-      font-style: normal;
-      font-size: 2em;
-      line-height: 1.5em; }
+      font-style: normal; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article .quote-text {
           float: left;
@@ -938,6 +906,26 @@ main.story section {
           border-bottom: 1px solid black;
           padding: 15px 0; }
           main.story section article .quote-text:last-child {
+            margin-right: 0; } }
+    main.story section article .quote-text {
+      font-size: 2em;
+      line-height: 1.5em; }
+    main.story section article .foot-notes {
+      color: gray;
+      font-size: 1.2em;
+      font-family: "Surveyor Text A", "Surveyor Text B";
+      font-weight: normal;
+      font-style: normal; }
+      @media screen and (min-width: 320px) and (max-width: 850px) {
+        main.story section article .foot-notes {
+          float: left;
+          display: block;
+          margin-right: 38.19821%;
+          width: 100%;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+          padding: 15px 0; }
+          main.story section article .foot-notes:last-child {
             margin-right: 0; } }
     main.story section article .quote {
       float: left;
@@ -1084,96 +1072,99 @@ hr {
     hr {
       display: none; } }
 
-main.about {
+main.about h1.header {
+  font-size: 2.5em;
+  margin: 0; }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    main.about h1.header {
+      padding-bottom: .5em;
+      margin-top: -0.5em;
+      border-bottom: 1px solid black; } }
+
+main.about h1 {
   font-family: "Surveyor Text A", "Surveyor Text B";
-  font-weight: 300;
+  font-weight: normal;
   font-style: normal; }
-  main.about section:nth-child(1) {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-top: 2em; }
-    main.about section:nth-child(1):last-child {
-      margin-right: 0; }
-    main.about section:nth-child(1) h1 {
-      font-family: "Surveyor Text A", "Surveyor Text B";
-      font-weight: normal;
-      font-style: normal; }
-      @media screen and (min-width: 320px) and (max-width: 500px) {
-        main.about section:nth-child(1) h1 {
-          font-size: 1.5em; } }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
-      main.about section:nth-child(1) {
-        float: left;
-        display: block;
-        margin-right: 38.19821%;
-        width: 100%; }
-        main.about section:nth-child(1):last-child {
-          margin-right: 0; } }
-  main.about section:nth-child(2) {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-right: 0;
-    margin-top: 2em; }
-    main.about section:nth-child(2):last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
-      main.about section:nth-child(2) {
-        display: none; } }
-  main.about p.about-title {
-    font-family: "Gotham SSm A", "Gotham SSm B";
-    font-weight: bold;
-    font-style: normal;
-    padding-top: 2em;
-    color: #b80405 !important;
-    font-size: .8em;
-    text-transform: uppercase;
-    margin-bottom: -10px; }
-  main.about p {
-    color: #1e1e1e;
-    line-height: 1.5em; }
-  main.about section:nth-child(3), main.about section:nth-child(6) {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    padding-top: 2em;
-    border-top: 1px solid #6c4b35;
-    margin-top: 2em; }
-    main.about section:nth-child(3):last-child, main.about section:nth-child(6):last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
-      main.about section:nth-child(3), main.about section:nth-child(6) {
-        float: left;
-        display: block;
-        margin-right: 38.19821%;
-        width: 100%; }
-        main.about section:nth-child(3):last-child, main.about section:nth-child(6):last-child {
-          margin-right: 0; } }
-  main.about section:nth-child(4), main.about section:nth-child(7) {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-right: 0;
-    padding-top: 2em;
-    border-top: 1px solid #6c4b35;
-    margin-top: 2em; }
-    main.about section:nth-child(4):last-child, main.about section:nth-child(7):last-child {
-      margin-right: 0; }
-    main.about section:nth-child(4) ul li, main.about section:nth-child(7) ul li {
-      padding: .5em 0; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
-      main.about section:nth-child(4), main.about section:nth-child(7) {
-        float: left;
-        display: block;
-        margin-right: 38.19821%;
-        width: 100%; }
-        main.about section:nth-child(4):last-child, main.about section:nth-child(7):last-child {
-          margin-right: 0; } }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    main.about h1 {
+      font-size: 1.5em; } }
+
+main.about section:nth-child(1) {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-top: 2em; }
+  main.about section:nth-child(1):last-child {
+    margin-right: 0; }
+
+main.about section:nth-child(2) {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0;
+  margin-top: 2em; }
+  main.about section:nth-child(2):last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    main.about section:nth-child(2) {
+      display: none; } }
+
+main.about p.about-title {
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-weight: bold;
+  font-style: normal;
+  padding-top: 2em;
+  color: #b80405 !important;
+  font-size: .8em;
+  text-transform: uppercase;
+  margin-bottom: -10px; }
+
+main.about p {
+  color: #1e1e1e;
+  line-height: 1.5em; }
+
+main.about section:nth-child(3), main.about section:nth-child(6) {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  padding-top: 2em;
+  border-top: 1px solid #6c4b35;
+  margin-top: 2em; }
+  main.about section:nth-child(3):last-child, main.about section:nth-child(6):last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    main.about section:nth-child(3), main.about section:nth-child(6) {
+      float: left;
+      display: block;
+      margin-right: 38.19821%;
+      width: 100%; }
+      main.about section:nth-child(3):last-child, main.about section:nth-child(6):last-child {
+        margin-right: 0; } }
+
+main.about section:nth-child(4), main.about section:nth-child(7) {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0;
+  padding-top: 2em;
+  border-top: 1px solid #6c4b35;
+  margin-top: 2em; }
+  main.about section:nth-child(4):last-child, main.about section:nth-child(7):last-child {
+    margin-right: 0; }
+  main.about section:nth-child(4) ul li, main.about section:nth-child(7) ul li {
+    padding: .5em 0; }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    main.about section:nth-child(4), main.about section:nth-child(7) {
+      float: left;
+      display: block;
+      margin-right: 38.19821%;
+      width: 100%; }
+      main.about section:nth-child(4):last-child, main.about section:nth-child(7):last-child {
+        margin-right: 0; } }
 
 a {
   text-decoration: none;
@@ -1188,7 +1179,6 @@ ul li {
 
 main {
   clear: both;
-  overflow: hidden;
   border-top: 1px solid silver; }
   @media screen and (min-width: 851px) {
     main {

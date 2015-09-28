@@ -148,7 +148,8 @@ main.story
 
 			+media(min-width 320px max-width 850px, 1)
 				+span-columns(1)
-				+shift(0)
+				+shift(0 )
+				margin-top: 0
 				margin-bottom: 0
 
 
@@ -229,10 +230,8 @@ main.story
 				+media(min-width 320px max-width 850px, 1)
 					+span-columns(1)
 
-			.quote-text
+			.quote-text,
 				+font($surveyor-text,normal,normal)
-				font-size: 2em
-				line-height: 1.5em
 
 				+media(min-width 320px max-width 850px, 1)
 					+span-columns(1)
@@ -240,6 +239,21 @@ main.story
 					border-bottom: 1px solid black
 					padding: 15px 0
 
+
+			.quote-text
+				font-size: 2em
+				line-height: 1.5em
+
+			.foot-notes
+				color: gray
+				font-size: 1.2em
+				+font($surveyor-text,normal,normal)
+
+				+media(min-width 320px max-width 850px, 1)
+					+span-columns(1)
+					border-top: 1px solid black
+					border-bottom: 1px solid black
+					padding: 15px 0
 
 
 			.quote

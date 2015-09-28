@@ -512,9 +512,9 @@ function my_mce_before_init_insert_formats( $init_array ) {
         // Each array child is a format with it's own settings
         array(
             'title' => 'Quote to the right',
-            'block' => 'span',
+            'selector' => 'p',
             'classes' => 'float-right quote-text',
-            'wrapper' => true,
+            // 'wrapper' => true,
 
         ),
         array(
@@ -546,9 +546,9 @@ function my_mce_before_init_insert_formats( $init_array ) {
         ),
 
         array(
-            'title' => 'Footnotes // To add',
+            'title' => 'Footnotes',
             'selector' => 'p',
-            'classes' => 'foot-notes',
+            'classes' => 'float-right foot-notes',
             // 'wrapper' => true,
         ),
     );

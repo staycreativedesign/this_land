@@ -20,8 +20,9 @@
 				?>
 			<article>
 			<a href="<?php echo esc_url( get_permalink() ); ?>">
-
-				<img src= <?php echo get_post_meta( $post->ID, 'meta-box-text', true );?>>
+				<figure>
+	 				<?php the_post_thumbnail(); ?>
+	 			</figure>
 				<h2>
 					<?php the_title(); ?>
 				</h2>

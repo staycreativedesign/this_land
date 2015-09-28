@@ -23,8 +23,8 @@ Template Name: Search Page
 					<article>
 						<a href="<?php echo esc_url( get_permalink() ); ?>">
 							<figure>
-								<?php the_post_thumbnail(); ?>
-							</figure>
+				 				<?php the_post_thumbnail(); ?>
+				 			</figure>
 							<h2>
 								<?php the_title(); ?>
 							</h2>

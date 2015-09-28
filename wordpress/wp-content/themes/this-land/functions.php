@@ -474,27 +474,14 @@ function large_image_set($post){
             </aside><?php
 }
 
-if ( ! function_exists('search_form') ) {
-    function search_form( $args ) {
-        $args = wp_parse_args( $args, array(
-            'placeholder' => '',
-            'form_id' => '',
-            'form_class' => '',
-            'container' => '',
-            'button_id' => '',
-            'input_id' => '',
-            'type' => 'post',
-    ));
-?>
-        <form method="get" id="<?php echo esc_attr($args['form_id']); ?>" class="<?php echo esc_attr($args['form_class']); ?>" action="<?php site_url(); ?>">
-        <?php if ( ! empty( $args['container'] ) ) echo '<div class="' . esc_attr($args['container']) . '">'; ?>
-            <button id="<?php echo esc_attr($args['button_id']); ?>" type="submit" class="button-submit" style="border: none;background-color: white;"><i class="fa fa-search"></i></button>
-            <input id="<?php echo esc_attr($args['input_id']); ?>" type="text" class="form-control" value="<?php echo esc_attr(get_search_query()); ?>" name="s" id="s" placeholder="<?php echo esc_attr($args['placeholder']); ?>">
-        <?php if ( ! empty( $args['container'] ) ) echo '</div>'; ?>
-        </form>
-<?php
+function SearchFilter($query) {
+    if ($query->is_search) {
+    $query->set('post_type', 'post');
     }
+    return $query;
 }
+
+add_filter('pre_get_posts','SearchFilter');
 
 function wpb_mce_buttons_2($buttons) {
     array_unshift($buttons, 'styleselect');

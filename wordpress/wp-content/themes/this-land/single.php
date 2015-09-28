@@ -28,6 +28,7 @@
 					</header>
 						<?php large_image_set($post);	?>
 					<article>
+					<?php check_for_soundcloud($post); ?>
 					<?php
 						the_content();
 					?>

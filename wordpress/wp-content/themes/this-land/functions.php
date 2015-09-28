@@ -635,8 +635,60 @@ function check_for_excerpt($post) {
 }
 
 
+function sound_cloud_mark_up($object)
+{
+    wp_nonce_field(basename(__FILE__), "_sound_cloud_code");
 
+    ?>
+        <div>
+            <p><?php echo get_post_meta($object->ID, "_sound_cloud_code", true);?></p>
+            <p>Add the Sound cloud link here</p>
+            <input name="_sound_cloud_code" type="textarea" value="">
+        </div>
+    <?php
+}
 
+function add_sound_cloud()
+{
+    add_meta_box("sound-meta-box", "Sound Cloud", "sound_cloud_mark_up", "post", "normal", "high", null);
+}
 
+add_action("add_meta_boxes", "add_sound_cloud");
 
+function save_sound_cloud($post_id, $post, $update)
+{
+    if (!isset($_POST["_sound_cloud_code"]) || !wp_verify_nonce($_POST["_sound_cloud_code"], basename(__FILE__)))
+        return $post_id;
 
+    if(!current_user_can("edit_post", $post_id))
+        return $post_id;
+
+    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
+        return $post_id;
+
+    $slug = "post";
+    if($slug != $post->post_type)
+        return $post_id;
+
+    $meta_box_text_value = "";
+
+    if(isset($_POST["_sound_cloud_code"]))
+    {
+        $meta_box_text_value = $_POST["_sound_cloud_code"];
+    }
+    update_post_meta($post_id, "_sound_cloud_code", $meta_box_text_value);
+}
+
+add_action("save_post", "save_sound_cloud", 10, 3);
+
+function check_for_soundcloud($post) {
+    $soundcloud = get_post_meta($post->ID, "_sound_cloud_code", true);
+
+    if($soundcloud) {
+        ?><p>
+        <?php echo get_post_meta($post->ID, "_sound_cloud_code", true); ?>
+        </p> <?php
+    } else {
+
+    }
+}

@@ -523,12 +523,6 @@ function my_mce_before_init_insert_formats( $init_array ) {
             'classes' => 'quote quote-text',
             // 'wrapper' => true,
         ),
-        array(
-            'title' => 'Red Button',
-            'selector' => 'p',
-            'classes' => 'red-button',
-            // 'wrapper' => true,
-        ),
 
         array(
             'title' => '3 Dot Spacer',
@@ -550,6 +544,13 @@ function my_mce_before_init_insert_formats( $init_array ) {
             'classes' => 'full-image',
             // 'wrapper' => true,
         ),
+
+        array(
+            'title' => 'Footnotes // To add',
+            'selector' => 'p',
+            'classes' => 'foot-notes',
+            // 'wrapper' => true,
+        ),
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats'] = json_encode( $style_formats );
@@ -559,3 +560,83 @@ function my_mce_before_init_insert_formats( $init_array ) {
 }
 // Attach callback to 'tiny_mce_before_init'
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
+
+function deck_meta_box($object)
+{
+    wp_nonce_field(basename(__FILE__), "deck-meta-box-save");
+
+    ?>
+        <div>
+              <label for="deck-meta-box-text">Enable deck &nbsp;&nbsp;&nbsp;</label>
+                        <?php
+                            $checkbox_value = get_post_meta($object->ID, "deck-meta-box-text", true);
+
+                            if($checkbox_value == "")
+                            {
+                                ?>
+                                    <input name="deck-meta-box-text" type="checkbox" value="true">
+                                <?php
+                            }
+                            else if($checkbox_value == "true")
+                            {
+                                ?>
+                                    <input name="deck-meta-box-text" type="checkbox" value="true" checked>
+                                <?php
+                            }
+                        ?>
+        </div>
+    <?php
+}
+
+function add_deck_meta_box()
+{
+    add_meta_box("demo-meta-box", "Check to Enable Deck", "deck_meta_box", "post", "normal", "high", null);
+}
+
+add_action("add_meta_boxes", "add_deck_meta_box");
+
+function save_deck_meta_box($post_id, $post, $update)
+{
+    if (!isset($_POST["deck-meta-box-save"]) || !wp_verify_nonce($_POST["deck-meta-box-save"], basename(__FILE__)))
+        return $post_id;
+
+    if(!current_user_can("edit_post", $post_id))
+        return $post_id;
+
+    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
+        return $post_id;
+
+    $slug = "post";
+    if($slug != $post->post_type)
+        return $post_id;
+
+    $meta_box_text_value = "";
+
+    if(isset($_POST["deck-meta-box-text"]))
+    {
+        $meta_box_text_value = $_POST["deck-meta-box-text"];
+    }
+    update_post_meta($post_id, "deck-meta-box-text", $meta_box_text_value);
+}
+
+add_action("save_post", "save_deck_meta_box", 10, 3);
+
+
+function check_for_excerpt($post) {
+    $the_deck = get_post_meta( $post->ID, 'deck-meta-box-text', true );
+
+    if($the_deck) {
+        ?> <h4>
+            <?php the_excerpt(); ?>
+            </h4> <?php
+    } else {
+    }
+}
+
+
+
+
+
+
+

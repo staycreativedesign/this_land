@@ -12,9 +12,7 @@
 
 					</aside>
 					<header>
-						<h4>
-							<?php the_excerpt(); ?>
-						</h4>
+						<?php check_for_excerpt($post)?>
 						<h1>
 							<?php the_title(); ?>
 						</h1>

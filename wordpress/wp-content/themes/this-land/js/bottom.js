@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
 
     });
 
-    $('main.search aside ul li a').click(function() {
+    $('main.search aside ul li a').on( 'click', function() {
       $(this).addClass('test')
     });
 });

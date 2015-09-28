@@ -474,14 +474,24 @@ function large_image_set($post){
             </aside><?php
 }
 
-function SearchFilter($query) {
-    if ($query->is_search) {
-    $query->set('post_type', 'post');
+function foo_search_filter($query) {
+    // You need to check to make sure you are not viewing admin
+    if(!is_admin()) {
+        // Check to make sure we are modifying the MAIN query only
+        if($query->is_main_query()) {
+            // NOW check to make sure we are searching
+            if($query->is_search) {
+                $query->set('post_type', 'post');
+                $query->set('cat', '-1307,-1');
+            }
+        }
     }
+
+    // Return the $query object, even if nothing was changed
     return $query;
 }
+add_action('pre_get_posts', 'foo_search_filter');
 
-add_filter('pre_get_posts','SearchFilter');
 
 function wpb_mce_buttons_2($buttons) {
     array_unshift($buttons, 'styleselect');

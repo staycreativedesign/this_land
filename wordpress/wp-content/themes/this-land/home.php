@@ -22,7 +22,8 @@
 						 			<a href="<?php echo esc_url( get_permalink() ); ?>">
 						 			<figure>
 						 				<?php the_post_thumbnail(); ?>
-						 			</figure>						 				<h2>
+						 			</figure>
+						 			<h2>
 						 					<?php the_title(); ?>
 						 				</h2>
 						 				<p><?php echo truncate_search_excerpt(); ?> ...</p>

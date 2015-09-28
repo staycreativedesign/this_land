@@ -34,6 +34,7 @@
 		   endif;
 		?>
 			<!-- <a href="#" class="load-story-btn">Load more stories</a> -->
+		<?php kriesi_pagination(); ?>
 		</section>
 	</main>
 	</div>

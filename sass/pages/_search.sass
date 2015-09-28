@@ -117,10 +117,15 @@ main.search
 		 	p
 		 		padding-top: 1em
 
-
-
-		.load-more
+		.pagination
+			+span-columns(4)
 			clear: both
+			text-align: left
+			padding: 40px 0
+
+			span, a
+				padding: 0 10px
+
 
 	+media(min-width 320px max-width 500px, 1)
 		+span-columns(1)

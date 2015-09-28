@@ -504,7 +504,7 @@ main.search {
         font-weight: bold; }
       main.search section article p:nth-child(3) {
         padding: 1em 5px 0 5px;
-        font-size: 1.3em;
+        font-size: 1.5em;
         line-height: 1.5em; }
       main.search section article .post-categories {
         position: absolute;
@@ -528,8 +528,18 @@ main.search {
             margin-top: 2em; } }
       main.search section article p {
         padding-top: 1em; }
-    main.search section .load-more {
-      clear: both; }
+    main.search section .pagination {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      clear: both;
+      text-align: left;
+      padding: 40px 0; }
+      main.search section .pagination:last-child {
+        margin-right: 0; }
+      main.search section .pagination span, main.search section .pagination a {
+        padding: 0 10px; }
   @media screen and (min-width: 320px) and (max-width: 500px) {
     main.search {
       float: left;
@@ -1086,6 +1096,13 @@ main.about {
     margin-top: 2em; }
     main.about section:nth-child(1):last-child {
       margin-right: 0; }
+    main.about section:nth-child(1) h1 {
+      font-family: "Surveyor Text A", "Surveyor Text B";
+      font-weight: normal;
+      font-style: normal; }
+      @media screen and (min-width: 320px) and (max-width: 500px) {
+        main.about section:nth-child(1) h1 {
+          font-size: 1.5em; } }
     @media screen and (min-width: 320px) and (max-width: 500px) {
       main.about section:nth-child(1) {
         float: left;
@@ -1147,8 +1164,6 @@ main.about {
     margin-top: 2em; }
     main.about section:nth-child(4):last-child, main.about section:nth-child(7):last-child {
       margin-right: 0; }
-    main.about section:nth-child(4) p:nth-child(1), main.about section:nth-child(7) p:nth-child(1) {
-      margin-top: 210px; }
     main.about section:nth-child(4) ul li, main.about section:nth-child(7) ul li {
       padding: .5em 0; }
     @media screen and (min-width: 320px) and (max-width: 500px) {
@@ -1158,29 +1173,7 @@ main.about {
         margin-right: 38.19821%;
         width: 100%; }
         main.about section:nth-child(4):last-child, main.about section:nth-child(7):last-child {
-          margin-right: 0; }
-        main.about section:nth-child(4) p:nth-child(1), main.about section:nth-child(7) p:nth-child(1) {
-          margin-top: auto; } }
-  main.about h1.header {
-    font-size: 2.5em;
-    margin: 0; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
-      main.about h1.header {
-        padding-bottom: .5em;
-        margin-top: -0.5em;
-        border-bottom: 1px solid black; } }
-  main.about h1 {
-    font-family: "Surveyor Text A", "Surveyor Text B";
-    font-weight: normal;
-    font-style: normal; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
-      main.about h1 {
-        font-size: 1.5em; } }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
-    main.about section:nth-child(3) {
-      margin-top: 0;
-      border-top: none;
-      padding-top: 0; } }
+          margin-right: 0; } }
 
 a {
   text-decoration: none;
@@ -1238,6 +1231,9 @@ hr {
 
 .no-bottom-border {
   border-bottom: none !important; }
+
+.clear {
+  clear: both; }
 
 body {
   margin: 0; }

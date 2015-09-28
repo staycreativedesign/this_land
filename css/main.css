@@ -397,6 +397,8 @@ main.search {
       color: #b80405; }
     main.search aside li:nth-child(2) {
       font-weight: bold; }
+    main.search aside a:selected {
+      background-color: yellow; }
     main.search aside h2 {
       font-size: 1.3em; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
@@ -1344,7 +1346,7 @@ body {
 .main-wrapper {
   max-width: 1220px;
   margin: 0 auto;
-  padding: 0 20px 40px 0;
+  padding: 0 20px 40px 20px;
   overflow: hidden;
   margin-bottom: 30px; }
   @media screen and (min-width: 320px) and (max-width: 500px) {

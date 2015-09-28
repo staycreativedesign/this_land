@@ -474,6 +474,11 @@ function large_image_set($post){
             </aside><?php
 }
 
+
+
+
+
+
 function foo_search_filter($query) {
     // You need to check to make sure you are not viewing admin
     if(!is_admin()) {
@@ -481,8 +486,8 @@ function foo_search_filter($query) {
         if($query->is_main_query()) {
             // NOW check to make sure we are searching
             if($query->is_search) {
-                $query->set('post_type', 'post');
-                $query->set('cat', '-1307,-1');
+              $query->set('post_type', 'post');
+               $query->set('cat', '-1307,-1');
             }
         }
     }

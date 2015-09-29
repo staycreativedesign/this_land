@@ -150,6 +150,9 @@
 					</article>
 					</a>
 				<?php endwhile; endif; wp_reset_postdata(); ?>
+
+
+
 					<?php
 					  if ( $second_ecommerce ) {
 					  	$args = array(
@@ -165,15 +168,6 @@
 					  }
 						$second_ecommerce = new WP_Query( $args );
 					?>
-					<?php if( $second_ecommerce->have_posts() ) : while( $second_ecommerce->have_posts() ) : $second_ecommerce->the_post(); ?>
-						<a href="<?php echo esc_url( get_permalink() ); ?>">
-						<article class="border-fix second-ecommerce">
-							<?php the_content(); ?>
-							<h2 class="text-center">
-								<?php the_title(); ?>
-							</h2>
-						</article>
-						</a>
-				<?php endwhile; endif; wp_reset_postdata(); ?>
+					<?php check_ecommerce_second_item($first_story) ?>
 		</aside>
 	</section>

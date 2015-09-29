@@ -29,7 +29,7 @@ main.story
 			+media(min-width 320px max-width 850px, 1)
 				+span-columns(1)
 				padding-bottom: 0
-				height: auto
+				height: 250px
 				margin-bottom: 10px
 
 			h1
@@ -40,6 +40,7 @@ main.story
 
 				+media(min-width 320px max-width 850px, 1)
 					font-size: 2em
+					margin-top: 1em
 
 			h4
 				margin-top: 0
@@ -67,24 +68,15 @@ main.story
 					margin-top: 0
 
 				+media(min-width 320px max-width 850px, 1)
-					display: none
+					+span-columns(1)
 
-			+media(min-width 320px max-width 850px, 1)
-				+span-columns(1)
-
-				.date-category
-					display: none
-
-				p:nth-child(n+4)
-					display: none
-
-				p:nth-child(3)
-					padding-bottom: 1em
-					margin-top: 9em
-					margin-bottom: 0
-					+border-bottom($article-border)
-					+media(min-width 320px max-width 850px, 1)
-						border-bottom: none
+					p:nth-child(3)
+						padding-bottom: 1em
+						margin-top: 9em
+						margin-bottom: 0
+						+border-bottom($article-border)
+						+media(min-width 320px max-width 850px, 1)
+							border-bottom: none
 		h1.second-area
 			height: 100px
 
@@ -144,11 +136,18 @@ main.story
 			padding: 0
 			margin-top: -8.3em
 
-			+media(min-width 320px max-width 850px, 1)
+			+media(min-width 320px max-width 500px, 1)
 				+span-columns(1)
-				+shift(0 )
+				+shift(0)
 				margin-top: 0
 				margin-bottom: 0
+
+			+media(min-width 501px max-width 850px, 1)
+				+span-columns(1)
+				+shift(0)
+				margin-top: 0
+				margin-bottom: 0
+				padding: 0 85px
 
 
 			p, blockquote p

@@ -14,13 +14,6 @@ jQuery(document).ready(function($){
           controlNav: false,                 // 1,2,3... navigation
           controlNavThumbs: false,         // Use thumbnails for Control Nav
           pauseOnHover: false,
-    $
-
     });
 
-   $('main.search aside ul li a').on( 'click', function(event) {
-     $('main.search aside ul li a').removeClass('selected-search');
-     $(this).addClass('selected-search');
-     event.preventDefault();
-   });
 });

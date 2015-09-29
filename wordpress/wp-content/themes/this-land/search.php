@@ -44,19 +44,7 @@ Template Name: Search Page
 							</p>
 					<?php } ?>
 					<!-- <a href="#" class="load-story-btn">Load more stories</a> -->
-					<!-- <?php
-						// USERS
-						$users = new WP_User_Query(array(
-							'search' => '*' . strtolower( get_search_query() ) . '*',
-						));
-						// Loop through advertisers
-						if ( ! empty( $users->results ) ) {
-							foreach ( $users->results as $user ) {
-								// Display user information
-								echo '<article><a href="' . get_author_posts_url( $user->ID ) . '">' . $user->display_name . '</a></article>';
-							}
-						}
-					?> -->
+					More Stories <?php kriesi_pagination(); ?>
 				</section>
 
 			</main>

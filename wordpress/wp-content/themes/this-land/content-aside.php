@@ -3,7 +3,7 @@
 		<h2>Order</h2>
 	</li>
 	<li>
-		Date Published <i class="fa fa-caret-down"></i>
+		<a href="?orderby=date&amp;order=DESC">Date Published</a> <!-- <i class="fa fa-caret-down"></i> -->
 	</li>
 	<li>
 		<a href="?orderby=author&amp;order=ASC">Author</a>

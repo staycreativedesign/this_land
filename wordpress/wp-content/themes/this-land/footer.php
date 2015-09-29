@@ -47,10 +47,10 @@
 							</p>
 						</li>
 						<li>
-							<a href="https://www.facebook.com/thislandpress" target="_blank"><?php echo wp_get_attachment_image( 34, array(21,21) ); ?></a>
-							<a href="https://twitter.com/thislandpress" target="_blank"><?php echo wp_get_attachment_image( 37, array(21,21) ); ?></a>
-							<a href="https://instagram.com/thislandpress/" target="_blank"><?php echo wp_get_attachment_image( 35, array(21,21) ); ?></a>
-							<a href="https://www.pinterest.com/thislandpress/" target="_blank"><?php echo wp_get_attachment_image( 36, array(21,21) ); ?></a>
+							<a href="https://www.facebook.com/thislandpress" target="_blank"><?php echo wp_get_attachment_image( 41937, array(21,21) ); ?></a>
+							<a href="https://twitter.com/thislandpress" target="_blank"><?php echo wp_get_attachment_image( 41934, array(21,21) ); ?></a>
+							<a href="https://instagram.com/thislandpress/" target="_blank"><?php echo wp_get_attachment_image( 41936, array(21,21) ); ?></a>
+							<a href="https://www.pinterest.com/thislandpress/" target="_blank"><?php echo wp_get_attachment_image( 41935, array(21,21) ); ?></a>
 					</li>
 					</ul>
 					<ul>

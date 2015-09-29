@@ -695,7 +695,7 @@ function check_for_soundcloud($post) {
 
 function kriesi_pagination($pages = '', $range = 2)
 {
-     $showitems = ($range * 2)+1;
+     $showitems = ($range * 5)+1;
 
      global $paged;
      if(empty($paged)) $paged = 1;
@@ -728,4 +728,16 @@ function kriesi_pagination($pages = '', $range = 2)
          if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>&raquo;</a>";
          echo "</div>\n";
      }
+}
+
+function check_ecommerce_second_item($first_story) {
+    $args = array(
+        'posts_per_page'        => 1,
+        'category__in'                  => array( 10 ),
+        'post_type'                 => 'post',
+        'orderby'                       => 'rand',
+    );
+
+    $first_ecommerce = new WP_Query( $args );
+
 }

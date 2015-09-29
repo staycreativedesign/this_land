@@ -409,9 +409,9 @@ main.search {
       @media screen and (min-width: 320px) and (max-width: 850px) {
         main.search aside li {
           font-size: .8em; } }
-    main.search aside a.selected-search {
+    main.search aside .current-cat {
       font-weight: bold;
-      color: black; }
+      color: black !important; }
   main.search section {
     text-align: center;
     float: left;
@@ -479,7 +479,8 @@ main.search {
         padding-top: 1em;
         font-size: 1.5em; }
       main.search section article p:nth-child(4) {
-        font-weight: bold; }
+        font-weight: bold;
+        padding-top: 0; }
       main.search section article p:nth-child(3) {
         padding: 1em 5px 0 5px;
         font-size: 1.5em;
@@ -590,7 +591,7 @@ main.story section {
         margin-right: 38.19821%;
         width: 100%;
         padding-bottom: 0;
-        height: auto;
+        height: 250px;
         margin-bottom: 10px; }
         main.story section header:last-child {
           margin-right: 0; } }
@@ -603,7 +604,8 @@ main.story section {
       font-style: normal; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section header h1 {
-          font-size: 2em; } }
+          font-size: 2em;
+          margin-top: 1em; } }
     main.story section header h4 {
       margin-top: 0;
       padding: 1em 0;
@@ -648,26 +650,19 @@ main.story section {
         margin-top: 0; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section header .date-category {
-          display: none; } }
-    @media screen and (min-width: 320px) and (max-width: 850px) {
-      main.story section header {
-        float: left;
-        display: block;
-        margin-right: 38.19821%;
-        width: 100%; }
-        main.story section header:last-child {
-          margin-right: 0; }
-        main.story section header .date-category {
-          display: none; }
-        main.story section header p:nth-child(n+4) {
-          display: none; }
-        main.story section header p:nth-child(3) {
-          padding-bottom: 1em;
-          margin-top: 9em;
-          margin-bottom: 0;
-          border-bottom: 1px solid silver; } }
+          float: left;
+          display: block;
+          margin-right: 38.19821%;
+          width: 100%; }
+          main.story section header .date-category:last-child {
+            margin-right: 0; }
+          main.story section header .date-category p:nth-child(3) {
+            padding-bottom: 1em;
+            margin-top: 9em;
+            margin-bottom: 0;
+            border-bottom: 1px solid silver; } }
     @media screen and (min-width: 320px) and (max-width: 850px) and (min-width: 320px) and (max-width: 850px) {
-      main.story section header p:nth-child(3) {
+      main.story section header .date-category p:nth-child(3) {
         border-bottom: none; } }
   main.story section h1.second-area {
     height: 100px; }
@@ -744,7 +739,7 @@ main.story section {
     margin-top: -8.3em; }
     main.story section article:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 320px) and (max-width: 850px) {
+    @media screen and (min-width: 320px) and (max-width: 500px) {
       main.story section article {
         float: left;
         display: block;
@@ -753,6 +748,18 @@ main.story section {
         margin-left: 0%;
         margin-top: 0;
         margin-bottom: 0; }
+        main.story section article:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 501px) and (max-width: 850px) {
+      main.story section article {
+        float: left;
+        display: block;
+        margin-right: 38.19821%;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 85px; }
         main.story section article:last-child {
           margin-right: 0; } }
     main.story section article p, main.story section article blockquote p {

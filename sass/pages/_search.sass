@@ -15,14 +15,14 @@ main.search
 		text-transform: uppercase
 		letter-spacing: 1.5px
 		margin-top: 2em
-		li:nth-child(2n)
+		li:nth-child(n+2)
 			padding: 1.2em 0
+			color: gray
 
 		li:nth-child(1)
 			color: $red
 
 		li:nth-child(2)
-			font-weight: bold
 
 		a:selected
 			background-color: yellow
@@ -36,6 +36,10 @@ main.search
 			font-size: 1em
 			+media(min-width 320px max-width 850px, 1)
 				font-size: .8em
+
+		a.selected-search
+			font-weight: bold
+			color: black
 
 	section
 		text-align: center
@@ -65,11 +69,15 @@ main.search
 		 	position: relative
 		 	height: 450px
 		 	font-size: .65em
-
+		 	+media(min-width 320px max-width 850px, 1)
+		 		height: 480px;
 		 	figure
 		 		img
 		 			height: 200px
 		 			object-fit: cover
+		 			+media(min-width 320px max-width 850px, 1)
+		 				height: 150px
+
 		 	h2
 		 		+font($gotham, bold, normal)
 		 		padding-top: 1em
@@ -82,6 +90,7 @@ main.search
 		 		padding: 1em 5px 0 5px
 		 		font-size: 1.5em
 		 		line-height: 1.5em
+
 
 		 	.post-categories
 		 		position: absolute

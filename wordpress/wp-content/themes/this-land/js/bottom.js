@@ -1,10 +1,9 @@
 jQuery(document).ready(function($){
     $('#menu').slicknav({
     	'label' : '',
-    	'brand': '<img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/this-land-logo.png" width="91%">'
+    	'brand': '<a href="/"><img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/this-land-logo.png" width="91%"></a>'
     });
 
-    $('.slicknav_menu').prepend('');
 
 
     $('#slider').nivoSlider({
@@ -19,7 +18,9 @@ jQuery(document).ready(function($){
 
     });
 
-    $('main.search aside ul li a').on( 'click', function() {
-      $(this).addClass('test')
-    });
+   $('main.search aside ul li a').on( 'click', function(event) {
+     $('main.search aside ul li a').removeClass('selected-search');
+     $(this).addClass('selected-search');
+     event.preventDefault();
+   });
 });

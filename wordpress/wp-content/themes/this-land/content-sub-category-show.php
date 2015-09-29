@@ -1,7 +1,5 @@
 		<?php $second_story  			= get_post_meta( get_the_ID(), 'second-story-save', true ); ?>
 		<?php $first_story	 			= get_post_meta( get_the_ID(), 'first-story-save', true ); ?>
-		<?php $first_ecommerce	 	= get_post_meta( get_the_ID(), 'first-ecommerce-item-save', true ); ?>
-		<?php $second_ecommerce		= get_post_meta( get_the_ID(), 'second-ecommerce-item-save', true ); ?>
 
 	<section class="ecommerce-story">
 			<?php {
@@ -123,51 +121,12 @@
 			</article>
 			<a href="<?php echo esc_url( get_permalink() ); ?>">
 		<?php endwhile; endif; wp_reset_postdata(); ?>
+
+
+
 		<aside class="sub-category">
-
-				<?php
-				  if ( $first_ecommerce ) {
-				  	$args = array(
-				  		'post__in' => array( $first_ecommerce ),
-				  	);
-				  } else {
-				  	$args = array(
-				  		'posts_per_page'		=> 1,
-				  		'category__in' 					=> array( 10 ),
-				  		'post_type'					=> 'post',
-				  		'orderby'						=> 'rand',
-				  	);
-				  }
-					$first_ecommerce = new WP_Query( $args );
-				?>
-				<?php if( $first_ecommerce->have_posts() ) : while( $first_ecommerce->have_posts() ) : $first_ecommerce->the_post(); ?>
-					<a href="<?php echo esc_url( get_permalink() ); ?>">
-					<article class="border-fix second-ecommerce first">
-						<?php the_content(); ?>
-						<h2 class="text-center">
-							<?php the_title(); ?>
-						</h2>
-					</article>
-					</a>
-				<?php endwhile; endif; wp_reset_postdata(); ?>
+			<?php check_first_ecommerce($post) ?>
 
 
-
-					<?php
-					  if ( $second_ecommerce ) {
-					  	$args = array(
-					  		'post__in' => array( $second_ecommerce ),
-					  	);
-					  } else {
-					  	$args = array(
-					  		'posts_per_page'		=> 1,
-					  		'category__in' 					=> array( 10 ),
-					  		'post_type'					=> 'post',
-					  		'orderby'						=> 'rand',
-					  	);
-					  }
-						$second_ecommerce = new WP_Query( $args );
-					?>
-					<?php check_ecommerce_second_item($first_story) ?>
 		</aside>
 	</section>

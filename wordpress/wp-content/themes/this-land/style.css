@@ -1437,7 +1437,7 @@ nav {
     border-left: 1px solid #6c4b35;
     height: 35px;
     letter-spacing: 2px;
-    width: 17%; }
+    width: 16%; }
   nav li:nth-child(3) {
     margin-right: 15px; }
   nav li:nth-child(4) {
@@ -1446,7 +1446,8 @@ nav {
     margin-top: 0;
     vertical-align: middle; }
     nav li:nth-child(4) input {
-      width: 80%; }
+      width: 80%;
+      outline-width: 0; }
   nav form {
     position: relative;
     width: 100%; }

@@ -16,4 +16,5 @@ jQuery(document).ready(function($){
           pauseOnHover: false,
     });
 
+    $("main.story section article p:nth-child(3)").insertAfter(<?php get_template_part('content', 'sub-category-show'); ?>)
 });

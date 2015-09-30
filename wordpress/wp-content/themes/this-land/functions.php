@@ -422,8 +422,11 @@ function large_image_set($post){
             <figure>
                 <?php the_post_thumbnail(); ?>
                 <?php check_large_caption($post) ?>
+
             </figure>
-            </aside><?php
+
+            </aside>
+            <?php
 }
 
 

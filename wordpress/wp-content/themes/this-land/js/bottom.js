@@ -16,5 +16,5 @@ jQuery(document).ready(function($){
           pauseOnHover: false,
     });
 
-    $("main.story section article p:nth-child(3)").insertAfter(<?php get_template_part('content', 'sub-category-show'); ?>)
+    $("<div id='div-gpt-ad-1443629402046-39' style='height:280px; width:336px;float:right;'><script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443629402046-39'); });</script></div>").insertAfter("main.story section article p:nth-child(3)")
 });

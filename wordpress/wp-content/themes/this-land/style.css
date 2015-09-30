@@ -484,7 +484,10 @@ main.search {
       main.search section article p:nth-child(3) {
         padding: 1em 5px 0 5px;
         font-size: 1.5em;
-        line-height: 1.5em; }
+        line-height: 1.5em;
+        font-family: "Surveyor Text A", "Surveyor Text B";
+        font-weight: normal;
+        font-style: normal; }
       main.search section article .post-categories {
         position: absolute;
         bottom: 0;

@@ -123,54 +123,6 @@ function save_large_image_meta_box($post_id, $post, $update)
 
 add_action("save_post", "save_large_image_meta_box", 10, 3);
 
-
-function story_image_caption_large($object)
-{
-    wp_nonce_field(basename(__FILE__), "caption-metabox");
-
-    ?>
-        <div>
-            <p>Enter the caption for the main image.</p>
-            <input name="large-image-caption" type="text" value="<?php echo get_post_meta($object->ID, "large-image-caption", true); ?>">
-        </div>
-    <?php
-}
-
-function large_image_caption()
-{
-    add_meta_box("large-caption-meta", "Story Large Image Caption", "story_image_caption_large", "post", "normal", "core", null);
-}
-
-add_action("add_meta_boxes", "large_image_caption");
-
-
-
-function save_large_image_caption($post_id, $post, $update)
-{
-    if (!isset($_POST["caption-metabox"]) || !wp_verify_nonce($_POST["caption-metabox"], basename(__FILE__)))
-        return $post_id;
-
-    if(!current_user_can("edit_post", $post_id))
-        return $post_id;
-
-    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
-        return $post_id;
-
-    $slug = "post";
-    if($slug != $post->post_type)
-        return $post_id;
-
-    $meta_box_text_value = "";
-
-    if(isset($_POST["large-image-caption"]))
-    {
-        $meta_box_text_value = $_POST["large-image-caption"];
-    }
-    update_post_meta($post_id, "large-image-caption", $meta_box_text_value);
-}
-
-add_action("save_post", "save_large_image_caption", 10, 3);
-
 function html5_insert_image($html, $id, $caption, $title, $align, $url) {
   $html5 = "<figure id='post-$id media-$id' class='align-$align'>";
   $html5 .= "<img src='$url' alt='$title' />";
@@ -451,11 +403,11 @@ function check_small_image($post) {
 }
 
 function check_large_caption($post) {
-        $large_caption = get_post_meta( $post->ID, 'large-image-caption', true );
+        $large_caption = get_post(get_post_thumbnail_id())->post_excerpt;
         if ( $large_caption ) {
           ?>
             <figcaption>
-                <?php echo get_post_meta( $post->ID, 'large-image-caption', true ); ?>
+                <?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
             </figcaption> <?php
         }
         else {
@@ -736,18 +688,17 @@ function check_first_ecommerce($post) {
         if ($first_ecommerce) {
             $args = array(
         'post__in' => array( $first_ecommerce ) ,
-    );
-  } else {
+        );
+        } else {
     $args = array(
         'posts_per_page'        => 1,
-        'post_type'                 => 'post',
-        'orderby'                       => 'rand',
-    );
+        'tag'                   => 'first_default_ecommerce_item'
+        );
   }
     $first_ecommerce = new WP_Query( $args );
     if( $first_ecommerce->have_posts() ) : while( $first_ecommerce->have_posts() ) : $first_ecommerce->the_post(); ?>
-        <a href="<?php echo esc_url( get_permalink() ); ?>">
-        <article class="border-fix second-ecommerce">
+        <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+        <article class="border-fix second-ecommerce first-article-fix">
             <?php the_content(); ?>
             <h2 class="text-center">
                 <?php the_title(); ?>
@@ -756,3 +707,33 @@ function check_first_ecommerce($post) {
         </a>
         <?php endwhile; endif; wp_reset_postdata();
  }
+
+ function check_second_ecommerce($post) {
+         $second_ecommerce = get_post_meta( $post->ID, 'second-ecommerce-item-save', true );
+         if ($second_ecommerce) {
+             $args = array(
+         'post__in' => array( $second_ecommerce ) ,
+         );
+         } else {
+     $args = array(
+         'posts_per_page'        => 1,
+         'tag'                   => 'second_default_ecommerce_item'
+         );
+   }
+     $second_ecommerce = new WP_Query( $args );
+     if( $second_ecommerce->have_posts() ) : while( $second_ecommerce->have_posts() ) : $second_ecommerce->the_post(); ?>
+         <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+         <article class="border-fix second-ecommerce">
+             <?php the_content(); ?>
+             <h2 class="text-center">
+                 <?php the_title(); ?>
+             </h2>
+         </article>
+         </a>
+         <?php endwhile; endif; wp_reset_postdata();
+  }
+
+  function pull_quote_shortcode( $atts, $content = null ) {
+    return '<p class="float-right quote-text">' . $content . '</p>';
+  }
+  add_shortcode( 'pullquote', 'pull_quote_shortcode' );

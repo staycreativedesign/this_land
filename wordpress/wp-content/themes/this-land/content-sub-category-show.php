@@ -126,6 +126,7 @@
 
 		<aside class="sub-category">
 			<?php check_first_ecommerce($post) ?>
+			<?php check_second_ecommerce($post) ?>
 
 
 		</aside>

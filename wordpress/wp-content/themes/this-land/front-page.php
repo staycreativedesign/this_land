@@ -10,10 +10,17 @@
          } ?>
         <div class="slider-wrapper theme-default main-image">
           <div id="slider" class="nivoSlider">
-            <?php if( $rotator->have_posts() ) : while( $rotator->have_posts() ) : $rotator->the_post(); ?>
-              <a href="<?php echo esc_url( get_permalink() ); ?>">
-              <img src="<?php echo get_post_meta( get_the_ID(), 'large-meta-box-text', true ); ?>">
-            </a>
+            <?php if( $rotator->have_posts() ) : while( $rotator->have_posts() ) : $rotator->the_post();
+                ?>
+                  <?php
+                    $image_url = get_post_meta( get_the_ID(), 'rotatimg-image-save', true );
+                    $attachment = get_post( get_attachment_id_from_src( $image_url ) );
+                    $test = get_post( $image_url );
+                    // echo '<pre>'; print_r($test->post_excerpt); echo '</pre>'
+                  ?>
+                  <a href="<?php echo $test->post_excerpt ?>" target="_blank">
+                  <img src="<?php echo wp_get_attachment_url( $image_url ); ?>">
+                  </a>
             <?php endwhile; endif; wp_reset_postdata(); ?>
           </div>
       </div>
@@ -27,7 +34,7 @@
                       <a href="<?php echo esc_url( get_permalink() ); ?>">
                         <article class="main">
                           <h1><?php the_title(); ?></h1>
-                            <?php echo get_the_popular_excerpt(); ?>
+                            <p><?php echo the_excerpt(); ?></p>
                           <p>
                             <span class="italics">by </span><?php the_author(); ?>
                           </p>

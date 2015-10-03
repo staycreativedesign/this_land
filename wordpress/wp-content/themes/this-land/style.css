@@ -114,9 +114,10 @@ img {
     outline: none; }
 
 .main-image {
-  padding-bottom: 1em;
+  padding-bottom: 8px;
   clear: both;
   overflow: hidden;
+  margin-bottom: 4px;
   border-bottom: 1px solid silver; }
   @media screen and (min-width: 320px) and (max-width: 500px) {
     .main-image {
@@ -125,7 +126,7 @@ img {
       margin-right: 38.19821%;
       width: 100%;
       margin-top: 0;
-      margin-bottom: 1em; }
+      margin-bottom: 0; }
       .main-image:last-child {
         margin-right: 0; } }
 
@@ -151,7 +152,6 @@ img {
       margin-right: 38.19821%;
       width: 100%;
       height: auto;
-      margin-bottom: 1em;
       padding-bottom: 1em; }
       .article-wrapper:last-child {
         margin-right: 0; } }
@@ -201,9 +201,13 @@ main.index {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
       font-style: normal; }
+    @media screen and (min-width: 320px) and (max-width: 500px) {
+      main.index article.main {
+        margin-bottom: 0; } }
   main.index p:nth-child(2) {
     font-size: 1em;
-    padding: 0 10%; }
+    padding: 0 10%;
+    line-height: 21.5px; }
     @media screen and (min-width: 320px) and (max-width: 500px) {
       main.index p:nth-child(2) {
         padding: 0; } }
@@ -225,10 +229,10 @@ main.index {
     font-family: "Gotham SSm A", "Gotham SSm B";
     font-weight: 300;
     font-style: normal;
-    font-size: .8em; }
+    font-size: 11px; }
     @media screen and (min-width: 320px) and (max-width: 500px) {
       main.index p:nth-child(4), main.index .post-categories li a {
-        font-size: .7em; } }
+        font-size: 11px; } }
     @media screen and (min-width: 320px) and (max-width: 500px) {
       main.index p:nth-child(4), main.index .post-categories li a {
         position: relative;
@@ -238,7 +242,7 @@ main.index {
 
 section.sub-category {
   clear: both;
-  padding-top: 1.5em;
+  padding-top: 15px;
   overflow: hidden; }
   @media screen and (min-width: 320px) and (max-width: 500px) {
     section.sub-category {
@@ -254,7 +258,8 @@ section.sub-category {
     position: relative; }
     section.sub-category article img {
       height: 200px;
-      background-size: cover; }
+      background-size: cover;
+      object-fit: cover; }
     section.sub-category article:last-child {
       margin-right: 0; }
     section.sub-category article p:nth-child(4) {
@@ -292,7 +297,7 @@ section.sub-category {
       left: 0%;
       margin-top: 4em;
       color: silver;
-      font-size: .7em; }
+      font-size: 11px; }
   @media screen and (min-width: 320px) and (max-width: 500px) {
     section.sub-category {
       float: left;
@@ -346,7 +351,8 @@ section.sub-category {
     .ecommerce article:last-child {
       margin-right: 0; }
     .ecommerce article figure img {
-      height: 223px; }
+      height: 223px;
+      object-fit: cover; }
   @media screen and (min-width: 320px) and (max-width: 500px) {
     .ecommerce {
       float: left;
@@ -393,22 +399,22 @@ main.search {
     main.search aside:last-child {
       margin-right: 0; }
     main.search aside li:nth-child(n+2) {
-      padding: 1.2em 0;
+      padding: .5em 0;
       color: gray; }
     main.search aside li:nth-child(1) {
       color: #b80405; }
-    main.search aside a:selected {
-      background-color: yellow; }
     main.search aside h2 {
-      font-size: 1.3em; }
+      font-size: 16px; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
         main.search aside h2 {
-          font-size: 1.2em; } }
+          font-size: .9em; } }
     main.search aside li {
       font-size: 1em; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
         main.search aside li {
           font-size: .8em; } }
+      main.search aside li a {
+        font-size: .7em; }
     main.search aside .current-cat {
       font-weight: bold;
       color: black !important; }
@@ -483,11 +489,14 @@ main.search {
         padding-top: 0; }
       main.search section article p:nth-child(3) {
         padding: 1em 5px 0 5px;
-        font-size: 1.5em;
-        line-height: 1.5em;
+        font-size: 16px;
+        line-height: 21.5px;
         font-family: "Surveyor Text A", "Surveyor Text B";
         font-weight: normal;
         font-style: normal; }
+        @media screen and (min-width: 320px) and (max-width: 500px) {
+          main.search section article p:nth-child(3) {
+            font-size: 18px; } }
       main.search section article .post-categories {
         position: absolute;
         bottom: 0;
@@ -496,7 +505,7 @@ main.search {
         font-family: "Gotham SSm A", "Gotham SSm B";
         font-weight: normal;
         font-style: normal;
-        font-size: .6em;
+        font-size: 11px;
         width: 100%; }
       @media screen and (min-width: 320px) and (max-width: 500px) {
         main.search section article {
@@ -632,10 +641,10 @@ main.story section {
       font-family: "Gotham SSm A", "Gotham SSm B";
       font-weight: 300;
       font-style: normal;
-      font-size: .8em; }
+      font-size: 11px; }
       @media screen and (min-width: 320px) and (max-width: 500px) {
         main.story section header .date-category {
-          font-size: .7em; } }
+          font-size: 11px; } }
       main.story section header .date-category ul.post-categories {
         margin-top: 0;
         text-transform: uppercase;
@@ -643,11 +652,11 @@ main.story section {
         font-family: "Gotham SSm A", "Gotham SSm B";
         font-weight: 300;
         font-style: normal;
-        font-size: .8em;
+        font-size: 11px;
         font-size: 1em; }
         @media screen and (min-width: 320px) and (max-width: 500px) {
           main.story section header .date-category ul.post-categories {
-            font-size: .7em; } }
+            font-size: 11px; } }
       main.story section header .date-category p:nth-child(1) {
         margin-bottom: 0; }
       main.story section header .date-category p:nth-child(2) {
@@ -774,7 +783,7 @@ main.story section {
       line-height: 1.5; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
         main.story section article p, main.story section article blockquote p {
-          font-size: 1em; } }
+          font-size: 1.2em; } }
     main.story section article p {
       float: left;
       display: block;
@@ -834,6 +843,15 @@ main.story section {
           padding-left: 0; }
           main.story section article .float-right:last-child {
             margin-right: 0; } }
+    main.story section article #div-gpt-ad-1443629402046-39 {
+      height: 280px;
+      width: 336px;
+      float: right; }
+      @media screen and (min-width: 320px) and (max-width: 850px) {
+        main.story section article #div-gpt-ad-1443629402046-39 {
+          width: 100%;
+          float: right;
+          text-align: center; } }
     main.story section article p:first-child {
       margin-top: 5.5%; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
@@ -1016,11 +1034,11 @@ section.ecommerce-story {
       font-family: "Gotham SSm A", "Gotham SSm B";
       font-weight: 300;
       font-style: normal;
-      font-size: .8em;
+      font-size: 11px;
       font-size: 0.7em !important; }
       @media screen and (min-width: 320px) and (max-width: 500px) {
         section.ecommerce-story article.bottom ul.post-categories {
-          font-size: .7em; } }
+          font-size: 11px; } }
   section.ecommerce-story aside.sub-category {
     float: left;
     display: block;
@@ -1068,13 +1086,13 @@ section.ecommerce-story {
         font-family: "Gotham SSm A", "Gotham SSm B";
         font-weight: 300;
         font-style: normal;
-        font-size: .8em;
+        font-size: 11px;
         font-size: 0.7em !important;
         position: absolute;
         bottom: 0; }
         @media screen and (min-width: 320px) and (max-width: 500px) {
           section.ecommerce-story aside.sub-category article ul.post-categories {
-            font-size: .7em; } }
+            font-size: 11px; } }
   section.ecommerce-story .first-article-fix {
     margin-right: 2.35765% !important; }
   section.ecommerce-story .border-fix {
@@ -1145,7 +1163,10 @@ main.about p.about-title {
 
 main.about p {
   color: #1e1e1e;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  font-family: "Surveyor Text A", "Surveyor Text B";
+  font-weight: normal;
+  font-style: normal; }
 
 main.about section:nth-child(3), main.about section:nth-child(6) {
   float: left;
@@ -1204,7 +1225,7 @@ main {
   border-top: 1px solid silver; }
   @media screen and (min-width: 851px) {
     main {
-      margin-top: 85px; } }
+      margin-top: 120px; } }
 
 blockquote {
   padding-right: .2em;
@@ -1251,24 +1272,33 @@ body {
   margin: 0; }
 
 .banner-wrapper-mobile {
-  display: none; }
-  @media screen and (min-width: 320px) and (max-width: 850px) {
+  display: none;
+  letter-spacing: 0.5em;
+  overflow: hidden;
+  text-align: center;
+  background-color: #b80405;
+  color: white;
+  font-family: "Surveyor Text A", "Surveyor Text B";
+  font-weight: normal;
+  font-style: normal;
+  position: absolute;
+  top: 0; }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
     .banner-wrapper-mobile {
       float: left;
       display: block;
       margin-right: 38.19821%;
       width: 100%;
-      overflow: hidden;
-      text-align: center;
-      background-color: #b80405;
-      color: white;
-      font-family: "Surveyor Text A", "Surveyor Text B";
-      font-weight: normal;
-      font-style: normal;
-      font-size: .9em;
-      font-size: .7em;
-      position: absolute;
-      top: 0; }
+      font-size: 11px; }
+      .banner-wrapper-mobile:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 501px) and (max-width: 850px) {
+    .banner-wrapper-mobile {
+      float: left;
+      display: block;
+      margin-right: 38.19821%;
+      width: 100%;
+      font-size: 76%; }
       .banner-wrapper-mobile:last-child {
         margin-right: 0; } }
 
@@ -1277,6 +1307,7 @@ body {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
+  letter-spacing: 0.5em;
   overflow: hidden;
   text-align: center;
   background-color: #b80405;
@@ -1284,7 +1315,7 @@ body {
   font-family: "Surveyor Text A", "Surveyor Text B";
   font-weight: normal;
   font-style: normal;
-  font-size: .9em; }
+  font-size: 15px; }
   .banner-wrapper:last-child {
     margin-right: 0; }
   @media screen and (min-width: 320px) and (max-width: 850px) {
@@ -1301,7 +1332,7 @@ body {
 
 .slicknav_menu {
   display: none;
-  margin-top: 2em;
+  margin-top: 2.5em;
   background-color: white !important;
   border: none;
   font-family: "Surveyor Text A", "Surveyor Text B";
@@ -1381,7 +1412,6 @@ nav {
 
 .nav-wrapper {
   background-color: white;
-  height: 113px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -1395,7 +1425,7 @@ nav {
 header {
   margin: 0 auto;
   max-width: 1220px;
-  padding: 0 20px;
+  padding: 3px 20px 0px 20px;
   overflow: hidden;
   display: block; }
 
@@ -1409,11 +1439,14 @@ header {
   .logo:last-child {
     margin-right: 0; }
   .logo h1 {
-    margin-top: 10px;
+    margin-top: 18px;
+    margin-bottom: 0;
     font-family: "Gotham SSm A", "Gotham SSm B";
     font-weight: 700;
     font-style: normal;
     font-size: 2em; }
+    .logo h1 img {
+      height: 29px; }
 
 @media screen and (min-width: 320px) and (max-width: 500px) {
   display: none; }
@@ -1462,7 +1495,7 @@ nav {
     right: 92%; }
 
 .nav-up {
-  top: -100px; }
+  top: -110px; }
 
 .subscribe {
   clear: both;

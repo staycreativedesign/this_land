@@ -32,30 +32,46 @@ function custom_theme_setup() {
 }
 add_action( 'after_setup_theme', 'custom_theme_setup' );
 
-
-function custom_meta_box_markup($object)
+function select_rotating_image($object)
 {
-    wp_nonce_field(basename(__FILE__), "meta-box-nonce");
+    wp_nonce_field("rotating_image_save_meta", "rotating_image_save_meta");
 
     ?>
         <div>
-            <p>Upload the image via Media > Add New.  Than copy the link into the box and click update</p>
-            <input name="meta-box-text" type="text" value="<?php echo get_post_meta($object->ID, "meta-box-text", true); ?>">
+            <p>Please select the rotating image</p>
+            <select name="main-rotating-image">
+                <?php
+                    $args = array(
+                                            'post_type' => 'attachment',
+                                            'numberposts' => 10
+                                        );
+                    $images = get_posts($args);
+                    ?> <option value="">Please select rotating image</option> <?php
+
+                    foreach($images as $image)
+                    {
+                    ?>
+                    <option value="<?php echo esc_attr( $image->ID ); ?>" <?php if ( get_post_meta(get_the_ID(), 'rotatimg-image-save', true) == $image->ID ) echo 'selected'; ?>><?php echo $image->post_title; ?></option>
+                    <?php
+                    }
+                ?>
+            </select>
         </div>
     <?php
 }
 
-function add_custom_meta_box()
+function rotating_image_meta_box()
 {
-    add_meta_box("demo-meta-box", "Mobile Rotating Image", "custom_meta_box_markup", "post", "normal", "high", null);
+    add_meta_box("rotatimg-image-save", "Rotating Image Selection", "select_rotating_image", "post", "normal", "core", null);
 }
 
-add_action("add_meta_boxes", "add_custom_meta_box");
+add_action("add_meta_boxes", "rotating_image_meta_box");
 
-function save_custom_meta_box($post_id, $post, $update)
+function save_rotating_image($post_id, $post, $update)
 {
-    if (!isset($_POST["meta-box-nonce"]) || !wp_verify_nonce($_POST["meta-box-nonce"], basename(__FILE__)))
+    if (!isset($_POST["rotating_image_save_meta"]) || !wp_verify_nonce($_POST["rotating_image_save_meta"], "rotating_image_save_meta")) {
         return $post_id;
+    }
 
     if(!current_user_can("edit_post", $post_id))
         return $post_id;
@@ -63,65 +79,10 @@ function save_custom_meta_box($post_id, $post, $update)
     if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
         return $post_id;
 
-    $slug = "post";
-    if($slug != $post->post_type)
-        return $post_id;
-
-    $meta_box_text_value = "";
-
-    if(isset($_POST["meta-box-text"]))
-    {
-        $meta_box_text_value = $_POST["meta-box-text"];
-    }
-    update_post_meta($post_id, "meta-box-text", $meta_box_text_value);
+    update_post_meta($post_id, "rotatimg-image-save", absint($_POST['main-rotating-image']));
 }
 
-add_action("save_post", "save_custom_meta_box", 10, 3);
-
-function story_image_large($object)
-{
-    wp_nonce_field(basename(__FILE__), "large-metabox-nonce");
-
-    ?>
-        <div>
-            <p>Upload the image via Media > Add New.  Than copy the link into the box and click update</p>
-            <input name="large-meta-box-text" type="text" value="<?php echo get_post_meta($object->ID, "large-meta-box-text", true); ?>">
-        </div>
-    <?php
-}
-
-function large_image_metabox()
-{
-    add_meta_box("large-image-meta", "Front Rotating Image", "story_image_large", "post", "normal", "core", null);
-}
-
-add_action("add_meta_boxes", "large_image_metabox");
-
-function save_large_image_meta_box($post_id, $post, $update)
-{
-    if (!isset($_POST["large-metabox-nonce"]) || !wp_verify_nonce($_POST["large-metabox-nonce"], basename(__FILE__)))
-        return $post_id;
-
-    if(!current_user_can("edit_post", $post_id))
-        return $post_id;
-
-    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
-        return $post_id;
-
-    $slug = "post";
-    if($slug != $post->post_type)
-        return $post_id;
-
-    $meta_box_text_value = "";
-
-    if(isset($_POST["large-meta-box-text"]))
-    {
-        $meta_box_text_value = $_POST["large-meta-box-text"];
-    }
-    update_post_meta($post_id, "large-meta-box-text", $meta_box_text_value);
-}
-
-add_action("save_post", "save_large_image_meta_box", 10, 3);
+add_action("save_post", "save_rotating_image", 10, 3);
 
 function html5_insert_image($html, $id, $caption, $title, $align, $url) {
   $html5 = "<figure id='post-$id media-$id' class='align-$align'>";
@@ -740,3 +701,12 @@ function check_first_ecommerce($post) {
     return '<p class="float-right quote-text">' . $content . '</p>';
   }
   add_shortcode( 'pullquote', 'pull_quote_shortcode' );
+
+
+  function get_attachment_id_from_src( $image_src ) {
+    $image_src = sanitize_text_field( $image_src );
+    global $wpdb;
+    $query = "SELECT ID FROM {$wpdb->posts} WHERE guid = '$image_src'";
+    $id = $wpdb->get_var( $query );
+    return $id;
+  }

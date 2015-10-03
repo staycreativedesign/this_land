@@ -21,7 +21,7 @@
 			<h2>
 				<?php the_title(); ?>
 			</h2>
-				<?php echo truncate_excerpt(); ?>
+				<p><?php echo truncate_excerpt(); ?></p>
 				<?php the_category(); ?>
 			</article>
 			</a>

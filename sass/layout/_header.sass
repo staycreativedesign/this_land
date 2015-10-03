@@ -3,26 +3,31 @@ body
 
 .banner-wrapper-mobile
 	display:  none
-	+media(min-width 320px max-width 850px, 1)
-		+span-columns(1)
-		overflow: hidden
-		text-align: center
-		background-color: $red
-		color: white
-		+font($surveyor,normal, normal)
-		font-size: .9em
-		font-size: .7em
-		position: absolute
-		top: 0
-
-.banner-wrapper
-	+span-columns(12)
+	letter-spacing: 0.5em
 	overflow: hidden
 	text-align: center
 	background-color: $red
 	color: white
 	+font($surveyor,normal, normal)
-	font-size: .9em
+	position: absolute
+	top: 0
+
+	+media(min-width 320px max-width 500px, 1)
+		+span-columns(1)
+		font-size: 11px
+	+media(min-width 501px max-width 850px, 1)
+		+span-columns(1)
+		font-size: 76%
+
+.banner-wrapper
+	+span-columns(12)
+	letter-spacing: 0.5em
+	overflow: hidden
+	text-align: center
+	background-color: $red
+	color: white
+	+font($surveyor,normal, normal)
+	font-size: 15px
 
 	+media(min-width 320px max-width 850px, 1)
 		+span-columns(1)
@@ -33,7 +38,7 @@ body
 .slicknav_menu
 	display: none // remove to appear
 	+media(min-width 320px max-width 850px, 1)
-	margin-top: 2em
+	margin-top: 2.5em
 	background-color: white!important
 	border: none
 	+font($surveyor,700, normal)
@@ -108,7 +113,6 @@ nav
 
 .nav-wrapper
 	background-color: white
-	height: 113px
 	width: 100%
 	position: fixed
 	top: 0
@@ -121,7 +125,7 @@ nav
 header
 	margin: 0 auto
 	max-width: 1220px
-	padding: 0 20px
+	padding: 3px 20px 0px 20px
 	overflow: hidden
 	display: block
 
@@ -130,9 +134,12 @@ header
 	text-transform: uppercase
 	color: $red
 	h1
-		margin-top: 10px
+		margin-top: 18px
+		margin-bottom: 0
 		+font($gotham, 700, normal)
 		font-size: 2em
+		img
+			height: 29px
 +media(min-width 320px max-width 500px, 1)
 		display: none
 
@@ -179,5 +186,5 @@ nav
 		right: 92%
 
 .nav-up
-  top: -100px
+  top: -110px
 

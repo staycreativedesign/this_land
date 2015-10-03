@@ -16,7 +16,7 @@ main.search
 		letter-spacing: 1.5px
 		margin-top: 2em
 		li:nth-child(n+2)
-			padding: 1.2em 0
+			padding: .5em 0
 			color: gray
 
 		li:nth-child(1)
@@ -24,19 +24,17 @@ main.search
 
 		li:nth-child(2)
 
-		a:selected
-			background-color: yellow
-
 		h2
-			font-size: 1.3em
+			font-size: 16px
 			+media(min-width 320px max-width 850px, 1)
-				font-size: 1.2em
+				font-size: .9em
 
 		li
 			font-size: 1em
 			+media(min-width 320px max-width 850px, 1)
 				font-size: .8em
-
+			a
+				font-size: .7em
 		.current-cat
 			font-weight: bold
 			color: black!important
@@ -89,9 +87,11 @@ main.search
 
 		 	p:nth-child(3)
 		 		padding: 1em 5px 0 5px
-		 		font-size: 1.56em
-		 		line-height: 1.5em
+		 		font-size: 16px
+		 		line-height: 21.5px
 		 		+font($surveyor-text, normal, normal)
+		 		@include media(min-width 320px max-width 500px, 1)
+		 			font-size: 18px
 
 
 		 	.post-categories
@@ -100,7 +100,7 @@ main.search
 		 		text-transform: uppercase
 		 		color: $article-border
 		 		+font($gotham, normal, normal)
-		 		font-size: .6em
+		 		font-size: 11px
 		 		width: 100%
 		 	@include media(min-width 320px max-width 500px, 1)
 		 		+span-columns(1)

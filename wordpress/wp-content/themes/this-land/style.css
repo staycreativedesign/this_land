@@ -200,6 +200,7 @@ main.index {
       @media screen and (min-width: 901px) {
         main.index article.main h1 {
           margin-top: .5em;
+          margin-bottom: 0;
           font-size: 2.5em; } }
     main.index article.main p:nth-child(-n+3) {
       font-family: "Surveyor Display A", "Surveyor Display B";
@@ -216,7 +217,7 @@ main.index {
       main.index p:nth-child(2) {
         padding: 0; } }
   main.index p:nth-child(3) {
-    margin-top: 2em;
+    margin-top: 0;
     font-size: 1em; }
   main.index .post-categories li a {
     font-family: "Gotham SSm A", "Gotham SSm B";
@@ -1021,6 +1022,7 @@ section.ecommerce-story {
       @media screen and (min-width: 901px) {
         section.ecommerce-story article.bottom h1 {
           margin-top: .5em;
+          margin-bottom: 0;
           font-size: 2.5em; } }
     section.ecommerce-story article.bottom p:nth-child(-n+3) {
       font-family: "Surveyor Display A", "Surveyor Display B";
@@ -1343,7 +1345,7 @@ body {
   @media screen and (min-width: 502px) and (max-width: 850px) {
     .slicknav_menu {
       margin: 1.8em 20px 0.5em 20px;
-      padding-bottom: 17px; } }
+      padding-bottom: 10px; } }
   @media screen and (min-width: 320px) and (max-width: 501px) {
     .slicknav_menu {
       margin: 2.5em 3% 0.5em 3%; } }

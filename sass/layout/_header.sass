@@ -3,7 +3,7 @@ body
 
 .banner-wrapper-mobile
 	display:  none
-	letter-spacing: 0.5em
+	letter-spacing: 0.05em
 	overflow: hidden
 	text-align: center
 	background-color: $red
@@ -14,33 +14,36 @@ body
 
 	+media(min-width 320px max-width 500px, 1)
 		+span-columns(1)
-		font-size: 11px
+		font-size: 13px
 	+media(min-width 501px max-width 850px, 1)
 		+span-columns(1)
-		font-size: 76%
+		font-size: 90%
 
 .banner-wrapper
 	+span-columns(12)
-	letter-spacing: 0.5em
+	letter-spacing: 0.05em
 	overflow: hidden
 	text-align: center
 	background-color: $red
 	color: white
 	+font($surveyor,normal, normal)
-	font-size: 15px
+	font-size: 21px
 
-	+media(min-width 320px max-width 850px, 1)
+	+media(min-width 320px max-width 500px, 1)
 		+span-columns(1)
-		font-size: .7em
+		font-size: 1em
 		position: absolute
 		top: 0
 
 .slicknav_menu
 	display: none // remove to appear
-	+media(min-width 320px max-width 850px, 1)
-	margin-top: 2.5em
+	border-bottom: 1px solid silver
+	+media(min-width 502px max-width 850px, 1)
+		margin: 1.8em 20px .5em 20px
+		padding-bottom: 17px
+	+media(min-width 320px max-width 501px, 1)
+		margin: 2.5em 3% .5em 3%
 	background-color: white!important
-	border: none
 	+font($surveyor,700, normal)
 	+media(min-width 320px max-width 850px, 12)
 		display: block
@@ -58,7 +61,7 @@ body
 		+font($gotham, 700, normal)
 		height: 36px
 		color: $red
-		margin: 11px 5px 6px
+		margin: 16px 5px 15px 0px
 		+media(min-width 320px max-width 500px, 1)
 			font-size: 2em!important
 			width: 69%
@@ -67,6 +70,8 @@ body
 		background-color: white
 		color: black
 		font-size: 2em
+		padding: 0!important
+		margin-top: 25px
 	ul
 		li
 			+font($gotham, 700, normal)
@@ -125,9 +130,10 @@ nav
 header
 	margin: 0 auto
 	max-width: 1220px
-	padding: 3px 20px 0px 20px
+	padding: 3px 0px 0px 20px
 	overflow: hidden
 	display: block
+	border-bottom: 1px solid silver
 
 .logo
 	+span-columns(8 of 36)
@@ -145,13 +151,13 @@ header
 
 nav
 	+span-columns(26 of 36)
-	+font($surveyor-text, 700, normal)
+	+font($gotham, 700, normal)
 	text-transform: uppercase
 	float: right
 	ul
 		text-align: right
 	li
-		+font($surveyor-text, 700, normal)
+		+font($gotham, 700, normal)
 		margin-top: 0
 		font-size: 13px
 		display: inline-block
@@ -176,6 +182,7 @@ nav
 	form
 		position: relative
 		width: 100%
+		padding-right: 20px
 
 		button
 			background-color: white
@@ -187,5 +194,8 @@ nav
 		right: 92%
 
 .nav-up
-  top: -110px
+  top: -150px
 
+.header-wrapper
+	margin: 0 auto
+	padding: 0 20px

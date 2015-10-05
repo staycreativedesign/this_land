@@ -139,8 +139,8 @@ img {
   justify-content: center;
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
+  margin-right: 1.40138%;
+  width: 49.29931%; }
   .article-wrapper:last-child {
     margin-right: 0; }
   .article-wrapper:nth-child(odd) {
@@ -170,9 +170,13 @@ main.index {
       display: block;
       margin-right: 38.19821%;
       width: 100%;
+      padding-top: .5em;
       margin-top: 0; }
       main.index:last-child {
         margin-right: 0; } }
+  @media screen and (min-width: 501px) and (max-width: 850px) {
+    main.index {
+      padding-top: .6em; } }
   main.index article.main {
     text-align: center;
     background-color: #fff9f5;
@@ -215,17 +219,22 @@ main.index {
     margin-top: 2em;
     font-size: 1em; }
   main.index .post-categories li a {
-    font-family: "Surveyor Text A", "Surveyor Text B";
+    font-family: "Gotham SSm A", "Gotham SSm B";
     font-weight: normal;
     font-style: normal;
+    letter-spacing: .1em;
     position: absolute;
-    bottom: 2em;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     margin-top: 4em;
     text-transform: uppercase;
     color: silver;
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: .1em;
     font-size: 11px; }
     @media screen and (min-width: 320px) and (max-width: 500px) {
       main.index .post-categories li a {
@@ -247,11 +256,11 @@ section.sub-category {
   section.sub-category article {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
+    margin-right: 1.40138%;
+    width: 23.94897%;
     border-bottom: 1px solid silver;
     border-bottom: 1px solid silver;
-    height: 350px;
+    height: 375px;
     position: relative; }
     section.sub-category article img {
       height: 200px;
@@ -286,8 +295,11 @@ section.sub-category {
       line-height: 1.4em;
       height: 66px; }
     section.sub-category article .post-categories li a {
+      font-family: "Gotham SSm A", "Gotham SSm B";
+      font-weight: normal;
+      font-style: normal;
       position: absolute;
-      bottom: 2%;
+      bottom: 5%;
       left: 0%;
       margin-top: 4em;
       color: silver;
@@ -321,14 +333,8 @@ section.sub-category {
           font-size: .5em; } }
 
 .ecommerce {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
   margin-right: 0;
-  margin-top: 2em; }
-  .ecommerce:last-child {
-    margin-right: 0; }
+  margin-top: 1em; }
   .ecommerce article {
     border: 1px solid silver;
     padding: 1em;
@@ -340,8 +346,8 @@ section.sub-category {
     font-style: normal;
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
+    margin-right: 1.40138%;
+    width: 23.94897%; }
     .ecommerce article:last-child {
       margin-right: 0; }
     .ecommerce article figure img {
@@ -388,8 +394,7 @@ main.search {
     font-style: normal;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-top: 2em;
-    li: nth-child(2); }
+    margin-top: 2em; }
     main.search aside:last-child {
       margin-right: 0; }
     main.search aside li:nth-child(n+2) {
@@ -632,6 +637,10 @@ main.story section {
       bottom: 0;
       text-transform: uppercase;
       color: silver;
+      font-family: "Gotham SSm A", "Gotham SSm B";
+      font-weight: normal;
+      font-style: normal;
+      letter-spacing: .1em;
       font-size: 11px; }
       @media screen and (min-width: 320px) and (max-width: 500px) {
         main.story section header .date-category {
@@ -640,6 +649,10 @@ main.story section {
         margin-top: 0;
         text-transform: uppercase;
         color: silver;
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: .1em;
         font-size: 11px;
         font-size: 1em; }
         @media screen and (min-width: 320px) and (max-width: 500px) {
@@ -1017,8 +1030,13 @@ section.ecommerce-story {
       line-height: 1.4em; }
     section.ecommerce-story article.bottom ul.post-categories {
       margin-top: 0;
+      letter-spacing: .1em;
       text-transform: uppercase;
       color: silver;
+      font-family: "Gotham SSm A", "Gotham SSm B";
+      font-weight: normal;
+      font-style: normal;
+      letter-spacing: .1em;
       font-size: 11px;
       font-size: 0.7em !important; }
       @media screen and (min-width: 320px) and (max-width: 500px) {
@@ -1068,6 +1086,10 @@ section.ecommerce-story {
         margin-top: 0;
         text-transform: uppercase;
         color: silver;
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: .1em;
         font-size: 11px;
         font-size: 0.7em !important;
         position: absolute;
@@ -1203,11 +1225,10 @@ ul li {
   list-style-type: none; }
 
 main {
-  clear: both;
-  border-top: 1px solid silver; }
+  clear: both; }
   @media screen and (min-width: 851px) {
     main {
-      margin-top: 120px; } }
+      margin-top: 139px; } }
 
 blockquote {
   padding-right: .2em;
@@ -1255,7 +1276,7 @@ body {
 
 .banner-wrapper-mobile {
   display: none;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.05em;
   overflow: hidden;
   text-align: center;
   background-color: #b80405;
@@ -1271,7 +1292,7 @@ body {
       display: block;
       margin-right: 38.19821%;
       width: 100%;
-      font-size: 11px; }
+      font-size: 13px; }
       .banner-wrapper-mobile:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 501px) and (max-width: 850px) {
@@ -1280,7 +1301,7 @@ body {
       display: block;
       margin-right: 38.19821%;
       width: 100%;
-      font-size: 76%; }
+      font-size: 90%; }
       .banner-wrapper-mobile:last-child {
         margin-right: 0; } }
 
@@ -1289,7 +1310,7 @@ body {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.05em;
   overflow: hidden;
   text-align: center;
   background-color: #b80405;
@@ -1297,16 +1318,16 @@ body {
   font-family: "Surveyor Text A", "Surveyor Text B";
   font-weight: normal;
   font-style: normal;
-  font-size: 15px; }
+  font-size: 21px; }
   .banner-wrapper:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 320px) and (max-width: 850px) {
+  @media screen and (min-width: 320px) and (max-width: 500px) {
     .banner-wrapper {
       float: left;
       display: block;
       margin-right: 38.19821%;
       width: 100%;
-      font-size: .7em;
+      font-size: 1em;
       position: absolute;
       top: 0; }
       .banner-wrapper:last-child {
@@ -1314,12 +1335,18 @@ body {
 
 .slicknav_menu {
   display: none;
-  margin-top: 2.5em;
+  border-bottom: 1px solid silver;
   background-color: white !important;
-  border: none;
   font-family: "Surveyor Text A", "Surveyor Text B";
   font-weight: 700;
   font-style: normal; }
+  @media screen and (min-width: 502px) and (max-width: 850px) {
+    .slicknav_menu {
+      margin: 1.8em 20px 0.5em 20px;
+      padding-bottom: 17px; } }
+  @media screen and (min-width: 320px) and (max-width: 501px) {
+    .slicknav_menu {
+      margin: 2.5em 3% 0.5em 3%; } }
   @media screen and (min-width: 320px) and (max-width: 850px) {
     .slicknav_menu {
       display: block; } }
@@ -1337,7 +1364,7 @@ body {
     font-style: normal;
     height: 36px;
     color: #b80405;
-    margin: 11px 5px 6px; }
+    margin: 16px 5px 15px 0px; }
     @media screen and (min-width: 320px) and (max-width: 500px) {
       .slicknav_menu .slicknav_brand {
         font-size: 2em !important;
@@ -1346,7 +1373,9 @@ body {
   .slicknav_menu .slicknav_btn {
     background-color: white;
     color: black;
-    font-size: 2em; }
+    font-size: 2em;
+    padding: 0 !important;
+    margin-top: 25px; }
   .slicknav_menu ul li {
     font-family: "Gotham SSm A", "Gotham SSm B";
     font-weight: 700;
@@ -1407,9 +1436,10 @@ nav {
 header {
   margin: 0 auto;
   max-width: 1220px;
-  padding: 3px 20px 0px 20px;
+  padding: 3px 0px 0px 20px;
   overflow: hidden;
-  display: block; }
+  display: block;
+  border-bottom: 1px solid silver; }
 
 .logo {
   float: left;
@@ -1438,7 +1468,7 @@ nav {
   display: block;
   margin-right: 0.77372%;
   width: 72.0073%;
-  font-family: "Surveyor Text A", "Surveyor Text B";
+  font-family: "Gotham SSm A", "Gotham SSm B";
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
@@ -1448,7 +1478,7 @@ nav {
   nav ul {
     text-align: right; }
   nav li {
-    font-family: "Surveyor Text A", "Surveyor Text B";
+    font-family: "Gotham SSm A", "Gotham SSm B";
     font-weight: 700;
     font-style: normal;
     margin-top: 0;
@@ -1471,7 +1501,8 @@ nav {
       outline-width: 0; }
   nav form {
     position: relative;
-    width: 100%; }
+    width: 100%;
+    padding-right: 20px; }
     nav form button {
       background-color: white; }
   nav .inner-addon i {
@@ -1480,7 +1511,11 @@ nav {
     right: 92%; }
 
 .nav-up {
-  top: -110px; }
+  top: -150px; }
+
+.header-wrapper {
+  margin: 0 auto;
+  padding: 0 20px; }
 
 .subscribe {
   clear: both;

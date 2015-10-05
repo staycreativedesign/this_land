@@ -17,7 +17,7 @@
 	display: flex!important
 	align-items: center
 	justify-content: center
-	+span-columns(6)
+	+span-columns(10 of 20)
 	+omega(odd)
 
 
@@ -26,12 +26,19 @@
 		height: auto
 		padding-bottom: 1em
 
+.articl-wrapper:nth-child(4)
+	@include media(min-width 320px max-width 500px, 1)
+
+
 main.index
 	padding-top: 1em
 	+span-columns(12)
 	@include media(min-width 320px max-width 500px, 1)
 		+span-columns(1)
+		padding-top: .5em
 		margin-top: 0
+	@include media(min-width 501px max-width 850px, 1)
+		padding-top: .6em
 
 	article.main
 		+article-main
@@ -53,9 +60,10 @@ main.index
 		font-size:	1em
 
 	.post-categories li a
-		+font($surveyor,normal,normal)
+		+font($gotham,normal,normal)
+		letter-spacing: .1em
 		position: absolute
-		bottom: 2em
+		bottom: 5%
 		left: 50%
 		transform: translate(-50%, -50%)
 		-webkit-transform: translate(-50%, -50%)
@@ -81,10 +89,10 @@ section.sub-category
 			background-size: cover
 			object-fit: cover
 
-		+span-columns(3)
+		+span-columns(5 of 20)
 		+border-bottom($article-border)
 		+article_type
-		height: 350px
+		height: 375px
 		position: relative
 		p:nth-child(2n)
 			margin-top: 5em
@@ -103,8 +111,9 @@ section.sub-category
 		ul
 
 		.post-categories li a
+				+font($gotham,normal,normal)
 				position: absolute
-				bottom: 2%
+				bottom: 5%
 				left: 0%
 				margin-top: 4em
 				color: silver
@@ -131,9 +140,9 @@ section.sub-category
 				font-size: .5em
 
 .ecommerce
-	+span-columns(12)
+	// +span-columns(12)
 	+omega()
-	margin-top: 2em
+	margin-top: 1em
 	article
 		border: 1px solid $article-border
 		padding: 1em
@@ -141,7 +150,7 @@ section.sub-category
 		text-align: center
 		font-size: .7em
 		+font($gotham, bold, normal)
-		+span-columns(3)
+		+span-columns(5 of 20)
 
 		figure
 			img

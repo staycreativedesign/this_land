@@ -54,28 +54,30 @@
 					<a href="https://www.facebook.com/thislandpress" target="_blank">LAUNCH PARTY FOR OUR NEW ISSUE. FACEBOOK DETAILS</a>
 				</p>
 			</aside>
-			<header>
-				<div role="banner" class="logo">
-					<h1>
-						<a href="<?php echo site_url(); ?>"><img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/this-land-logo.png"></a>
-					</h1>
-				</div>
-				<nav role="navigation ">
-					<ul id="menu">
-						<li>
-							<a href="<?php echo site_url('/stories'); ?>">Explore</a>
-						</li>
-						<li>
-							<a href="https://thislandpress.myshopify.com/" target="_blank">Shop</a>
-						</li>
-						<li>
-							<a href="https://thislandpress.myshopify.com/collections/magazine" target="_blank">Subscribe</a>
-						</li>
-						<li>
-							<?php get_search_form(); ?>
-						</li>
-					</ul>
-				</nav>
-			</header>
+			<div class="header-wrapper">
+				<header>
+					<div role="banner" class="logo">
+						<h1>
+							<a href="<?php echo site_url(); ?>"><img src="http://devthisland.wpengine.com/wp-content/uploads/2015/09/this-land-logo.png"></a>
+						</h1>
+					</div>
+					<nav role="navigation ">
+						<ul id="menu">
+							<li>
+								<a href="<?php echo site_url('/stories'); ?>">Explore</a>
+							</li>
+							<li>
+								<a href="https://thislandpress.myshopify.com/" target="_blank">Shop</a>
+							</li>
+							<li>
+								<a href="https://thislandpress.myshopify.com/collections/magazine" target="_blank">Subscribe</a>
+							</li>
+							<li>
+								<?php get_search_form(); ?>
+							</li>
+						</ul>
+					</nav>
+				</header>
+			</div>
 		</div>
 		<div class="main-wrapper">

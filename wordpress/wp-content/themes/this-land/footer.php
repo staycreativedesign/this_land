@@ -34,7 +34,7 @@
 						<a href="stories/">Articles</a>
 					</li>
 					<li>
-						<a href="https://thislandpress.myshopify.com/" target="_blank">Store</a>
+						<a href="https://thislandpress.myshopify.com/">Store</a>
 					</li>
 					<li>
 						<a href="https://thislandpress.myshopify.com/collections/magazine" target="_blank">Subscribe</a>

@@ -67,7 +67,7 @@
 								<a href="<?php echo site_url('/stories'); ?>">Explore</a>
 							</li>
 							<li>
-								<a href="https://thislandpress.myshopify.com/" target="_blank">Shop</a>
+								<a href="https://thislandpress.myshopify.com/">Shop</a>
 							</li>
 							<li>
 								<a href="https://thislandpress.myshopify.com/collections/magazine" target="_blank">Subscribe</a>

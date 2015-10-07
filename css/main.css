@@ -119,7 +119,7 @@ img {
   overflow: hidden;
   margin-bottom: 4px;
   border-bottom: 1px solid silver; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
+  @media screen and (min-width: 320px) and (max-width: 580px) {
     .main-image {
       float: left;
       display: block;
@@ -145,7 +145,7 @@ img {
     margin-right: 0; }
   .article-wrapper:nth-child(odd) {
     margin-right: 0; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
+  @media screen and (min-width: 320px) and (max-width: 580px) {
     .article-wrapper {
       float: left;
       display: block;
@@ -164,7 +164,7 @@ main.index {
   width: 100%; }
   main.index:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
+  @media screen and (min-width: 320px) and (max-width: 580px) {
     main.index {
       float: left;
       display: block;
@@ -206,14 +206,14 @@ main.index {
       font-family: "Surveyor Display A", "Surveyor Display B";
       font-weight: 300;
       font-style: normal; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
+    @media screen and (min-width: 320px) and (max-width: 580px) {
       main.index article.main {
         margin-bottom: 0; } }
   main.index p:nth-child(2) {
     font-size: 1em;
     padding: 0 10%;
     line-height: 21.5px; }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
+    @media screen and (min-width: 320px) and (max-width: 580px) {
       main.index p:nth-child(2) {
         padding: 0; } }
   main.index p:nth-child(3) {
@@ -240,7 +240,7 @@ main.index {
     @media screen and (min-width: 320px) and (max-width: 500px) {
       main.index .post-categories li a {
         font-size: 11px; } }
-    @media screen and (min-width: 320px) and (max-width: 500px) {
+    @media screen and (min-width: 320px) and (max-width: 580px) {
       main.index .post-categories li a {
         position: relative;
         transform: none;
@@ -251,9 +251,20 @@ section.sub-category {
   clear: both;
   padding-top: 15px;
   overflow: hidden; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
+  @media screen and (min-width: 320px) and (max-width: 450px) {
     section.sub-category {
       display: none !important; } }
+  @media screen and (min-width: 450px) and (max-width: 580px) {
+    section.sub-category {
+      float: left;
+      display: block;
+      margin-right: 1.40138%;
+      width: 100%;
+      height: auto;
+      padding-top: 0;
+      padding-bottom: 2em; }
+      section.sub-category:last-child {
+        margin-right: 0; } }
   section.sub-category article {
     float: left;
     display: block;
@@ -305,33 +316,17 @@ section.sub-category {
       margin-top: 4em;
       color: silver;
       font-size: 11px; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
-    section.sub-category {
-      float: left;
-      display: block;
-      margin-right: 38.19821%;
-      width: 100%;
-      height: auto;
-      padding-top: 0;
-      padding-bottom: 2em; }
-      section.sub-category:last-child {
-        margin-right: 0; }
+    @media screen and (min-width: 450px) and (max-width: 580px) {
       section.sub-category article {
-        text-align: center;
+        margin-top: 1em;
         float: left;
         display: block;
-        margin-right: 38.19821%;
-        width: 100%;
-        margin-right: 0;
-        margin-top: 1em;
-        border-bottom: 1px solid black; }
+        margin-right: 1.40138%;
+        width: 49.29931%; }
         section.sub-category article:last-child {
           margin-right: 0; }
-        section.sub-category article p {
-          margin-top: 0; }
-        section.sub-category article p:nth-child(2n) {
-          margin-top: 0;
-          font-size: .5em; } }
+        section.sub-category article:nth-child(2) {
+          margin-right: 0; } }
 
 .ecommerce {
   margin-right: 0;
@@ -354,7 +349,7 @@ section.sub-category {
     .ecommerce article figure img {
       height: 223px;
       object-fit: cover; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
+  @media screen and (min-width: 320px) and (max-width: 580px) {
     .ecommerce {
       float: left;
       display: block;

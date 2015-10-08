@@ -78,7 +78,7 @@ section.sub-category
 	@include media(min-width 320px max-width 450px, 1)
 		display: none!important
 
-	@include media(min-width 450px max-width 580px, 1)
+	@include media(min-width 410px max-width 580px, 1)
 		+span-columns(20 of 20)
 		height: auto
 		padding-top: 0
@@ -120,19 +120,22 @@ section.sub-category
 				font-size: 11px
 
 
-		@include media(min-width 450px max-width 580px, 1)
-			margin-top: 1em
+		@include media(min-width 451px max-width 800px, 1)
 			+span-columns(10 of 20)
-			+omega(2)
+			margin-bottom: 1em
+
+	article:nth-child(4)
+		@include media(min-width 451px max-width 800px, 1)
+			margin-right: 0
+
 
 .ecommerce
 	// +span-columns(12)
-	+omega()
-	margin-top: 1em
+	margin-top: 1.5em
 	article
 		border: 1px solid $article-border
 		padding: 1em
-		margin-bottom: 2em
+		margin-bottom: 1em
 		text-align: center
 		font-size: .7em
 		+font($gotham, bold, normal)
@@ -143,10 +146,14 @@ section.sub-category
 				height: 223px
 				object-fit: cover
 
-	@include media(min-width 320px max-width 580px, 1)
+	@include media(min-width 320px max-width 450px, 1)
 		+span-columns(1)
 		margin-top: 0em
 		article
 			+span-columns(1)
-			+omega()
+			+omega(2n)
+			margin-top: 1.0em
+
+		article:nth-child(1)
+			margin-top: 1.7em
 

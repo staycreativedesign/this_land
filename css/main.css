@@ -6,49 +6,14 @@ html {
 *::before {
   box-sizing: inherit; }
 
-.floats {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  border-bottom: 1px solid silver;
-  border-bottom: 1px solid silver; }
-  .floats.left {
-    float: left; }
-  .floats.right {
-    float: right; }
-  .floats.ad {
-    margin-top: 5em; }
-  .floats:last-child {
-    margin-right: 0; }
-  .floats p:nth-child(4) {
-    text-transform: uppercase;
-    color: silver;
-    font-family: "Gotham SSm A", "Gotham SSm B";
-    font-weight: normal;
-    font-style: normal;
-    font-size: .6em;
-    width: 100%; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
-    .floats p:nth-child(4) {
-      margin-top: 2em; } }
-  .floats p:nth-child(2n) {
-    position: absolute;
-    bottom: 0; }
-  .floats h2 {
-    font-family: "Gotham SSm A", "Gotham SSm B";
-    font-weight: bold;
-    font-style: normal;
-    font-size: .7em;
-    margin-top: 1.8em; }
-  .floats p {
-    font-family: "Surveyor Display A", "Surveyor Display B";
-    font-weight: 300;
-    font-style: normal; }
-  @media screen and (min-width: 320px) and (max-width: 500px) {
-    .floats p:nth-child(2n) {
-      position: relative;
-      bottom: auto; } }
+.floats.left {
+  float: left; }
+
+.floats.right {
+  float: right; }
+
+.floats.ad {
+  margin-top: 5em; }
 
 figure {
   padding: 0;
@@ -254,7 +219,7 @@ section.sub-category {
   @media screen and (min-width: 320px) and (max-width: 450px) {
     section.sub-category {
       display: none !important; } }
-  @media screen and (min-width: 450px) and (max-width: 580px) {
+  @media screen and (min-width: 410px) and (max-width: 580px) {
     section.sub-category {
       float: left;
       display: block;
@@ -316,25 +281,25 @@ section.sub-category {
       margin-top: 4em;
       color: silver;
       font-size: 11px; }
-    @media screen and (min-width: 450px) and (max-width: 580px) {
+    @media screen and (min-width: 451px) and (max-width: 800px) {
       section.sub-category article {
-        margin-top: 1em;
         float: left;
         display: block;
         margin-right: 1.40138%;
-        width: 49.29931%; }
+        width: 49.29931%;
+        margin-bottom: 1em; }
         section.sub-category article:last-child {
-          margin-right: 0; }
-        section.sub-category article:nth-child(2) {
           margin-right: 0; } }
+  @media screen and (min-width: 451px) and (max-width: 800px) {
+    section.sub-category article:nth-child(4) {
+      margin-right: 0; } }
 
 .ecommerce {
-  margin-right: 0;
-  margin-top: 1em; }
+  margin-top: 1.5em; }
   .ecommerce article {
     border: 1px solid silver;
     padding: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     text-align: center;
     font-size: .7em;
     font-family: "Gotham SSm A", "Gotham SSm B";
@@ -349,7 +314,7 @@ section.sub-category {
     .ecommerce article figure img {
       height: 223px;
       object-fit: cover; }
-  @media screen and (min-width: 320px) and (max-width: 580px) {
+  @media screen and (min-width: 320px) and (max-width: 450px) {
     .ecommerce {
       float: left;
       display: block;
@@ -363,9 +328,15 @@ section.sub-category {
         display: block;
         margin-right: 38.19821%;
         width: 100%;
-        margin-right: 0; }
+        margin-top: 1.0em; }
         .ecommerce article:last-child {
-          margin-right: 0; } }
+          margin-right: 0; }
+        .ecommerce article:nth-child(2n) {
+          margin-right: 0; }
+        .ecommerce article:nth-child(2n+1) {
+          clear: left; }
+      .ecommerce article:nth-child(1) {
+        margin-top: 1.7em; } }
 
 main.search {
   float: left;

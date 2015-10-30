@@ -1,0 +1,69 @@
+main.about
+	h1.header
+		font-size: 2.5em
+		margin: 0
+		@include media(min-width 320px max-width 500px, 1)
+			padding-bottom: .5em
+			margin-top: -0.5em
+			border-bottom: 1px solid black
+
+	h1
+		+font($surveyor, normal, normal)
+		@include media(min-width 320px max-width 500px, 1)
+			font-size: 1.5em
+
+	section:nth-child(1)
+		+span-columns(6)
+		margin-top: 2em
+
+
+	section:nth-child(2)
+		+span-columns(6)
+		+omega()
+		margin-top: 2em
+		@include media(min-width 320px max-width 500px, 1)
+			display: none
+
+	p.about-title
+		+font($gotham, bold, normal)
+		padding-top: 2em
+		color: $red!important
+		font-size: .8em
+		text-transform: uppercase
+		margin-bottom: -10px
+
+
+	p
+		color: #1e1e1e
+		line-height: 1.5em
+		+font($surveyor-text, normal, normal)
+
+	section:nth-child(3), section:nth-child(6)
+		+span-columns(6)
+		padding-top: 2em
+		border-top: 1px solid $nav-brown
+		margin-top: 2em
+		@include media(min-width 320px max-width 500px, 1)
+			+span-columns(1)
+
+	section:nth-child(4), section:nth-child(7)
+		+span-columns(6)
+		+omega()
+		padding-top: 2em
+		border-top: 1px solid $nav-brown
+		margin-top: 2em
+
+		ul li
+			padding: .5em 0
+
+		@include media(min-width 320px max-width 500px, 1)
+			+span-columns(1)
+
+// 		p:nth-child(1)
+// 		margin-top: 210px
+
+	section:nth-child(3)
+		@include media(min-width 320px max-width 500px, 1)
+			margin-top: 0
+			border-top: none
+			padding-top: 0

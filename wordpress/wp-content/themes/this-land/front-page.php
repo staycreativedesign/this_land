@@ -4,26 +4,57 @@
   */
 ?>
   <?php get_header(); ?>
-    <main role="main" class="index">
-      <?php {
-           $rotator = new WP_Query( 'tag=main_rotating' );
-         } ?>
-        <div class="slider-wrapper theme-default main-image">
-          <div id="slider" class="nivoSlider">
-            <?php if( $rotator->have_posts() ) : while( $rotator->have_posts() ) : $rotator->the_post();
-                ?>
-                  <?php
-                    $image_url = get_post_meta( get_the_ID(), 'rotatimg-image-save', true );
-                    $attachment = get_post( get_attachment_id_from_src( $image_url ) );
-                    $test = get_post( $image_url );
-                    // echo '<pre>'; print_r($test->post_excerpt); echo '</pre>'
+
+      <main role="main" class="index">
+        <?php {
+            {
+             $rotator = new WP_Query( 'tag=main_rotating' );
+           } ?>
+          <div class="slider-wrapper theme-default main-image desktop">
+            <div id="slider" class="nivoSlider">
+              <?php if( $rotator->have_posts() ) : while( $rotator->have_posts() ) : $rotator->the_post();
                   ?>
-                  <a href="<?php echo $test->post_excerpt ?>" target="_blank">
-                  <img src="<?php echo wp_get_attachment_url( $image_url ); ?>">
-                  </a>
-            <?php endwhile; endif; wp_reset_postdata(); ?>
-          </div>
-      </div>
+                    <?php
+                      $image_url = get_post_meta( get_the_ID(), 'rotatimg-image-save', true );
+                      $attachment = get_post( get_attachment_id_from_src( $image_url ) );
+                      $test = get_post( $image_url );
+                      // echo '<pre>'; print_r($test->post_excerpt); echo '</pre>'
+                    ?>
+                    <a href="<?php echo $test->post_excerpt ?>" target="_blank">
+                    <img src="<?php echo wp_get_attachment_url( $image_url ); ?>">
+                    </a>
+              <?php endwhile; endif; wp_reset_postdata(); ?>
+            </div>
+        </div> <?php
+      }
+      ?>
+
+        <?php {
+            {
+             $mobile_rotator = new WP_Query( 'tag=mobile_main_rotating' );
+           } ?>
+          <div class="slider-wrapper theme-default main-image mobile">
+            <div id="slider" class="nivoSlider">
+              <?php if( $mobile_rotator->have_posts() ) : while( $mobile_rotator->have_posts() ) : $mobile_rotator->the_post();
+                  ?>
+                    <?php
+                      $mobile_image_url = get_post_meta( get_the_ID(), 'rotatimg-image-save', true );
+                      $image = get_post( get_attachment_id_from_src( $mobile_image_url ) );
+                      $mobile_post = get_post( $mobile_image_url );
+                      // echo '<pre>'; print_r($mobile_post->post_excerpt); echo '</pre>'
+                    ?>
+                    <a href="<?php echo $mobile_post->post_excerpt ?>" target="_blank">
+                    <img src="<?php echo wp_get_attachment_url( $mobile_image_url ); ?>">
+                    </a>
+              <?php endwhile; endif; wp_reset_postdata(); ?>
+            </div>
+        </div> <?php
+      }
+      ?>
+
+
+
+
       <?php if(is_home() || is_front_page()) {
         $query = new WP_Query( 'tag=main_top&showposts=4' );
        } ?>

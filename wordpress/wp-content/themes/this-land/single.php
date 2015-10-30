@@ -29,51 +29,12 @@
 						<?php large_image_set($post);	?>
 					<article>
 					<?php check_for_soundcloud($post); ?>
-					<!-- /4053978/DoWhat_OKC_120x240_1 -->
-
-
-					<!-- /4053978/DoWhat_Tulsa_336x550_L -->
-	<!-- 				<div id='div-gpt-ad-1443629402046-15' style='height:550px; width:336px;'>
+					<!-- /4053978/1stAdonPost -->
+					<div id='div-gpt-ad-1445975693653-0'>
 					<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443629402046-15'); });
-					</script>
-					</div> -->
-
-					<!-- /4053978/DoWhat_Tulsa_336x550_R -->
-					<!-- <div id='div-gpt-ad-1443629402046-16' style='height:550px; width:336px;'>
-					<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443629402046-16'); });
-					</script>
-					</div> -->
-
-
-					<!-- /4053978/ThisLand_Sidebar_336x550 -->
-<!-- 					<div id='div-gpt-ad-1443629402046-36' style='height:550px; width:336px;'>
-					<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443629402046-36'); });
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1445975693653-0'); });
 					</script>
 					</div>
- -->
-					<!-- /4053978/ThisLand_Sidebar_336x550_L -->
-<!-- 					<div id='div-gpt-ad-1443629402046-37' style='height:550px; width:336px;'>
-					<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443629402046-37'); });
-					</script>
-					</div>
- -->
-					<!-- /4053978/ThisLand_Sidebar_336x550_R -->
-					<!-- <div id='div-gpt-ad-1443629402046-38' style='height:550px; width:336px;'>
-					<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443629402046-38'); });
-					</script>
-					</div> -->
-
-					<!-- /4053978/ThisLand_Sidebar_Bottom_336x280 -->
-					<!-- <div id='div-gpt-ad-1443629402046-39' style='height:280px; width:336px;'>
-					<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443629402046-39'); });
-					</script>
-					</div> -->
 					<?php
 						the_content();
 					?>

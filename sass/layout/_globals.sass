@@ -39,6 +39,9 @@ span
 .text-center
 	text-align: center
 
+.text-uppercase
+	text-transform: uppercase
+
 hr
 	border: none
 	height: 1px
@@ -46,8 +49,14 @@ hr
 
 .mobile
 	display: none
-	+media(min-width 320px max-width 850px, 1)
-		display: normal
+	+media(min-width 320px max-width 499px, 1)
+		display: block
+
+
+.desktop
+	display: block
+	+media(min-width 320px max-width 500px, 1)
+		display: none!important
 
 .no-bottom-border
 	border-bottom: none!important

@@ -281,7 +281,7 @@ section.sub-category {
       margin-top: 4em;
       color: silver;
       font-size: 11px; }
-    @media screen and (min-width: 450px) and (max-width: 800px) {
+    @media screen and (min-width: 451px) and (max-width: 800px) {
       section.sub-category article {
         float: left;
         display: block;
@@ -290,7 +290,7 @@ section.sub-category {
         margin-bottom: 1em; }
         section.sub-category article:last-child {
           margin-right: 0; } }
-  @media screen and (min-width: 450px) and (max-width: 800px) {
+  @media screen and (min-width: 451px) and (max-width: 800px) {
     section.sub-category article:nth-child(4) {
       margin-right: 0; } }
 
@@ -314,7 +314,7 @@ section.sub-category {
     .ecommerce article figure img {
       height: 223px;
       object-fit: cover; }
-  @media screen and (min-width: 320px) and (max-width: 580px) {
+  @media screen and (min-width: 320px) and (max-width: 450px) {
     .ecommerce {
       float: left;
       display: block;
@@ -337,6 +337,12 @@ section.sub-category {
           clear: left; }
       .ecommerce article:nth-child(1) {
         margin-top: 1.7em; } }
+
+.main.error {
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  padding-top: 20px;
+  text-align: center;
+  height: 50vh; }
 
 main.search {
   float: left;
@@ -811,12 +817,13 @@ main.story section {
           padding-left: 0; }
           main.story section article .float-right:last-child {
             margin-right: 0; } }
-    main.story section article #div-gpt-ad-1443629402046-39 {
+    main.story section article #div-gpt-ad-1445890111753-0 {
       height: 280px;
       width: 336px;
-      float: right; }
+      float: right;
+      margin-bottom: 1em; }
       @media screen and (min-width: 320px) and (max-width: 850px) {
-        main.story section article #div-gpt-ad-1443629402046-39 {
+        main.story section article #div-gpt-ad-1445890111753-0 {
           width: 100%;
           float: right;
           text-align: center; } }
@@ -1018,7 +1025,8 @@ section.ecommerce-story {
     section.ecommerce-story aside.sub-category:last-child {
       margin-right: 0; }
     section.ecommerce-story aside.sub-category img {
-      height: 200px; }
+      height: 200px;
+      object-fit: cover; }
     section.ecommerce-story aside.sub-category article {
       float: left;
       display: block;
@@ -1222,6 +1230,9 @@ span {
 .text-center {
   text-align: center; }
 
+.text-uppercase {
+  text-transform: uppercase; }
+
 hr {
   border: none;
   height: 1px;
@@ -1229,9 +1240,15 @@ hr {
 
 .mobile {
   display: none; }
-  @media screen and (min-width: 320px) and (max-width: 850px) {
+  @media screen and (min-width: 320px) and (max-width: 499px) {
     .mobile {
-      display: normal; } }
+      display: block; } }
+
+.desktop {
+  display: block; }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    .desktop {
+      display: none !important; } }
 
 .no-bottom-border {
   border-bottom: none !important; }
@@ -1241,6 +1258,9 @@ hr {
 
 body {
   margin: 0; }
+
+.bold {
+  font-weight: bold; }
 
 .banner-wrapper-mobile {
   display: none;

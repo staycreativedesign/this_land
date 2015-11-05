@@ -30,11 +30,11 @@
 					<article>
 					<?php check_for_soundcloud($post); ?>
 					<!-- /4053978/1stAdonPost -->
-					<div id='div-gpt-ad-1445975693653-0'>
+<!-- 					<div id='div-gpt-ad-1446672708370-0'>
 					<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1445975693653-0'); });
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1446672708370-0'); });
 					</script>
-					</div>
+					</div> -->
 					<?php
 						the_content();
 					?>

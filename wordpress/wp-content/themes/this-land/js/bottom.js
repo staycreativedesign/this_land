@@ -16,5 +16,10 @@ jQuery(document).ready(function($){
           pauseOnHover: false,
     });
 
-    $("<div id='div-gpt-ad-1443629402046-39'><script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443629402046-39'); });</script></div>").insertAfter("main.story section article p:nth-child(3)")
+    $("<div id='div-gpt-ad-1446672708370-0'><script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1446672708370-0'); });</script></div>").insertAfter("main.story section article p:nth-child(2)")
+
+    $("<div id='div-gpt-ad-1446681124572-0'><script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1446681124572-0'); });</script></div>").insertAfter("main.story section article p:nth-child(8)")
+
+    $("<div id='div-gpt-ad-1446694122046-0'><script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1446694122046-0'); });</script></div>").insertAfter("main.story section article p:nth-last-child(2)")
+
 });
